@@ -279,6 +279,37 @@ p{
         }
 
     }
+    function tangent(x) {
+        divide(sine(x), cosine(x))
+    }
+    function cosine(x) {
+        return sine(add(x), '11.0010010000111111')
+    }
+    function sine(x) {
+        temp = mod(x, '11.0010010000111111');
+        var result = divide(  times( times('16',temp), add('-11.0010010000111111', temp) ), add('110001.010110010001011111111', times( times('-4',temp), add('-11.0010010000111111', temp)) )  );
+        if ( greiter(mod(x, '110.010010000111111'), '11.0010010000111111') ){
+            result = times(result, -1);
+        }
+        return result;
+    }
+    function greiter(a, b) {
+        return ;
+    }
+    function times(a, b) {
+        return ;
+    }
+    function divide(a, b) {
+        return ;
+    }
+    function add(a, b) {
+        return ;
+    }
+    function mod(a, b) {
+        return ;
+    }
+
+
 
 
 </script>

@@ -1,0 +1,95 @@
+<html lang="English">
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../mainStyle.css">
+
+<style>
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+</style>
+
+
+<body onload="currentTime()">
+
+<a href="https://landmine.maykids.org/">hom</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolǐo</a> <a href="https://landmine.maykids.org/about.html">ubaǒt</a>
+
+<br/><hr style="width:99%;" />
+
+<h1>Bainarǐ yǔnits</h1>
+<h2>taim:</h2>
+<br/>
+<p style="text-align: center;">
+  <span id="binary" style="border: 2.5vmin solid #030649; padding: 2vmin; border-radius: 4vmin; background-color: #c4e5ed; box-shadow: 0 2vmin 1vmin rgba(7,7,46,0.35); font-family: 'Droid Sans'; font-size: 18vmin; letter-spacing: -6vmin"></span>
+</p>
+<br/>
+<p id="decimal" style="text-align: center"></p>
+<p>1t = 2<sup>-16</sup>day</p>
+<p>1zt = 1day</p>
+
+<h2>leňx:</h2>
+<p>1d = 2<sup>-34</sup><i>t</i> • c </p>
+<div style="text-align: center;">
+  <img src="d.png" alt="[IMAGE] a comparison between an inch, a centi-meter, and a d" style="width:50%;">
+</div>
+
+<p>1hd = 2<sup>4</sup>d</p>
+<div style="text-align: center;">
+  <img src="hd.png" alt="[IMAGE] a comparison between a foot, a meter, and a hd" style="width:50%;">
+</div>
+
+<p>1zd = 2<sup>16</sup>d</p>
+<div style="text-align: center;">
+  <img src="zd.png" alt="[IMAGE] a comparison between a mile, a kilo-meter, and a zd" style="width:50%;">
+</div>
+
+</body>
+
+<script>
+  function currentTime() {
+    var d = new Date();
+    var temp = 0;
+    temp += d.getHours() * 3600;
+    temp += d.getMinutes() * 60;
+    temp += d.getSeconds();
+    temp += d.getMilliseconds() * 0.001;
+    temp = temp / 86400;
+    var binary = temp.toString(2)
+    binary = binary.substring(2,19)
+    binary = binary.replaceAll("1", "┃")
+    binary = binary.replaceAll("0", "╻")
+    binary += "⠀"
+
+    if (document.getElementById('binary').innerText != binary) {
+      document.getElementById('binary').innerText = binary;
+    }
+
+    var time = ''
+    if (d.getHours().toString().length === 1) {
+      time += '0' + d.getHours()
+    } else {
+      time += d.getHours()
+    }
+    if (d.getMinutes().toString().length === 1) {
+      time += ':0' + d.getMinutes()
+    } else {
+      time += ':' + d.getMinutes()
+    }
+    if (d.getSeconds().toString().length === 1) {
+      time += ':0' + d.getSeconds()
+    } else {
+      time += ':' + d.getSeconds()
+    }
+
+    if (document.getElementById('decimal').innerText != time) {
+      document.getElementById('decimal').innerText = time;
+    }
+  }
+  setInterval(currentTime,50);
+</script>
+
+</html>
