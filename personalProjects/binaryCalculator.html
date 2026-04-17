@@ -1,0 +1,286 @@
+<html lang="English">
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../mainStyle.css">
+
+<style>
+button{
+    border-color: #0056af;
+    font-size: 5vmin;
+    font-family: 'Jetbrains', Monospace;
+    border-width: 0.75vmin;
+    background-color: #54c7ff;
+    padding: 2vmin 6.5vmin;
+    border-radius: 2vmin;
+}
+button:hover {
+    border-color: #0c7bd5;
+    font-size: 5vmin;
+    font-family: 'Jetbrains', Monospace;
+    border-width: 0.75vmin;
+    background-color: #6adcff;
+    padding: 2vmin 6.5vmin;
+    border-radius: 2vmin;
+}
+button:active {
+    border-color: #003391;
+    font-size: 5vmin;
+    font-family: 'Jetbrains', Monospace;
+    border-width: 0.75vmin;
+    background-color: #3897e4;
+    padding: 2vmin 6.5vmin;
+    border-radius: 2vmin;
+}
+input{
+    border-color: #0056af;
+    font-size: 5vmin;
+    font-family: 'Jetbrains', Monospace;
+    border-width: 0.75vmin;
+    background-color: #54c7ff;
+    padding: 3vmin 5vmin;
+    border-radius: 2vmin;
+}
+input:hover {
+    border-color: #0c7bd5;
+    font-size: 5vmin;
+    font-family: 'Jetbrains', Monospace;
+    border-width: 0.75vmin;
+    background-color: #6adcff;
+    padding: 3vmin 5vmin;
+    border-radius: 2vmin;
+}
+input:active {
+    border-color: #003391;
+    font-size: 5vmin;
+    font-family: 'Jetbrains', Monospace;
+    border-width: 0.75vmin;
+    background-color: #3897e4;
+    padding: 3vmin 5vmin;
+    border-radius: 2vmin;
+}
+p{
+    font-size: 0.5vmin
+}
+#clear {
+    border-color: #8f047c;
+    background-color: #ff649a;
+}
+#clear:hover {
+    border-color: #b10f91;
+    background-color: #ff8fad;
+}
+#clear:active {
+    border-color: #75016f;
+    background-color: #ed52a5;
+}
+
+#decimal {
+    width: 53vmin;
+    height: 9vmin;
+    font-size: 5vmin;
+    font-family: Jetbrains, Monospace;
+    text-align: left;
+    border-color: #003391;
+    border-width: 0.75vmin;
+    background-color: #ffffff;
+    border-radius: 2vmin;
+}
+
+#display {
+    width: 71vmin;
+    height: 13vmin;
+    font-size: 5vmin;
+    font-family: Jetbrains, Monospace;
+    text-align: right;
+    border-color: #003391;
+    border-width: 0.75vmin;
+    background-color: #ffffff;
+    border-radius: 2vmin;
+}
+
+</style>
+
+
+<body>
+
+<a href="https://landmine.maykids.org/">hom</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolǐo</a> <a href="https://landmine.maykids.org/about.html">ubaǒt</a>
+
+<br/><hr style="width:99%;" />
+
+<h1>Binary Calculator</h1>
+
+<div style="text-align: center;">
+    <input type="text" id="display" disabled />
+    <p> </p>
+    <button type="button" onclick="clearDisplay()" id="clear" style="padding: 3vmin 6vmin;">C</button>
+    <button type="button" onclick="calculate()" style="padding: 3vmin 25vmin;">=</button>
+    <br/><p> </p>
+    <button type="button" onclick="appendNum('0')" style="padding: 3vmin 10vmin;">0</button>
+    <button type="button" onclick="appendNum('1')" style="padding: 3vmin 10vmin;">1</button>
+    <button type="button" onclick="appendNum('.')" style="padding: 3vmin 1.5vmin;">.</button>
+    <button type="button" onclick="sign()" style="padding: 3vmin 1.5vmin;">+/-</button>
+    <br/><p> </p>
+    <button type="button" onclick="incr('+')">></button>
+    <button type="button" onclick="incr('-')"><</button>
+    <button type="button" onclick="appendOperation('+')">+</button>
+    <button type="button" onclick="appendOperation('-')">-</button>
+    <br/><p></p>
+    <button type="button" onclick="appendOperation('*')">*</button>
+    <button type="button" onclick="appendOperation('/')">/</button>
+
+    <button type="button" onclick="appendOperation('^')">^</button>
+    <button type="button" onclick="appendOperation('root')">&#8730</button>
+    <br/><p></p><br/>
+    <input onclick="change()" type="button" value="rad" id="angle"></input>
+    <button type="button" onclick="trig('sin')" style="padding: 3vmin 3vmin;">sin</button>
+    <button type="button" onclick="trig('cos')" style="padding: 3vmin 3vmin;">cos</button>
+    <button type="button" onclick="trig('tan')" style="padding: 3vmin 3vmin;">tan</button>
+    <br/><p></p><br/>
+    <b style="font-size: 3vmin;">decimal input: &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203
+        &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203
+        &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203
+        &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203</b><br/>
+    <input type="number" id="decimal">
+    <button type="button" onclick="appendType()" style="padding: 1vmin 1vmin;">input</button>
+</div>
+
+</body>
+
+<script>
+    var currentInput = '0';
+    var currentOperation = '';
+    var previousInput = '';
+    var angleUnit = 1
+
+    function appendNum(num){
+        if (num === ".") {
+            currentInput += num;
+        } else if (currentInput == '0') {
+            currentInput = num;
+        } else {
+            currentInput += num;
+        }
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
+    }
+    function appendOperation(operation) {
+        if (currentInput === '') return;
+        if (previousInput !== '') { calculate(); }
+        currentOperation = operation;
+        previousInput = currentInput;
+        currentInput = '0';
+        document.getElementById('display').value = `${previousInput} ${currentOperation}`;
+    }
+    function calculate() {
+        if (previousInput === '' || currentInput === '') return;
+        let result;
+        let prev = parseFloat(previousInput);
+        let current = parseFloat(currentInput);
+
+        switch (currentOperation) {
+            case '+':
+                result = decimalToBinary( binaryToDecimal(prev) + binaryToDecimal(current) );
+                break;
+            case '-':
+                result = decimalToBinary( binaryToDecimal(prev) - binaryToDecimal(current) );
+                break;
+            case '*':
+                result = decimalToBinary( binaryToDecimal(prev) * binaryToDecimal(current) );
+                break;
+            case '/':
+                result = decimalToBinary( binaryToDecimal(prev) / binaryToDecimal(current) );
+                break;
+            case '^':
+                result = decimalToBinary( binaryToDecimal(prev) ** binaryToDecimal(current) );
+                break;
+            case 'root':
+                result = decimalToBinary( binaryToDecimal(prev) ** ( 1 / binaryToDecimal(current) ) );
+                break;
+            default:
+                return;
+        }
+
+        currentInput = result.toString();
+        currentOperation = '';
+        previousInput = '';
+        document.getElementById('display').value = currentInput;
+    }
+    function incr(I) {
+        if (I === '+') {
+            currentInput = decimalToBinary( binaryToDecimal(currentInput) + 1);
+        } else {
+            currentInput = decimalToBinary( binaryToDecimal(currentInput) - 1)
+        }
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
+    }
+    function trig(type) {
+        var input = binaryToDecimal(currentInput);
+
+        if (angleUnit === 0) {
+            input *= 2 * Math.PI;
+        } else if (angleUnit === 2) {
+            input *= Math.PI / 180;
+        }
+
+        if (type === "sin") {
+            currentInput = Math.sin(input);
+        } else if (type === "cos") {
+            currentInput = Math.cos(input);
+        } else if (type === "tan") {
+            currentInput = Math.tan(input);
+        }
+        currentInput = decimalToBinary(currentInput);
+
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
+    }
+    function sign() {
+        currentInput *= -1
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
+    }
+    function clearDisplay() {
+        currentInput = '0';
+        previousInput = '';
+        currentOperation = '';
+        document.getElementById("decimal").value = '';
+        document.getElementById('display').value = '';
+    }
+    function decimalToBinary(N) {
+        return N.toString(2);
+
+    }
+    function binaryToDecimal(N) {
+        var inte = parseInt(N, 2);
+        var radix = 0;
+        const numble = N % 1;
+        var i = 1;
+        while (i < numble.length) {
+            if (numble[i] === 1) {
+                radix += 2 ** (-i + 1 );
+            }
+            i ++;
+        }
+
+        return inte + radix;
+    }
+    function change() {
+        var elem = document.getElementById("angle");
+        angleUnit += 1;
+        angleUnit = angleUnit % 3;
+        if (angleUnit === 0) { elem.value = "rot" }
+        else if (angleUnit === 1) { elem.value = "rad" }
+        else { elem.value = "deg" }
+    }
+    function appendType() {
+        var elem = document.getElementById("decimal");
+        if ( !isNaN(elem.value) ) {
+            currentInput = decimalToBinary(Number(elem.value));
+            document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
+            elem.value = '';
+        }
+
+    }
+
+
+</script>
+
+</html>

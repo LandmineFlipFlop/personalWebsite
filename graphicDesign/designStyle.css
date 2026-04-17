@@ -1,0 +1,35 @@
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(to top, sandybrown, beige);
+    background-attachment: fixed;
+    h1 {font-size: 4vmin;}
+    font-size: 2vmin;
+    hr {
+        border: 0.5vmin solid #05095a;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    a:link {
+        color: #0056af;
+        text-decoration: none;
+    }
+    a:visited {
+        color:#0056af;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #008ed6;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: #008ed6;
+        text-decoration: underline;
+    }
+}

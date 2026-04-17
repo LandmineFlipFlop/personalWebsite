@@ -1,0 +1,325 @@
+<html lang="English">
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../mainStyle.css">
+
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    h2 {
+        text-align: center
+    }
+    h3 {
+        text-align: center
+    }
+    p {
+        text-align: center
+    }
+    a {
+        text-align: center
+    }
+    input{
+        border-color: #0056af;
+        font-size: 3vmin;
+        font-family: 'Jetbrains', Monospace;
+        border-width: 0.75vmin;
+        background-color: #54c7ff;
+        padding: 1vmin 2vmin;
+        border-radius: 2vmin;
+    }
+    input:hover {
+        border-color: #0c7bd5;
+        font-size: 3vmin;
+        font-family: 'Jetbrains', Monospace;
+        border-width: 0.75vmin;
+        background-color: #6adcff;
+        padding: 1vmin 2vmin;
+        border-radius: 2vmin;
+    }
+    input:active {
+        border-color: #003391;
+        font-size: 3vmin;
+        font-family: 'Jetbrains', Monospace;
+        border-width: 0.75vmin;
+        background-color: #3897e4;
+        padding: 1vmin 2vmin;
+        border-radius: 2vmin;
+    }
+</style>
+
+<body>
+
+<a href="https://landmine.maykids.org/">hom</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolǐo</a> <a href="https://landmine.maykids.org/about.html">ubaǒt</a>
+
+<br/><hr style="width:99%;" />
+
+<h1>Guess That Number System!</h1>
+<h2>How It Works:</h2>
+<p>You get to see a list with the decimal notation next to it, and then have to guess what the rule for the numbers is.</p>
+<div>
+    <img src="example.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error or disability setting, this page will not be understandable without image context, my apologies" style="width:50%;">
+</div>
+<div>
+    <ul>
+        <li>All systems have a guaranteed notation for every positive integer to infinity
+        <li>No number has more than 1 way one way to write it
+        <li>Systems <b>do not</b> need to use Arabic numerals
+    </ul>
+</div>
+<p>try to figure out how it works before looking at the answer<br/><br/><a href="https://en.wikipedia.org/wiki/Numeral_system" target="_blank">wikipedia - Numeral system</a></p>
+
+<br/>
+
+<h3>As a refresher:</h3>
+<p>Classic number bases behave as follows, though not all systems shown will fit this mould</p>
+<div>
+    <img src="positionalNotation.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error or disability setting, this page will not be understandable without image context, my apologies" style="width:50%;">
+</div>
+<p><a href="https://en.wikipedia.org/wiki/Positional_notation" target="_blank">wikipedia - Positional notation</a></p>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h2>System l</h2>
+<div>
+    <img src="system1.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t1"></h3>
+<p id="l1"></p>
+<div>
+    <input onclick="Reveal(1)" type="button" value="Click to reveal" id="b1"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h2>System l.</h2>
+<div>
+    <img src="system2.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t2"></h3>
+<p id="l2"></p>
+<div>
+    <input onclick="Reveal(2)" type="button" value="Click to reveal" id="b2"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h2>System C</h2>
+<div>
+    <img src="system3.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t3"></h3>
+<p id="l3"></p>
+<div>
+    <input onclick="Reveal(3)" type="button" value="Click to reveal" id="b3"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 10000</h3>
+<div>
+    <img src="system4.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t4"></h3>
+<p id="l4"></p>
+<div>
+    <input onclick="Reveal(4)" type="button" value="Click to reveal" id="b4"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 101</h3>
+<div>
+    <img src="system5.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t5"></h3>
+<p id="l5"></p>
+<div>
+    <input onclick="Reveal(5)" type="button" value="Click to reveal" id="b5"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System l-o</h3>
+<div>
+    <img src="system6.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t6"></h3>
+<p id="l6"></p>
+<div>
+    <input onclick="Reveal(6)" type="button" value="Click to reveal" id="b6"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 1000</h3>
+<div>
+    <img src="system7.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t7"></h3>
+<p id="l7"></p>
+<div>
+    <input onclick="Reveal(7)" type="button" value="Click to reveal" id="b7"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 110</h3>
+<div>
+    <img src="system8.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t8"></h3>
+<p id="l8"></p>
+<div>
+    <input onclick="Reveal(8)" type="button" value="Click to reveal" id="b8"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 4.1</h3>
+<div>
+    <img src="system9.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t9"></h3>
+<p id="l9"></p>
+<div>
+    <input onclick="Reveal(9)" type="button" value="Click to reveal" id="b9"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 10202</h3>
+<div>
+    <img src="system10.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:85%;">
+</div>
+<br/>
+<h3 id="t10"></h3>
+<p id="l10"></p>
+<div>
+    <input onclick="Reveal(10)" type="button" value="Click to reveal" id="b10"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System ~101.0110</h3>
+<div>
+    <img src="system11.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:50%;">
+</div>
+<br/>
+<h3 id="t11"></h3>
+<p id="l11"></p>
+<div>
+    <input onclick="Reveal(11)" type="button" value="Click to reveal" id="b11"></input>
+</div>
+
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+
+<h3>System 100000.101001</h3>
+<div>
+    <img src="system12.png" alt="[IMAGE] sorry this image didnt work, this could be a page error, web browser error, or disability setting. this page will not be understandable without image context, my apologies" style="width:50%;">
+</div>
+<br/>
+<h3 id="t12"></h3>
+<p id="l12"></p>
+<div>
+    <input onclick="Reveal(12)" type="button" value="Click to reveal" id="b12"></input>
+</div>
+
+<br/><br/><hr style="width:99%;" /><br/><br/>
+<h3>Thanks for playing!</h3>
+<br/><br/>
+
+
+</body>
+
+<script>
+  function Reveal(id){
+
+    if (id === 1) {
+        document.getElementById('t1').innerText = 'Base 1\n' + '(Unary)\n';
+        document.getElementById('l1').innerHTML = '<a href="https://en.wikipedia.org/wiki/Unary_numeral_system" target="_blank">wikipedia - Unary numeral system</a>';
+        document.getElementById('b1').style.display = "none";
+    }
+    if (id === 2) {
+        document.getElementById('t2').innerText = 'Base 2\n' + '(Binary)\n';
+        document.getElementById('l2').innerHTML = '<a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">wikipedia - Binary number</a>';
+        document.getElementById('b2').style.display = "none";
+    }
+    if (id === 3) {
+        document.getElementById('t3').innerText = 'Base 8\n' + '(Octal)\n';
+        document.getElementById('l3').innerHTML = '<a href="https://en.wikipedia.org/wiki/Octal" target="_blank">wikipedia - Octal</a>';
+        document.getElementById('b3').style.display = "none";
+    }
+    if (id === 4) {
+        document.getElementById('t4').innerText = 'Base √2\n';
+        document.getElementById('l4').innerHTML = '<a href="https://en.wikipedia.org/wiki/Non-integer_base_of_numeration#Base_%E2%88%9A2" target="_blank">wikipedia - Non-integer base of numeration</a>';
+        document.getElementById('b4').style.display = "none";
+    }
+    if (id === 5) {
+        document.getElementById('t5').innerText = 'Base -2\n' + '(Negabinary)\n';
+        document.getElementById('l5').innerHTML = '<a href="https://en.wikipedia.org/wiki/Negative_base" target="_blank">wikipedia - Negative base</a>';
+        document.getElementById('b5').style.display = "none";
+    }
+    if (id === 6) {
+        document.getElementById('t6').innerText = 'Base 3\n' + '(Balanced Ternary)\n';
+        document.getElementById('l6').innerHTML = '<a href="https://en.wikipedia.org/wiki/Balanced_ternary" target="_blank">wikipedia - Balanced ternary</a>';
+        document.getElementById('b6').style.display = "none";
+    }
+    if (id === 7) {
+        document.getElementById('t7').innerText = 'Primary\n' + '(Prime number multiplying)\n';
+        document.getElementById('l7').innerHTML = '<a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic" target="_blank">wikipedia - Fundamental theorem of arithmetic</a>';
+        document.getElementById('b7').style.display = "none";
+    }
+    if (id === 8) {
+        document.getElementById('t8').innerText = 'Factorial\n' + '(factoradic)\n';
+        document.getElementById('l8').innerHTML = '<a href="https://en.wikipedia.org/wiki/Factorial_number_system" target="_blank">wikipedia - Factorial number system</a>';
+        document.getElementById('b8').style.display = "none";
+    }
+    if (id === 9) {
+        document.getElementById('t9').innerText = 'Base 0.2\n' + '(Base 1/5)\n';
+        document.getElementById('l9').innerHTML = '<a href="https://en.wikipedia.org/wiki/Quinary" target="_blank">wikipedia - Quinary</a>';
+        document.getElementById('b9').style.display = "none";
+    }
+    if (id === 10) {
+        document.getElementById('t10').innerText = 'Base 2i\n' + '(Base √-4)\n';
+        document.getElementById('l10').innerHTML = '<a href="https://en.wikipedia.org/wiki/Quater-imaginary_base" target="_blank">wikipedia - Quater-imaginary base</a>';
+        document.getElementById('b10').style.display = "none";
+    }
+    if (id === 11) {
+        document.getElementById('t11').innerText = 'Base π\n' + '(pinary)\n';
+        document.getElementById('l11').innerHTML = '<a href="https://en.wikipedia.org/wiki/Non-integer_base_of_numeration#Base_%CF%80" target="_blank">wikipedia - Non-integer base of numeration</a>';
+        document.getElementById('b11').style.display = "none";
+    }
+    if (id === 12) {
+        document.getElementById('t12').innerText = 'Golden ratio base\n' + '(phinary)\n';
+        document.getElementById('l12').innerHTML = '<a href="https://en.wikipedia.org/wiki/Golden_ratio_base" target="_blank">wikipedia - Golden ratio base</a>';
+        document.getElementById('b12').style.display = "none";
+    }
+
+  }
+</script>
+
+</html>

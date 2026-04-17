@@ -1,0 +1,55 @@
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: beige;
+    color: #05095a;
+    h1 {font-size: 4vmin;}
+    font-size: 2vmin;
+    hr {
+        border: 0.5vmin solid #05095a;
+    }
+    a:link {
+        color: #0056af;
+        text-decoration: none;
+    }
+    a:visited {
+        color:#0056af;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #008ed6;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: #008ed6;
+        text-decoration: underline;
+    }
+    button{
+        border-color: #0056af;
+        font-size: 5vmin;
+        font-family: 'Jetbrains', Monospace;
+        border-width: 0.75vmin;
+        background-color: #54c7ff;
+        padding: 2vmin 6.5vmin;
+        border-radius: 2vmin;
+    }
+    button:hover {
+        border-color: #0c7bd5;
+        font-size: 5vmin;
+        font-family: 'Jetbrains', Monospace;
+        border-width: 0.75vmin;
+        background-color: #6adcff;
+        padding: 2vmin 6.5vmin;
+        border-radius: 2vmin;
+    }
+    button:active {
+        border-color: #003391;
+        font-size: 5vmin;
+        font-family: 'Jetbrains', Monospace;
+        border-width: 0.75vmin;
+        background-color: #3897e4;
+        padding: 2vmin 6.5vmin;
+        border-radius: 2vmin;
+    }
+}
