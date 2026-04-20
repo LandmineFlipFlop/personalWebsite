@@ -2,6 +2,7 @@ body{
     font-family: 'Trebuchet MS', sans-serif;
     background-image: linear-gradient(to top, sandybrown, beige);
     background-attachment: fixed;
+    color: #05095a;
     h1 {font-size: 4vmin;}
     font-size: 2vmin;
     hr {

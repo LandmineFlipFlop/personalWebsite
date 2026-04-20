@@ -11,27 +11,33 @@
   p {
     text-align: center;
   }
+  div {
+    text-align: center;
+  }
 </style>
 
 
 <body onload="currentTime()">
 
-<a href="https://landmine.maykids.org/">hom</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolǐo</a> <a href="https://landmine.maykids.org/about.html">ubaǒt</a>
-
+<a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
 <br/><hr style="width:99%;" />
 
-<h1>Bainarǐ yǔnits</h1>
-<h2>taim:</h2>
+<h1>Binary Unit System</h1>
+<p>This system defines its base units in terms of <a href="https://en.wikipedia.org/wiki/Planck_units">the planck units</a> which is a (as far as we currently know) fundamental system of units</p>
+<h2>time:</h2>
 <br/>
 <p style="text-align: center;">
-  <span id="binary" style="border: 2.5vmin solid #030649; padding: 2vmin; border-radius: 4vmin; background-color: #c4e5ed; box-shadow: 0 2vmin 1vmin rgba(7,7,46,0.35); font-family: 'Droid Sans'; font-size: 18vmin; letter-spacing: -6vmin"></span>
+  <span id="binary" style="border: 2.5vmin solid #030649; padding: 2vmin; border-radius: 4vmin; background-color: #c4e5ed; box-shadow: 0 2vmin 1vmin rgba(7,7,46,0.35); font-family: 'Droid Sans'; font-size: 18vmin; letter-spacing: -5vmin; padding-right: 7vmin;"></span>
 </p>
 <br/>
 <p id="decimal" style="text-align: center"></p>
-<p>1t = 2<sup>-16</sup>day</p>
-<p>1zt = 1day</p>
+<p>the time system is defined in such a way as to have it line up with a day such that 1zt (or 2<sup>16</sup>t) is equivient to 1day</p>
+<div>
+  <img src="planckTime.png" alt="[IMAGE] the definition of planck time" style="width:30%;">
+  <img src="binaryUnitTime.png" alt="[IMAGE] the definition of the B.U.S time in terms of planck time" style="width:30%;">
+</div>
 
-<h2>leňx:</h2>
+<h2>length:</h2>
 <p>1d = 2<sup>-34</sup><i>t</i> • c </p>
 <div style="text-align: center;">
   <img src="d.png" alt="[IMAGE] a comparison between an inch, a centi-meter, and a d" style="width:50%;">
@@ -57,12 +63,11 @@
     temp += d.getMinutes() * 60;
     temp += d.getSeconds();
     temp += d.getMilliseconds() * 0.001;
-    temp = temp / 86400;
+    temp = temp * 0.758518216239;
+    temp = Math.trunc(temp)
     var binary = temp.toString(2)
-    binary = binary.substring(2,19)
     binary = binary.replaceAll("1", "┃")
     binary = binary.replaceAll("0", "╻")
-    binary += "⠀"
 
     if (document.getElementById('binary').innerText != binary) {
       document.getElementById('binary').innerText = binary;
