@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="mainStyle.css">
 
-<body>
+<body onload="checkFirefox()">
 
 <a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/portfolio.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
 
@@ -18,8 +18,18 @@
     <li><a href="https://landmine.maykids.org/personalProjects/projectList.html">personal projects</a>
     <li><a href="https://landmine.maykids.org/about.html">about</a>
     <li><a href="https://landmine.maykids.org/sideTracks.html">random stuff I find neat</a>
+    <a id="firefox"></a>
 </ul>
 
 </body>
+
+<script>
+    isFirefox = typeof InstallTrigger !== 'undefined';
+    function checkFirefox() {
+        if (!isFirefox) {
+            document.getElementById('firefox').innerHTML = '<li><a href="https://www.firefox.com/en-US/" target="_blank">my favorite web browser!</a> (you should try it)';
+        }
+    }
+</script>
 
 </html>
