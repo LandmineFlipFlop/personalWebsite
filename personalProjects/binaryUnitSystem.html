@@ -16,16 +16,33 @@
   }
   .short {
     border-left: 1.5vmin solid #030649;
-    height: 6vmin;
+    height: 7vmin;
+    width: 2vmin;
     display: inline-block;
   }
   .tall {
     border-left: 1.5vmin solid #030649;
-    height: 12vmin;
+    height: 13vmin;
+    width: 2vmin;
     display: inline-block;
+  }
+  .short-connected {
+    border-left: 1.5vmin solid #030649;
+    height: 6vmin;
+    width: 2vmin;
+    display: inline-block;
+    border-bottom: 1vmin solid #030649;
+  }
+  .tall-connected {
+    border-left: 1.5vmin solid #030649;
+    height: 12vmin;
+    width: 2vmin;
+    display: inline-block;
+    border-bottom: 1vmin solid #030649;
   }
   .invis {
     display: inline-block;
+    width: 2vmin;
   }
 </style>
 
@@ -87,15 +104,22 @@
     var binary = temp.toString(2)
     binary = binary.padStart(16, "0");
 
-    document.getElementById('binary').innerHTML ='<div class="invis"></div> ';
+    document.getElementById('binary').innerHTML ='<div class="invis"></div>';
     for (var i = 0; i < 16; i++) {
-      if (binary[i] === '1') {
-        document.getElementById('binary').innerHTML += ' <div class="tall"></div>';
+      if (i % 4 === 3) {
+        if (binary[i] === '1') {
+          document.getElementById('binary').innerHTML += '<div class="tall"></div>';
+        } else {
+          document.getElementById('binary').innerHTML += '<div class="short"></div>';
+        }
       } else {
-        document.getElementById('binary').innerHTML += ' <div class="short"></div>';
+        if (binary[i] === '1') {
+          document.getElementById('binary').innerHTML += '<div class="tall-connected"></div>';
+        } else {
+          document.getElementById('binary').innerHTML += '<div class="short-connected"></div>';
+        }
       }
     }
-    document.getElementById('binary').innerHTML += ' <div class="invis"></div>';
 
     var time = ''
     if (d.getHours().toString().length === 1) {
