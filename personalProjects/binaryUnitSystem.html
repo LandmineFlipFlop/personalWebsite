@@ -85,13 +85,14 @@
     temp = temp * 0.758518216239;
     temp = Math.trunc(temp)
     var binary = temp.toString(2)
+    binary = binary.padStart(16, "0");
 
     document.getElementById('binary').innerHTML ='<div class="invis"></div> ';
     for (var i = 0; i < 16; i++) {
-      if (binary[i] === '0') {
-        document.getElementById('binary').innerHTML += ' <div class="short"></div>';
-      } else {
+      if (binary[i] === '1') {
         document.getElementById('binary').innerHTML += ' <div class="tall"></div>';
+      } else {
+        document.getElementById('binary').innerHTML += ' <div class="short"></div>';
       }
     }
     document.getElementById('binary').innerHTML += ' <div class="invis"></div>';
