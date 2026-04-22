@@ -14,6 +14,19 @@
   div {
     text-align: center;
   }
+  .short {
+    border-left: 1.5vmin solid #030649;
+    height: 6vmin;
+    display: inline-block;
+  }
+  .tall {
+    border-left: 1.5vmin solid #030649;
+    height: 12vmin;
+    display: inline-block;
+  }
+  .invis {
+    display: inline-block;
+  }
 </style>
 
 
@@ -27,7 +40,9 @@
 <h2>time:</h2>
 <br/>
 <p style="text-align: center;">
-  <span id="binary" style="border: 2.5vmin solid #030649; padding: 2vmin; border-radius: 4vmin; background-color: #c4e5ed; box-shadow: 0 2vmin 1vmin rgba(7,7,46,0.35); font-family: 'Droid Sans'; font-size: 18vmin; letter-spacing: -5vmin; padding-right: 7vmin;"></span>
+  <span id="binary" style="border: 2.5vmin solid #030649; padding: 3vmin; border-radius: 4vmin; background-color: #c4e5ed; box-shadow: 0 2vmin 1vmin rgba(7,7,46,0.35); font-size: 16vmin; letter-spacing: -3vmin;">
+    <span class="tall"></span> <span class="short"></span>
+  </span>
 </p>
 <br/>
 <p id="decimal" style="text-align: center"></p>
@@ -70,12 +85,16 @@
     temp = temp * 0.758518216239;
     temp = Math.trunc(temp)
     var binary = temp.toString(2)
-    binary = binary.replaceAll("1", "┃")
-    binary = binary.replaceAll("0", "╻")
 
-    if (document.getElementById('binary').innerText != binary) {
-      document.getElementById('binary').innerText = binary;
+    document.getElementById('binary').innerHTML ='<div class="invis"></div> ';
+    for (var i = 0; i < 16; i++) {
+      if (binary[i] === '0') {
+        document.getElementById('binary').innerHTML += ' <div class="short"></div>';
+      } else {
+        document.getElementById('binary').innerHTML += ' <div class="tall"></div>';
+      }
     }
+    document.getElementById('binary').innerHTML += ' <div class="invis"></div>';
 
     var time = ''
     if (d.getHours().toString().length === 1) {
