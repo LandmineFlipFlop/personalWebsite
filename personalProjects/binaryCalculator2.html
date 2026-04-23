@@ -1,0 +1,238 @@
+<html lang="English">
+
+<link rel="stylesheet" href="../mainStyle.css">
+
+<meta charset="UTF-8">
+
+<style>
+    .short {
+        border-left: 1.5vmin solid #030649;
+        height: 4.5vmin;
+        width: 1.5vmin;
+        display: inline-block;
+    }
+    .tall {
+        border-left: 1.5vmin solid #030649;
+        height: 9vmin;
+        width: 1.5vmin;
+        display: inline-block;
+    }
+    .short-connected {
+        border-left: 1.5vmin solid #030649;
+        height: 3.5vmin;
+        width: 1.5vmin;
+        display: inline-block;
+        border-bottom: 1vmin solid #030649;
+    }
+    .tall-connected {
+        border-left: 1.5vmin solid #030649;
+        height: 8vmin;
+        width: 1.5vmin;
+        display: inline-block;
+        border-bottom: 1vmin solid #030649;
+    }
+    .radix {
+      border-left: 1.5vmin solid #030649;
+      height: 1.5vmin;
+      width: 1.5vmin;
+      display: inline-block;
+    }
+    .minus {
+      border-top: 1.5vmin solid #030649;
+      height: 3.5vmin;
+      width: 3.5vmin;
+      display: inline-block;
+    }
+    .invis {
+      display: inline-block;
+      width: 1.5vmin;
+      height: 9vmin;
+    }
+</style>
+
+<body>
+
+<a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/portfolio.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
+
+<br/><hr style="width:99%;" />
+
+<h1>Title</h1>
+<p>body text</p>
+
+<p style="text-align: center;">
+  <span id="binary" style="border: 0.5vmin solid #030649; padding: 1vmin; border-radius: 1vmin; background-color: white; font-size: 12vmin; letter-spacing: -3vmin; -webkit-user-select:none;user-select:none;">
+    <span class="invis"></span>
+  </span>
+</p>
+<div style="text-align: center;">
+  <button type="button" onclick="equal()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 48vmin;">=</button>
+  <button type="button" onclick="del()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 24vmin; text-align: center;">⌫</button>
+  <button type="button" onclick="erase()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 24vmin; text-align: center;">C</button>
+  <br/>
+  <button type="button" onclick="appendZero()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="short"></span></button>
+  <button type="button" onclick="appendOne()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="tall"></span></button>
+  <button type="button" onclick="appendRadix()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="radix"></span></button>
+  <br/>
+  <button type="button" onclick="incrementation()" style="padding: 3vmin 10vmin;">></button>
+  <button type="button" onclick="decrementation()" style="padding: 3vmin 10vmin;"><</button>
+  <button type="button" onclick="setOperation('+')" style="padding: 3vmin 10vmin;">+</button>
+  <button type="button" onclick="switchSign()" style="padding: 3vmin 10vmin;">±</button>
+  <br/>
+  <button type="button" onclick="setOperation('•')" style="padding: 3vmin 10vmin;">•</button>
+  <button type="button" onclick="setOperation('/')" style="padding: 3vmin 10vmin;">/</button>
+  <button type="button" onclick="setOperation('^')" style="padding: 3vmin 10vmin;">^</button>
+  <button type="button" onclick="setOperation('v')" style="padding: 3vmin 10vmin;">√</button>
+</div>
+
+</body>
+
+<script>
+  var currentNum = ''
+  var previousNum = ''
+  var currentOperation = ''
+  function appendZero() {
+    if (currentNum.length === 0 || currentNum.length > 1 || currentNum !== '0') {
+      currentNum += '0';
+      fullnum()
+    }
+  }
+  function appendOne() {
+    if (currentNum.length === 1 && currentNum === '0') {
+      currentNum = '1';
+    } else {
+      currentNum += '1';
+    }
+    fullnum()
+  }
+  function appendRadix() {
+    if (currentNum.length === 0) {
+      currentNum = '0.';
+    } else if (!currentNum.includes('.')) {
+      currentNum += '.';
+    }
+    fullnum()
+  }
+  function switchSign() {
+    if (currentNum.includes('1')) {
+      if (currentNum[0] === '-') {
+        currentNum = currentNum.substring(1);
+      } else {
+        currentNum = "-" + currentNum;
+      }
+      fullnum()
+    }
+  }
+
+  function setOperation(operation) {
+    if (previousNum === '') {
+      if (currentNum.length === 0) {
+        currentNum = '0';
+      }
+      previousNum = currentNum;
+      currentNum = '';
+    }
+    currentOperation = operation;
+    fullnum();
+  }
+
+
+  function erase() {
+    currentOperation = '';
+    previousNum = '';
+    currentNum = '';
+    fullnum();
+    document.getElementById('binary').innerHTML += currentOperation + ''
+  }
+  function del() {
+    if (currentNum.length > 0) {
+      currentNum = currentNum.substring(0, currentNum.length - 1);
+      if (currentNum[0] === '-' && !currentNum.includes('1')) {
+        currentNum = currentNum.substring(1);
+      }
+      fullnum();
+    } else {
+      currentOperation = ''
+      currentNum = previousNum
+      previousNum = ''
+      fullnum()
+    }
+  }
+
+  function fullnum() {
+    rewriteBinary('binary', previousNum);
+    if (currentOperation.length > 0)
+    document.getElementById('binary').innerHTML += currentOperation + '<div class="invis"></div><div class="invis"></div><div class="invis"></div>';
+    writeBinary('binary', currentNum);
+  }
+
+  function rewriteBinary(id, num) {
+      document.getElementById(id).innerHTML = '<div class="invis"></div>';
+      writeBinary(id, num);
+    }
+    function writeBinary(id, num) {
+      var number = num;
+      if (num[0] === "-") {
+        document.getElementById(id).innerHTML += '<div class="minus"></div><div class="invis"></div>';
+        number = number.substring(1);
+      }
+
+      if (number.includes('.')) {
+        var array = number.split('.');
+        var whole = array[0];
+        var partial = array[1];
+
+        if (whole[0] === "-") {
+          writeBinaryWhole(id, whole.substring(1));
+        } else {
+          writeBinaryWhole(id, whole);
+        }
+
+        document.getElementById(id).innerHTML += '<div class="radix"></div>';
+        writeBinaryPartial(id, partial);
+
+      } else {
+        if (num[0] === "-") {
+          writeBinaryWhole(id, num.substring(1));
+        } else {
+          writeBinaryWhole(id, num);
+        }
+      }
+    }
+
+    function writeBinaryWhole (id, num) {1
+        for (var i = 0; i < num.length; i++) {
+            if ((num.length - i) % 4 === 1) {
+                if (num[i] === '1') {
+                    document.getElementById(id).innerHTML += '<div class="tall"></div>';
+                } else {
+                    document.getElementById(id).innerHTML += '<div class="short"></div>';
+                }
+            } else {
+                if (num[i] === '1') {
+                    document.getElementById(id).innerHTML += '<div class="tall-connected"></div>';
+                } else {
+                    document.getElementById(id).innerHTML += '<div class="short-connected"></div>';
+                }
+            }
+        }
+    }
+    function writeBinaryPartial (id, num) {1
+      for (var i = 0; i < num.length; i++) {
+        if ((i % 4 === 3) || (i === num.length - 1)){
+          if (num[i] === '1') {
+            document.getElementById(id).innerHTML += '<div class="tall"></div>';
+          } else {
+            document.getElementById(id).innerHTML += '<div class="short"></div>';
+          }
+        } else {
+          if (num[i] === '1') {
+            document.getElementById(id).innerHTML += '<div class="tall-connected"></div>';
+          } else {
+            document.getElementById(id).innerHTML += '<div class="short-connected"></div>';
+          }
+        }
+      }
+    }
+</script>
+
+</html>
