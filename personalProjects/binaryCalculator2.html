@@ -50,11 +50,11 @@
     }
 </style>
 
-<body>
 
-<a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
+<script src="../header.js" type="text/javascript"></script>
+<body onload="header()">
 
-<br/><hr style="width:99%;" />
+<p id="header"></p>
 
 <h1>Binary Calculator</h1>
 
@@ -86,9 +86,9 @@
 </body>
 
 <script>
-  var currentNum = '';
-  var previousNum = '';
-  var currentOperation = '';
+  let currentNum = '';
+  let previousNum = '';
+  let currentOperation = '';
   function appendZero() {
     if (currentNum.length === 0 || currentNum.length > 1 || currentNum !== '0') {
       currentNum += '0';
@@ -123,26 +123,32 @@
   }
 
   function incrementation() {
-    var temp = currentNum;
+    let temp = currentNum;
     if (!currentNum.includes('-')) {
       temp = '0' + temp;
     }
     currentNum = '';
     if (temp.includes('.')) {
-      var array = temp.split('.');
+      let array = temp.split('.');
       temp = array[0];
     }
-    for (var i = 1; i < temp.length; i++) {
-      if (temp[temp.length - i] === '0') {
-        currentNum = '1' + currentNum;
-        break
-      } else if (temp[temp.length - i] === '1') {
-        currentNum = '0' + currentNum;
-      } else if (temp[temp.length - i] === '-') {
-        currentNum = '-1' + currentNum;
-        break
+    let insert = false;
+    for (let i = 1; i < temp.length; i++) {
+      if (insert) {
+
+      } else {
+        if (temp[temp.length - i] === '0') {
+          currentNum = '1' + currentNum;
+          break
+        } else if (temp[temp.length - i] === '1') {
+          currentNum = '0' + currentNum;
+        } else if (temp[temp.length - i] === '-') {
+          currentNum = '-1' + currentNum;
+          break
+        }
       }
     }
+    currentNum = temp
     fullnum();
   }
 
@@ -212,16 +218,16 @@
       writeBinary(id, num);
     }
     function writeBinary(id, num) {
-      var number = num;
+      let number = num;
       if (num[0] === "-") {
         document.getElementById(id).innerHTML += '<div class="minus"></div><div class="invis"></div>';
         number = number.substring(1);
       }
 
       if (number.includes('.')) {
-        var array = number.split('.');
-        var whole = array[0];
-        var partial = array[1];
+        let array = number.split('.');
+        let whole = array[0];
+        let partial = array[1];
 
         if (whole[0] === "-") {
           writeBinaryWhole(id, whole.substring(1));
@@ -242,7 +248,7 @@
     }
 
     function writeBinaryWhole (id, num) {1
-        for (var i = 0; i < num.length; i++) {
+        for (let i = 0; i < num.length; i++) {
             if ((num.length - i) % 4 === 1) {
                 if (num[i] === '1') {
                     document.getElementById(id).innerHTML += '<div class="tall"></div>';
@@ -259,7 +265,7 @@
         }
     }
     function writeBinaryPartial (id, num) {1
-      for (var i = 0; i < num.length; i++) {
+      for (let i = 0; i < num.length; i++) {
         if ((i % 4 === 3) || (i === num.length - 1)){
           if (num[i] === '1') {
             document.getElementById(id).innerHTML += '<div class="tall"></div>';
