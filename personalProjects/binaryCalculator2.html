@@ -52,12 +52,11 @@
 
 <body>
 
-<a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/portfolio.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
+<a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/personalProjects/projectList.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
 
 <br/><hr style="width:99%;" />
 
-<h1>Title</h1>
-<p>body text</p>
+<h1>Binary Calculator</h1>
 
 <p style="text-align: center;">
   <span id="binary" style="border: 0.5vmin solid #030649; padding: 1vmin; border-radius: 1vmin; background-color: white; font-size: 12vmin; letter-spacing: -3vmin; -webkit-user-select:none;user-select:none;">
@@ -65,19 +64,19 @@
   </span>
 </p>
 <div style="text-align: center;">
-  <button type="button" onclick="equal()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 48vmin;">=</button>
+  <button type="button" onclick="equal()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 48.5vmin;">=</button>
   <button type="button" onclick="del()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 24vmin; text-align: center;">⌫</button>
   <button type="button" onclick="erase()" style="padding: 3vmin 10vmin; font-size: 7vmin; width: 24vmin; text-align: center;">C</button>
-  <br/>
+  <br/><p style="font-size: 0.5vmin"> </p>
   <button type="button" onclick="appendZero()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="short"></span></button>
   <button type="button" onclick="appendOne()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="tall"></span></button>
   <button type="button" onclick="appendRadix()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="radix"></span></button>
-  <br/>
+  <br/><p style="font-size: 0.5vmin"> </p>
   <button type="button" onclick="incrementation()" style="padding: 3vmin 10vmin;">></button>
   <button type="button" onclick="decrementation()" style="padding: 3vmin 10vmin;"><</button>
   <button type="button" onclick="setOperation('+')" style="padding: 3vmin 10vmin;">+</button>
   <button type="button" onclick="switchSign()" style="padding: 3vmin 10vmin;">±</button>
-  <br/>
+  <br/><p style="font-size: 0.5vmin"> </p>
   <button type="button" onclick="setOperation('•')" style="padding: 3vmin 10vmin;">•</button>
   <button type="button" onclick="setOperation('/')" style="padding: 3vmin 10vmin;">/</button>
   <button type="button" onclick="setOperation('^')" style="padding: 3vmin 10vmin;">^</button>
@@ -87,13 +86,13 @@
 </body>
 
 <script>
-  var currentNum = ''
-  var previousNum = ''
-  var currentOperation = ''
+  var currentNum = '';
+  var previousNum = '';
+  var currentOperation = '';
   function appendZero() {
     if (currentNum.length === 0 || currentNum.length > 1 || currentNum !== '0') {
       currentNum += '0';
-      fullnum()
+      fullnum();
     }
   }
   function appendOne() {
@@ -102,7 +101,7 @@
     } else {
       currentNum += '1';
     }
-    fullnum()
+    fullnum();
   }
   function appendRadix() {
     if (currentNum.length === 0) {
@@ -110,7 +109,7 @@
     } else if (!currentNum.includes('.')) {
       currentNum += '.';
     }
-    fullnum()
+    fullnum();
   }
   function switchSign() {
     if (currentNum.includes('1')) {
@@ -119,8 +118,32 @@
       } else {
         currentNum = "-" + currentNum;
       }
-      fullnum()
+      fullnum();
     }
+  }
+
+  function incrementation() {
+    var temp = currentNum;
+    if (!currentNum.includes('-')) {
+      temp = '0' + temp;
+    }
+    currentNum = '';
+    if (temp.includes('.')) {
+      var array = temp.split('.');
+      temp = array[0];
+    }
+    for (var i = 1; i < temp.length; i++) {
+      if (temp[temp.length - i] === '0') {
+        currentNum = '1' + currentNum;
+        break
+      } else if (temp[temp.length - i] === '1') {
+        currentNum = '0' + currentNum;
+      } else if (temp[temp.length - i] === '-') {
+        currentNum = '-1' + currentNum;
+        break
+      }
+    }
+    fullnum();
   }
 
   function setOperation(operation) {
@@ -128,6 +151,19 @@
       if (currentNum.length === 0) {
         currentNum = '0';
       }
+      if (currentNum.includes('.')) {
+        while (currentNum[currentNum.length - 1] === '0') {
+          currentNum = currentNum.substring(0, currentNum.length - 1);
+        }
+        if (currentNum[currentNum.length - 1] === '.') {
+          currentNum = currentNum.substring(0, currentNum.length - 1);
+        }
+      }
+      previousNum = currentNum;
+      currentNum = '';
+    }
+    if (currentOperation.length > 0 && currentNum.length > 0) {
+      equal()
       previousNum = currentNum;
       currentNum = '';
     }
@@ -151,12 +187,18 @@
       }
       fullnum();
     } else {
-      currentOperation = ''
-      currentNum = previousNum
-      previousNum = ''
-      fullnum()
+      currentOperation = '';
+      currentNum = previousNum;
+      previousNum = '';
+      fullnum();
     }
   }
+
+
+  function equal() {
+
+  }
+
 
   function fullnum() {
     rewriteBinary('binary', previousNum);
