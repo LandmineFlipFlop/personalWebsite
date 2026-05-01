@@ -72,8 +72,8 @@
   <button type="button" onclick="appendOne()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="tall"></span></button>
   <button type="button" onclick="appendRadix()" style="padding: 3vmin 10vmin; width: 32.5vmin;"><span class="invis"></span><span class="radix"></span></button>
   <br/><p style="font-size: 0.5vmin"> </p>
-  <button type="button" onclick="incrementation()" style="padding: 3vmin 10vmin;">></button>
-  <button type="button" onclick="decrementation()" style="padding: 3vmin 10vmin;"><</button>
+  <button type="button" onclick="incrementation(false)" style="padding: 3vmin 10vmin;">></button>
+  <button type="button" onclick="decrementation(false)" style="padding: 3vmin 10vmin;"><</button>
   <button type="button" onclick="setOperation('+')" style="padding: 3vmin 10vmin;">+</button>
   <button type="button" onclick="switchSign()" style="padding: 3vmin 10vmin;">±</button>
   <br/><p style="font-size: 0.5vmin"> </p>
@@ -122,49 +122,153 @@
     }
   }
 
-  function incrementation() {
-    let temp = currentNum;
-    if (!currentNum.includes('-')) {
-      temp = '0' + temp;
+  function incrementation(negative) {
+    let list = []
+    let temp = '';
+    if (currentNum.includes('.')) {
+      list = currentNum.split('.');
+      temp = list[0];
+      currentNum = '.' + list[1];
+    } else {
+      temp = currentNum;
+      currentNum = '';
     }
-    currentNum = '';
-    if (temp.includes('.')) {
-      let array = temp.split('.');
-      temp = array[0];
-    }
-    let insert = false;
-    for (let i = 1; i < temp.length; i++) {
-      if (insert) {
+    if (temp.includes('-') && !negative) {
+      currentNum = temp + currentNum;
+      decrementation(true);
+    } else {
+      temp = '00' + temp;
 
-      } else {
-        if (temp[temp.length - i] === '0') {
-          currentNum = '1' + currentNum;
-          break
-        } else if (temp[temp.length - i] === '1') {
+
+      let insert = false;
+      for (let i = 1; i < temp.length; i++) {
+        if (insert) {
+          currentNum = temp[temp.length - i] + currentNum;
+        } else {
+          if (temp[temp.length - i] === '0') {
+            currentNum = '1' + currentNum;
+            insert = true;
+          } else if (temp[temp.length - i] === '1') {
+            currentNum = '0' + currentNum;
+          } else if (temp[temp.length - i] === '-') {
+            currentNum = '-1' + currentNum;
+            insert = true;
+          }
+        }
+      }
+      if (currentNum[0] === '0') {
+        currentNum = currentNum.substring(1);
+      }
+      if (currentNum[0] === '0') {
+        currentNum = currentNum.substring(1);
+      }
+      if (currentNum[0] === '-' && currentNum[1] === '0') {
+        currentNum = '-' + currentNum.substring(2);
+      }
+      if (currentNum === '' || currentNum === '-') {
+        currentNum = '0';
+      }
+      fullnum();
+    }
+  }
+
+function decrementation(negative) {
+    let list = [];
+    let temp = '';
+    if (currentNum.includes('.')) {
+      list = currentNum.split('.');
+      temp = list[0];
+      currentNum = '.' + list[1];
+    } else {
+      temp = currentNum;
+      currentNum = '';
+    }
+    if (temp.includes('-')  && !negative) {
+      currentNum = temp + currentNum;
+      incrementation(true);
+    } else if (temp === '0') {
+      currentNum = '-1' + currentNum;
+      fullnum();
+    } else {
+        temp = '00' + temp;
+
+
+        let insert = false;
+        for (let i = 1; i < temp.length; i++) {
+          if (insert) {
+            currentNum = temp[temp.length - i] + currentNum;
+          } else {
+            if (temp[temp.length - i] === '1') {
+              currentNum = '0' + currentNum;
+              insert = true;
+            } else if (temp[temp.length - i] === '0') {
+              currentNum = '1' + currentNum;
+            }
+
+          }
+        }
+        if (currentNum[0] === '0') {
+          currentNum = currentNum.substring(1);
+        }
+        if (currentNum[0] === '0') {
+          currentNum = currentNum.substring(1);
+        }
+        if (currentNum[0] === '-' && currentNum[1] === '0') {
+          currentNum = '-' + currentNum.substring(2);
+        }
+        if (currentNum[0] === '.') {
           currentNum = '0' + currentNum;
-        } else if (temp[temp.length - i] === '-') {
-          currentNum = '-1' + currentNum;
-          break
+        }
+        if (currentNum[0] === '-' && currentNum[1] === '.') {
+          currentNum = '-0' + currentNum;
+        }
+        if (currentNum === '' || currentNum === '-') {
+          currentNum = '0';
+        }
+        fullnum();
+
+
+      }
+  }
+
+  function prune(num) {
+    let temp = num
+    if (temp[1] === '-'){
+      for (let i = 0; i < temp.length - 1; i++) {
+        if (temp[1] === '0') {
+          temp = '-' + temp.substring(2)
+        } else {
+          i = temp.length
+        }
+      }
+    } else {
+      for (let i = 0; i < temp.length - 1; i++) {
+        if (temp[0] === '0') {
+          temp = temp.substring(1)
+        } else {
+          i = temp.length
         }
       }
     }
-    currentNum = temp
-    fullnum();
+
+    if (temp.length === 0) {
+      temp = '0';
+    }
+    if (temp.includes('.')) {
+      while (temp[temp.length - 1] === '0') {
+        temp = temp.substring(0, temp.length - 1);
+      }
+      if (temp[temp.length - 1] === '.') {
+        temp = temp.substring(0, temp.length - 1);
+      }
+    }
+    return temp;
   }
+
 
   function setOperation(operation) {
     if (previousNum === '') {
-      if (currentNum.length === 0) {
-        currentNum = '0';
-      }
-      if (currentNum.includes('.')) {
-        while (currentNum[currentNum.length - 1] === '0') {
-          currentNum = currentNum.substring(0, currentNum.length - 1);
-        }
-        if (currentNum[currentNum.length - 1] === '.') {
-          currentNum = currentNum.substring(0, currentNum.length - 1);
-        }
-      }
+      currentNum = prune(currentNum);
       previousNum = currentNum;
       currentNum = '';
     }
@@ -202,7 +306,10 @@
 
 
   function equal() {
-
+    currentOperation = '';
+    currentNum = previousNum;
+    previousNum = '';
+    fullnum();
   }
 
 
