@@ -1,114 +1,117 @@
 <html lang="English">
 
-<meta charset="UTF-8">
+<head>
 
-<link rel="stylesheet" href="../mainStyle.css">
+    <link rel="stylesheet" href="../mainStyle.css">
+    <meta charset="UTF-8">
 
-<style>
-button{
-    border-color: #0056af;
-    font-size: 5vmin;
-    font-family: 'Jetbrains', Monospace;
-    border-width: 0.75vmin;
-    background-color: #54c7ff;
-    padding: 2vmin 6.5vmin;
-    border-radius: 2vmin;
-}
-button:hover {
-    border-color: #0c7bd5;
-    font-size: 5vmin;
-    font-family: 'Jetbrains', Monospace;
-    border-width: 0.75vmin;
-    background-color: #6adcff;
-    padding: 2vmin 6.5vmin;
-    border-radius: 2vmin;
-}
-button:active {
-    border-color: #003391;
-    font-size: 5vmin;
-    font-family: 'Jetbrains', Monospace;
-    border-width: 0.75vmin;
-    background-color: #3897e4;
-    padding: 2vmin 6.5vmin;
-    border-radius: 2vmin;
-}
-input{
-    border-color: #0056af;
-    font-size: 5vmin;
-    font-family: 'Jetbrains', Monospace;
-    border-width: 0.75vmin;
-    background-color: #54c7ff;
-    padding: 3vmin 5vmin;
-    border-radius: 2vmin;
-}
-input:hover {
-    border-color: #0c7bd5;
-    font-size: 5vmin;
-    font-family: 'Jetbrains', Monospace;
-    border-width: 0.75vmin;
-    background-color: #6adcff;
-    padding: 3vmin 5vmin;
-    border-radius: 2vmin;
-}
-input:active {
-    border-color: #003391;
-    font-size: 5vmin;
-    font-family: 'Jetbrains', Monospace;
-    border-width: 0.75vmin;
-    background-color: #3897e4;
-    padding: 3vmin 5vmin;
-    border-radius: 2vmin;
-}
-p{
-    font-size: 0.5vmin
-}
-#clear {
-    border-color: #8f047c;
-    background-color: #ff649a;
-}
-#clear:hover {
-    border-color: #b10f91;
-    background-color: #ff8fad;
-}
-#clear:active {
-    border-color: #75016f;
-    background-color: #ed52a5;
-}
+    <script src="../header.js" type="text/javascript"></script>
 
-#decimal {
-    width: 53vmin;
-    height: 9vmin;
-    font-size: 5vmin;
-    font-family: Jetbrains, Monospace;
-    text-align: left;
-    border-color: #003391;
-    border-width: 0.75vmin;
-    background-color: #ffffff;
-    border-radius: 2vmin;
-}
+    <style>
+        button{
+            border-color: #0056af;
+            font-size: 5vmin;
+            font-family: 'Jetbrains', Monospace;
+            border-width: 0.75vmin;
+            background-color: #54c7ff;
+            padding: 2vmin 6.5vmin;
+            border-radius: 2vmin;
+        }
+        button:hover {
+            border-color: #0c7bd5;
+            font-size: 5vmin;
+            font-family: 'Jetbrains', Monospace;
+            border-width: 0.75vmin;
+            background-color: #6adcff;
+            padding: 2vmin 6.5vmin;
+            border-radius: 2vmin;
+        }
+        button:active {
+            border-color: #003391;
+            font-size: 5vmin;
+            font-family: 'Jetbrains', Monospace;
+            border-width: 0.75vmin;
+            background-color: #3897e4;
+            padding: 2vmin 6.5vmin;
+            border-radius: 2vmin;
+        }
+        input{
+            border-color: #0056af;
+            font-size: 5vmin;
+            font-family: 'Jetbrains', Monospace;
+            border-width: 0.75vmin;
+            background-color: #54c7ff;
+            padding: 3vmin 5vmin;
+            border-radius: 2vmin;
+        }
+        input:hover {
+            border-color: #0c7bd5;
+            font-size: 5vmin;
+            font-family: 'Jetbrains', Monospace;
+            border-width: 0.75vmin;
+            background-color: #6adcff;
+            padding: 3vmin 5vmin;
+            border-radius: 2vmin;
+        }
+        input:active {
+            border-color: #003391;
+            font-size: 5vmin;
+            font-family: 'Jetbrains', Monospace;
+            border-width: 0.75vmin;
+            background-color: #3897e4;
+            padding: 3vmin 5vmin;
+            border-radius: 2vmin;
+        }
+        p{
+            font-size: 0.5vmin
+        }
+        #clear {
+            border-color: #8f047c;
+            background-color: #ff649a;
+        }
+        #clear:hover {
+            border-color: #b10f91;
+            background-color: #ff8fad;
+        }
+        #clear:active {
+            border-color: #75016f;
+            background-color: #ed52a5;
+        }
 
-#display {
-    width: 71vmin;
-    height: 13vmin;
-    font-size: 5vmin;
-    font-family: Jetbrains, Monospace;
-    text-align: right;
-    border-color: #003391;
-    border-width: 0.75vmin;
-    background-color: #ffffff;
-    border-radius: 2vmin;
-}
+        #decimal {
+            width: 53vmin;
+            height: 9vmin;
+            font-size: 5vmin;
+            font-family: Jetbrains, Monospace;
+            text-align: left;
+            border-color: #003391;
+            border-width: 0.75vmin;
+            background-color: #ffffff;
+            border-radius: 2vmin;
+        }
 
-</style>
+        #display {
+            width: 71vmin;
+            height: 13vmin;
+            font-size: 5vmin;
+            font-family: Jetbrains, Monospace;
+            text-align: right;
+            border-color: #003391;
+            border-width: 0.75vmin;
+            background-color: #ffffff;
+            border-radius: 2vmin;
+        }
 
+    </style>
 
-<body>
+    <title>binary calculator</title>
 
-<a href="https://landmine.maykids.org/">home</a>  <a href="https://landmine.maykids.org/portfolio.html">portfolio</a> <a href="https://landmine.maykids.org/about.html">about</a>
+</head>
 
-<br/><hr style="width:99%;" />
+<body onload="header()">
+<div id="top-bar" class="top-bar"></div>
 
-<h1>Binary Calculator</h1>
+<h1>binary Calculator</h1>
 
 <div style="text-align: center;">
     <input type="text" id="display" disabled />

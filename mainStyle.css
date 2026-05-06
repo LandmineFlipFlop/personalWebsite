@@ -33,6 +33,7 @@ body{
         background-color: #54c7ff;
         padding: 2vmin 6.5vmin;
         border-radius: 2vmin;
+        transition-duration: 0.2s;
     }
     button:hover {
         border-color: #0c7bd5;
@@ -51,5 +52,18 @@ body{
         background-color: #3897e4;
         padding: 2vmin 6.5vmin;
         border-radius: 2vmin;
+    }
+    .top-bar {
+        position: sticky;
+        top:0;
+        padding:2vmin;
+        background: beige;
+        text-align: left;
+        border-bottom: #05095a solid 1vmin;
+    }
+    .centered {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }

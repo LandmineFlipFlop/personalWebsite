@@ -8,13 +8,9 @@ body{
     hr {
         border: 0.5vmin solid #05095a;
     }
-    div {
-        display: flex;
-        justify-content: center;
+    p {
+        padding-inline: 20vmin;
     }
-    h1 {text-align: center;}
-    p {text-align: center;}
-    div {text-align: center;}
     a:link {
         color: #0056af;
         text-decoration: none;
@@ -32,5 +28,20 @@ body{
     a:active {
         color: #008ed6;
         text-decoration: underline;
+    }
+    .top-bar {
+        position: sticky;
+        top:0;
+        padding:2vmin;
+        background: beige;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        border-bottom: #05095a solid 1vmin;
+    }
+    .centered {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }
