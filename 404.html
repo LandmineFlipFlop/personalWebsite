@@ -1,46 +1,61 @@
 <html lang="English">
 
-<style>
-    body {
-        font-family: 'Trebuchet MS', sans-serif;
-        background-color: beige;
-        color: #05095a;
+<head>
 
-        h1 {
-            font-size: 4vmin;
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: beige;
+            color: #05095a;
+
+            h1 {
+                font-size: 4vmin;
+            }
+
+            font-size: 2vmin;
+
+            hr {
+                border: 0.5vmin solid #05095a;
+            }
+
+            a:link {
+                color: #0056af;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: #0056af;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #008ed6;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: #008ed6;
+                text-decoration: underline;
+            }
         }
+    </style>
 
-        font-size: 2vmin;
-
-        hr {
-            border: 0.5vmin solid #05095a;
+    <script>
+        function header() {
+            document.getElementById('top-bar').innerHTML = '<a href="https://landmine.maykids.org/" style="padding-right: 1vmin; padding-left: 0.5vmin">home</a> -  <a href="https://landmine.maykids.org/portfolio.html" style="padding-inline: 1vmin">portfolio</a> - <a href="https://landmine.maykids.org/personalProjects/projectList.html" style="padding-inline: 1vmin">personal projects</a> - <a href="https://landmine.maykids.org/musings/directory.html" style="padding-inline: 1vmin">musings</a> - <a href="https://landmine.maykids.org/about.html" style="padding-inline: 1vmin">about</a>';
         }
+    </script>
 
-        a:link {
-            color: #0056af;
-            text-decoration: none;
-        }
+    <title>error 404</title>
 
-        a:visited {
-            color: #0056af;
-            text-decoration: none;
-        }
+</head>
 
-        a:hover {
-            color: #008ed6;
-            text-decoration: underline;
-        }
 
-        a:active {
-            color: #008ed6;
-            text-decoration: underline;
-        }
-    }
-</style>
 
-<body>
-
-<a href="https://landmine.maykids.org/" style="padding-right: 1vmin; padding-left: 0.5vmin">home</a> -  <a href="https://landmine.maykids.org/portfolio.html" style="padding-inline: 1vmin">portfolio</a> - <a href="https://landmine.maykids.org/personalProjects/projectList.html" style="padding-inline: 1vmin">personal projects</a> - <a href="https://landmine.maykids.org/musings/directory.html" style="padding-inline: 1vmin">musings</a> - <a href="https://landmine.maykids.org/about.html" style="padding-inline: 1vmin">about</a>
+<body onload="header()">
+<div id="top-bar" class="top-bar"></div>
 
 <br/><hr style="width:99%;" />
 
