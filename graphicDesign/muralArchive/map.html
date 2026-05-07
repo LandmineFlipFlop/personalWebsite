@@ -2,10 +2,51 @@
 
 <head>
 
-    <link rel="stylesheet" href="../../mainStyle.css">
-
     <meta charset="UTF-8">
 
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: beige;
+            color: #05095a;
+
+            h1 {
+                font-size: 4vmin;
+            }
+
+            font-size: 2vmin;
+
+            hr {
+                border: 0.5vmin solid #05095a;
+            }
+
+            a:link {
+                color: #0056af;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: #0056af;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #008ed6;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: #008ed6;
+                text-decoration: underline;
+            }
+
+            .centered {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
     <style>
         .container{
             position: absolute;
@@ -21,7 +62,7 @@
         }
         .container .photo {
             width: 1.5vw;
-            transition: opacity 0.2s, top 0.2s, transform 0.2s, border 0.1s, z-index 0.2s;
+            transition: opacity 0.2s, top 0.2s, transform 0.2s, border 0.1s, z-index 0.2s, filter 0.15s;
             border-radius: 0.5vw;
             transform: scale(1);
             position: absolute;
@@ -30,6 +71,7 @@
             border-style: solid;
             border-width: 0.2vw;
             border-color: black;
+            filter: grayscale(30%) contrast(70%) brightness(130%) blur(0.03vw);
         }
         .container .selection:hover + .photo {
             transform: scale(8);
@@ -37,6 +79,7 @@
             z-index: 4;
             border-width: 0.05vw;
             cursor: pointer;
+            filter: grayscale(0) contrast(100%) brightness(100%) blur(0);
         }
 
 
@@ -99,7 +142,7 @@
     <div class="modal-content" style="width: 96%;">
         <span class="close" id="close" onclick="modalClose()">&times;</span>
         <p id="content"></p>
-        <img src="" alt="" id="image" style="height: 40vh; padding-inline: 5vw"/>
+        <img src="" alt="" id="image" style="height: 33vh; padding-inline: 5vw"/>
     </div>
 
 </div>
@@ -235,6 +278,15 @@
     <img class="photo" src="images/village%20scene.JPG" alt=""/>
 </div>
 
+<div  class="container" style="top: 51vw;left: 57.8vw;">
+    <a class="selection"
+       onclick="modalScript('abstract fish mural:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/abstract%20fish.JPG')"
+    ></a>
+    <img class="photo" src="images/abstract%20fish.JPG" alt=""/>
+</div>
+
 <div  class="container" style="top: 52.5vw;left: 61vw;">
     <a class="selection"
        onclick="modalScript('sunglasses mural:\n'
@@ -287,7 +339,7 @@
        + '⠀⠀year: 2016\n'
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Chloe Jesse\n'
-       + '⠀⠀⠀⠀• Chloe Jesse\n'
+       + '⠀⠀⠀⠀• Adriana L. Austin\n'
        + '⠀⠀⠀⠀• Emma Wu Shortt\n'
        + '⠀⠀⠀⠀• Autumn W Morrison\n'
        + '⠀⠀⠀⠀• Carmen Sherlock\n'
@@ -655,6 +707,42 @@
        + '⠀⠀credits: undocumented', 'images/floating%20geometry.JPG')"
     ></a>
     <img class="photo" src="images/floating%20geometry.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 6.8vw;left: 56vw;">
+    <a class="selection"
+       onclick="modalScript('human rights mural:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+    ></a>
+    <img class="photo" src="images/placeholder.png" alt=""/>
+</div>
+
+<div  class="container" style="top: 6.8vw;left: 50vw;">
+    <a class="selection"
+       onclick="modalScript('japanese mural (WIP):\n'
+       +'⠀⠀year: 2026\n'
+       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+    ></a>
+    <img class="photo" src="images/placeholder.png" alt=""/>
+</div>
+
+<div  class="container" style="top: 6.8vw;left: 46.5vw;">
+    <a class="selection"
+       onclick="modalScript('MLK mural:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/MLK%20array.png')"
+    ></a>
+    <img class="photo" src="images/MLK%201.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 6.8vw;left: 18vw;">
+    <a class="selection"
+       onclick="modalScript('ancient culture mural:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/ancient%20culture.JPG')"
+    ></a>
+    <img class="photo" src="images/ancient%20culture.JPG" alt=""/>
 </div>
 
 
