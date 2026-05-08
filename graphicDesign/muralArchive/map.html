@@ -115,7 +115,7 @@
         .close {
             color: grey;
             float: right;
-            font-size: 28px;
+            font-size: 5vmax;
             font-weight: bold;
             transition: 0.2s;
         }
@@ -135,14 +135,18 @@
 <body>
 
 
-<img src="images/muralMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0;" alt=""/>
+<img src="images/southMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; filter: blur(0.2vw)" alt=""/>
+<img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.75vw; left: 0.5vw;filter: blur(0.2vw) brightness(0) opacity(0.6);" alt=""/>
+<img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.5vw; left: 0.5vw;" alt=""/>
 
 <div id="myModal" class="modal" style="opacity: 0; position: absolute; top: -8vw; width: 96%;">
 
     <div class="modal-content" style="width: 96%;">
         <span class="close" id="close" onclick="modalClose()">&times;</span>
         <p id="content"></p>
-        <img src="" alt="" id="image" style="height: 33vh; padding-inline: 5vw"/>
+        <a id="redirect" target="_blank"></a>
+        <img src="" alt="" id="image" style="height: 50vh; width: 80vw; padding-inline: 5vw; object-fit: scale-down;"/>
+        <p id="caption"></p>
     </div>
 
 </div>
@@ -196,10 +200,10 @@
 
 <div  class="container" style="top: 49.4vw;left: 45.3vw;">
     <a class="selection"
-       onclick="modalScript('science office mural:\n'
+       onclick="modalScript('science hall mural:\n'
        +'⠀⠀year: 2006\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Esteban', 'images/science%20office.JPG')"
+       + '⠀⠀⠀⠀Esteban Camacho Steffensen', 'images/science%20office%20array.png', 'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/', 'find his site here')"
     ></a>
     <img class="photo" src="images/science%20office.JPG" alt=""/>
 </div>
@@ -298,11 +302,11 @@
 
 <div  class="container" style="top: 51vw;left: 62.7vw;">
     <a class="selection"
-       onclick="modalScript('eye & hand mural (WIP):\n'
+       onclick="modalScript('CAS mural (WIP):\n'
        +'⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+       + '⠀⠀credits: undocumented', 'images/CAS.jpg')"
     ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
+    <img class="photo" src="images/CAS.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 64.6vw;">
@@ -455,9 +459,12 @@
 
 <div  class="container" style="top: 38.5vw;left: 41vw;">
     <a class="selection"
-       onclick="modalScript('tree life mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/tree%20life%20array.png')"
+       onclick="modalScript('Memorial Courtyard Mural:\n'
+       +'⠀⠀year: 2011\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Esteban Camacho Steffensen',
+       'images/tree%20life%20full.jpg', 'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/', 'find his site here',
+       'The enormous size of an old-growth Sitka Spruce is used to embody the community’s grief over the death of two beloved students. The entire mural is an illustration of the site where the tragedy happened, but the mood and imagery alludes to the resurrection of hope and beauty, rather than the depressive side of the tragedy')"
     ></a>
     <img class="photo" src="images/tree%20life%203.JPG" alt=""/>
 </div>
@@ -710,21 +717,21 @@
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 56vw;">
-    <a class="selection"
+    <a style=" height: 2.5vw;" class="selection"
        onclick="modalScript('human rights mural:\n'
        +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+       + '⠀⠀credits: undocumented', 'images/human%20rights.jpeg')"
     ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
+    <img class="photo" src="images/human%20rights.jpeg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 50vw;">
     <a class="selection"
-       onclick="modalScript('japanese mural (WIP):\n'
+       onclick="modalScript('japanese club mural (WIP):\n'
        +'⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+       + '⠀⠀credits: undocumented', 'images/japanese%20club.jpg')"
     ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
+    <img class="photo" src="images/japanese%20club.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 46.5vw;">
@@ -745,6 +752,52 @@
     <img class="photo" src="images/ancient%20culture.JPG" alt=""/>
 </div>
 
+<div  class="container" style="top: 6.8vw;left: 28vw;">
+    <a class="selection"
+       onclick="modalScript('assorted structures mural:\n'
+       + '⠀⠀year: 2010\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Claire Write', 'images/assorted%20structures.JPG')"
+    ></a>
+    <img class="photo" src="images/assorted%20structures.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 33vw;left: 47vw;">
+    <a style=" height: 2.5vw;" class="selection"
+       onclick="modalScript('jellyfish door art:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/jellyfish.JPG')"
+    ></a>
+    <img class="photo" src="images/jellyfish.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 37vw;left: 47vw;">
+    <a style=" height: 2.5vw;" class="selection"
+       onclick="modalScript('whale door art:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/whale.JPG')"
+    ></a>
+    <img class="photo" src="images/whale.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 43.5vw;left: 62.3vw;">
+    <a class="selection"
+       onclick="modalScript('dressing room painting?:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+    ></a>
+    <img class="photo" src="images/placeholder.png" alt=""/>
+</div>
+
+<div  class="container" style="top: 44vw;left: 45.5vw;">
+    <a class="selection"
+       onclick="modalScript('periodic table art fixture:\n'
+       +'⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/periodic%20table.jpeg')"
+    ></a>
+    <img class="photo" src="images/periodic%20table.jpeg" alt=""/>
+</div>
+
 
 </body>
 
@@ -754,8 +807,10 @@
     var content = document.getElementById("content");
     var image = document.getElementById("image");
     var screenDarken = document.getElementById("screenDarken");
+    var redirect = document.getElementById("redirect");
+    var caption = document.getElementById("caption");
 
-    function modalScript(text, photo) {
+    function modalScript(text, photo, link, linkText, extra) {
         modal.style.opacity = "1";
         screenDarken.style.opacity = "1";
         screenDarken.style.pointerEvents = "auto";
@@ -764,13 +819,22 @@
 
         content.innerText = text;
         image.src = photo;
+        if (link.length > 0 && linkText.length > 0) {
+            redirect.href = link;
+            redirect.innerText = linkText;
+        }
+        if (extra.length > 0) {
+            caption.innerText = extra;
+        }
     }
     function modalClose() {
         modal.style.opacity = "0";
         screenDarken.style.opacity = "0";
         screenDarken.style.pointerEvents = "none";
         modal.style.pointerEvents = "none";
-        modal.style.top = "-8vw";
+        redirect.href = '';
+        redirect.innerText = '';
+        caption.innerText = '';
     }
 
 </script>
