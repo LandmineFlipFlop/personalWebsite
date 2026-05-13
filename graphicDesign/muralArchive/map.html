@@ -11,13 +11,13 @@
             color: #05095a;
 
             h1 {
-                font-size: 4vmin;
+                font-size: 3vw;
             }
 
-            font-size: 2vmin;
+            font-size: 1vw;
 
             hr {
-                border: 0.5vmin solid #05095a;
+                border: 0.5vw solid #05095a;
             }
 
             a:link {
@@ -39,22 +39,17 @@
                 color: #008ed6;
                 text-decoration: underline;
             }
-
-            .centered {
-                display: flex;
-                justify-content: center;
-                text-align: center;
-            }
         }
     </style>
     <style>
         .container{
             position: absolute;
+            -webkit-user-select:none; user-select:none;
         }
 
         .container .selection {
-            width: 2vw;
-            height: 1.5vw;
+            width: 1.8vw;
+            height: 1.3vw;
             transition: 0.2s;
             border-radius: 0.5vw;
             position: absolute;
@@ -72,6 +67,7 @@
             border-width: 0.2vw;
             border-color: black;
             filter: grayscale(30%) contrast(70%) brightness(130%) blur(0.03vw);
+            background-color: rgba(0, 0, 0, 0.48);
         }
         .container .selection:hover + .photo {
             transform: scale(8);
@@ -134,10 +130,12 @@
 
 <body>
 
-
-<img src="images/southMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; filter: blur(0.2vw)" alt=""/>
+<h1>South Eugene High School interactive mural map</h1>
+<img src="images/southMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none; user-select:none; pointer-events: none; z-index: 0; filter: blur(0.2vw)" alt=""/>
 <img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.75vw; left: 0.5vw;filter: blur(0.2vw) brightness(0) opacity(0.6);" alt=""/>
 <img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.5vw; left: 0.5vw;" alt=""/>
+
+<br/><br/><br/>
 
 <div id="myModal" class="modal" style="opacity: 0; position: absolute; top: -8vw; width: 96%;">
 
@@ -156,11 +154,11 @@
 <div  class="container" style="top: 50.7vw;left: 47.5vw;">
     <a class="selection"
        onclick="modalScript('bird corner mural:\n'
-       +'⠀⠀year: 2002\n'
+       + '⠀⠀year: 2002\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• eg\n'
-       + '⠀⠀⠀⠀• RNX\n'
-       + '⠀⠀⠀⠀• AG', 'images/bird%20corner.JPG')"
+       + '⠀⠀⠀⠀eg\n'
+       + '⠀⠀⠀⠀RNX\n'
+       + '⠀⠀⠀⠀AG', 'images/bird%20corner.JPG')"
     ></a>
     <img class="photo" src="images/bird%20corner.JPG" alt=""/>
 </div>
@@ -168,12 +166,12 @@
 <div  class="container" style="top: 50.7vw;left: 52vw;">
     <a class="selection"
        onclick="modalScript('mountain mural:\n'
-       +'⠀⠀year: 2018\n'
+       + '⠀⠀year: 2018\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Bronwyn Lord\n'
-       + '⠀⠀⠀⠀• Madi McGowan\n'
-       + '⠀⠀⠀⠀• Liam Davis\n'
-       + '⠀⠀⠀⠀• Savannah Stanley', 'images/mountains.JPG')"
+       + '⠀⠀⠀⠀Bronwyn Lord\n'
+       + '⠀⠀⠀⠀Madi McGowan\n'
+       + '⠀⠀⠀⠀Liam Davis\n'
+       + '⠀⠀⠀⠀Savannah Stanley', 'images/mountains.JPG')"
     ></a>
     <img class="photo" src="images/mountains.JPG" alt=""/>
 </div>
@@ -181,19 +179,19 @@
 <div  class="container" style="top: 43vw;left: 47.8vw;">
     <a class="selection"
        onclick="modalScript('ocean pollution mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Bryan G', 'images/ocean%20pollution.JPG')"
+       + '⠀⠀⠀⠀Bryan G', 'images/oceanPollution.JPG')"
     ></a>
-    <img class="photo" src="images/ocean%20pollution.JPG" alt=""/>
+    <img class="photo" src="images/oceanPollution.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 49.8vw;left: 49.4vw;">
     <a class="selection"
        onclick="modalScript('forest mural:\n'
-       +'⠀⠀year: 2003\n'
+       + '⠀⠀year: 2003\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Claire', 'images/forrest.JPG')"
+       + '⠀⠀⠀⠀Claire', 'images/forrest.JPG')"
     ></a>
     <img class="photo" src="images/forrest.JPG" alt=""/>
 </div>
@@ -201,21 +199,23 @@
 <div  class="container" style="top: 49.4vw;left: 45.3vw;">
     <a class="selection"
        onclick="modalScript('science hall mural:\n'
-       +'⠀⠀year: 2006\n'
+       + '⠀⠀year: 2006\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀Esteban Camacho Steffensen', 'images/science%20office%20array.png', 'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/', 'find his site here')"
+       + '⠀⠀⠀⠀Esteban Camacho Steffensen','images/scienceHallFull.png','',
+       'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/',
+       'find esteban’s site here')"
     ></a>
-    <img class="photo" src="images/science%20office.JPG" alt=""/>
+    <img class="photo" src="images/scienceHall.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 44.5vw;left: 42vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('einstein mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Hannah Nute\n'
-       + '⠀⠀⠀⠀• Carson Schmittle\n'
-       + '⠀⠀⠀⠀• Ze\'ev Tubman', 'images/einstein.JPG')"
+       + '⠀⠀⠀⠀Hannah Nute\n'
+       + '⠀⠀⠀⠀Carson Schmittle\n'
+       + '⠀⠀⠀⠀Ze\'ev Tubman', 'images/einstein.JPG')"
     ></a>
     <img class="photo" src="images/einstein.JPG" alt=""/>
 </div>
@@ -223,24 +223,24 @@
 <div  class="container" style="top: 47.5vw;left: 42.5vw;">
     <a class="selection"
        onclick="modalScript('feynman mural:\n'
-       +'⠀⠀year: 2013\n'
+       + '⠀⠀year: 2013\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Mary Vertulfo\n'
-       + '⠀⠀⠀⠀• Maia Watkins\n'
-       + '⠀⠀⠀⠀• Kove Janeski\n'
-       + '⠀⠀⠀⠀• Z.W.E', 'images/feynman.JPG')"
+       + '⠀⠀⠀⠀Mary Vertulfo\n'
+       + '⠀⠀⠀⠀Maia Watkins\n'
+       + '⠀⠀⠀⠀Kove Janeski\n'
+       + '⠀⠀⠀⠀Z.W.E', 'images/feynman.JPG')"
     ></a>
     <img class="photo" src="images/feynman.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 45.5vw;left: 44.3vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('curie mural:\n'
-       +'⠀⠀year: 2017\n'
+       + '⠀⠀year: 2017\n'
        + '⠀⠀credits, SEHS art club:\n'
-       + '⠀⠀⠀⠀• Julia Chou\n'
-       + '⠀⠀⠀⠀• Dani White\n'
-       + '⠀⠀⠀⠀• Tabia Schmidt', 'images/curie.JPG')"
+       + '⠀⠀⠀⠀Julia Chou\n'
+       + '⠀⠀⠀⠀Dani White\n'
+       + '⠀⠀⠀⠀Tabia Schmidt', 'images/curie.JPG')"
     ></a>
     <img class="photo" src="images/curie.JPG" alt=""/>
 </div>
@@ -248,18 +248,18 @@
 <div  class="container" style="top: 47vw;left: 57.5vw;">
     <a class="selection"
        onclick="modalScript('fish school mural (WIP):\n'
-       +'⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/fish%20school%20array.png')"
+       + '⠀⠀year: 2026\n'
+       + '⠀⠀credits: undocumented', 'images/fishSchoolFull.png')"
     ></a>
-    <img class="photo" src="images/fish%20school.JPG" alt=""/>
+    <img class="photo" src="images/fishSchool.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 43vw;left: 58.5vw;">
     <a class="selection"
        onclick="modalScript('stage mural:\n'
-       +'⠀⠀year: 2025\n'
+       + '⠀⠀year: 2025\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Aurora', 'images/stage.JPG')"
+       + '⠀⠀⠀⠀Aurora', 'images/stage.JPG')"
     ></a>
     <img class="photo" src="images/stage.JPG" alt=""/>
 </div>
@@ -267,52 +267,62 @@
 <div  class="container" style="top: 45vw;left: 58.5vw;">
     <a class="selection"
        onclick="modalScript('seaside scene mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/seaside%20scene.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Maria Maita Keppeler', 'images/seasideScene.JPG')"
     ></a>
-    <img class="photo" src="images/seaside%20scene.JPG" alt=""/>
+    <img class="photo" src="images/seasideScene.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 59.5vw;">
     <a class="selection"
        onclick="modalScript('village scene mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/village%20scene.JPG')"
+       + '⠀⠀year: 2019\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Haven Burley\n'
+       + '⠀⠀⠀⠀Matea Frances\n'
+       + '⠀⠀⠀⠀Gio C Burley\n'
+       + '⠀⠀⠀⠀Zoe T\n'
+       + '⠀⠀⠀⠀Luke C-A\n'
+       + '⠀⠀⠀⠀Dale R\n'
+       + '⠀⠀⠀⠀Anahi C-A', 'images/villageScene.JPG')"
     ></a>
-    <img class="photo" src="images/village%20scene.JPG" alt=""/>
+    <img class="photo" src="images/villageScene.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 57.8vw;">
     <a class="selection"
        onclick="modalScript('abstract fish mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/abstract%20fish.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Maple', 'images/abstractFish.JPG')"
     ></a>
-    <img class="photo" src="images/abstract%20fish.JPG" alt=""/>
+    <img class="photo" src="images/abstractFish.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 52.5vw;left: 61vw;">
     <a class="selection"
-       onclick="modalScript('sunglasses mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+       onclick="modalScript('thought bubbles mural:\n'
+       + '⠀⠀year: 1994\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Johanna Wright', 'images/sunglasses.JPG')"
     ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
+    <img class="photo" src="images/sunglasses.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 62.7vw;">
     <a class="selection"
        onclick="modalScript('CAS mural (WIP):\n'
-       +'⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/CAS.jpg')"
+       + '⠀⠀year: 2026\n'
+       + '⠀⠀credits: undocumented', 'images/Cas.JPG')"
     ></a>
-    <img class="photo" src="images/CAS.jpg" alt=""/>
+    <img class="photo" src="images/Cas.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 64.6vw;">
     <a class="selection"
        onclick="modalScript('flamingo mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/flamingos.JPG')"
     ></a>
     <img class="photo" src="images/flamingos.JPG" alt=""/>
@@ -321,273 +331,309 @@
 <div  class="container" style="top: 51.6vw;left: 64.6vw;">
     <a class="selection"
        onclick="modalScript('castle mural:\n'
-       + '⠀⠀year: 1963\n'
+       + '⠀⠀year: 1983\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Gina King', 'images/castle.JPG')"
+       + '⠀⠀⠀⠀Gina King', 'images/castle.JPG')"
     ></a>
     <img class="photo" src="images/castle.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 49.5vw;left: 66.6vw;">
-    <a style=" height: 2.5vw;" class="selection"
-       onclick="modalScript('pottery door mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/pottery%20door.JPG')"
+<div  class="container" style="top: 50.3vw;left: 66.6vw;">
+    <a class="selection"
+       onclick="modalScript('assorted symbols mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/assortedSymbols.JPG')"
     ></a>
-    <img class="photo" src="images/pottery%20door.JPG" alt=""/>
+    <img class="photo" src="images/assortedSymbols.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 52vw;left: 67.3vw;">
+<div  class="container" style="top: 49.2vw;left: 68.48vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('pottery door mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/potteryDoor.JPG')"
+    ></a>
+    <img class="photo" src="images/potteryDoor.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 52vw;left: 71.3vw;">
     <a class="selection"
        onclick="modalScript('global citizens mural:\n'
        + '⠀⠀year: 2016\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Chloe Jesse\n'
-       + '⠀⠀⠀⠀• Adriana L. Austin\n'
-       + '⠀⠀⠀⠀• Emma Wu Shortt\n'
-       + '⠀⠀⠀⠀• Autumn W Morrison\n'
-       + '⠀⠀⠀⠀• Carmen Sherlock\n'
-       + '⠀⠀⠀⠀• Siena Sassone', 'images/global%20citizens.JPG')"
+       + '⠀⠀⠀⠀Chloe Jesse\n'
+       + '⠀⠀⠀⠀Adriana L. Austin\n'
+       + '⠀⠀⠀⠀Emma Wu Shortt\n'
+       + '⠀⠀⠀⠀Autumn W Morrison\n'
+       + '⠀⠀⠀⠀Carmen Sherlock\n'
+       + '⠀⠀⠀⠀Siena Sassone', 'images/globalCitizens.JPG')"
     ></a>
-    <img class="photo" src="images/global%20citizens.JPG" alt=""/>
+    <img class="photo" src="images/globalCitizens.JPG" alt=""/>
 </div>
 
-<div class="container" style="top: 49vw;left: 68.5vw;">
-    <a style=" height: 2.5vw;" class="selection"
+<div class="container" style="top: 49vw;left: 70.3vw;">
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('grey figures mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/grey%20figures.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/greyFigures.JPG')"
     ></a>
-    <img class="photo" src="images/grey%20figures.JPG" alt=""/>
+    <img class="photo" src="images/greyFigures.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 49vw;left: 70.3vw;">
-    <a style=" height: 2.5vw;" class="selection"
+<div  class="container" style="top: 46.8vw;left: 70.3vw;">
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('graphic design door art:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/graphic%20design%20door.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/graphicDesignDoor.JPG')"
     ></a>
-    <img class="photo" src="images/graphic%20design%20door.JPG" alt=""/>
+    <img class="photo" src="images/graphicDesignDoor.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 52vw;left: 69.5vw;">
-    <a style=" height: 2.5vw;" class="selection"
+<div  class="container" style="top: 51.3vw;left: 69.5vw;">
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('“Elements” mural:\n'
-       +'⠀⠀year: 2022\n'
+       + '⠀⠀year: 2022\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Miranda Vidaly\n'
-       + '⠀⠀⠀⠀• Sydney Millis', 'images/elemental.JPG')"
+       + '⠀⠀⠀⠀Miranda Vidaly\n'
+       + '⠀⠀⠀⠀Sydney Millis', 'images/elemental.JPG')"
     ></a>
     <img class="photo" src="images/elemental.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 49.5vw;left: 72.2vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('rowing team mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Claire B\n'
-       + '⠀⠀⠀⠀• Camille C', 'images/rowing%20team.JPG')"
+       + '⠀⠀⠀⠀Claire B\n'
+       + '⠀⠀⠀⠀Camille C', 'images/rowing%20team.JPG')"
     ></a>
     <img class="photo" src="images/rowing%20team.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 76vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('celestial figures mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/celestial%20figures.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/celestialFigures.JPG')"
     ></a>
-    <img class="photo" src="images/celestial%20figures.JPG" alt=""/>
+    <img class="photo" src="images/celestialFigures.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 78vw;">
     <a class="selection"
        onclick="modalScript('uprising mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/uprising.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Azyr Koreen', 'images/uprising.JPG')"
     ></a>
     <img class="photo" src="images/uprising.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 52vw;left: 80vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('moon cycle mural:\n'
+       + '⠀⠀year: 1995\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Abbe Bender', 'images/moonPhases.JPG')"
+    ></a>
+    <img class="photo" src="images/moonPhases.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 82vw;">
     <a class="selection"
        onclick="modalScript('swirl mural:\n'
-       + '⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/illusory%20swirls.JPG')"
+       + '⠀⠀year: 2015\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀AC\n'
+       + '⠀⠀⠀⠀IS\n'
+       + '⠀⠀⠀⠀GP\n'
+       + '⠀⠀⠀⠀WE\n'
+       + '⠀⠀⠀⠀SG\n'
+       + '⠀⠀⠀⠀BG\n'
+       + '⠀⠀⠀⠀TP', 'images/illusorySwirls.JPG')"
     ></a>
-    <img class="photo" src="images/illusory%20swirls.JPG" alt=""/>
+    <img class="photo" src="images/illusorySwirls.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 40vw;left: 60vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('atomic mural:\n'
        + '⠀⠀year: 1985\n'
-       + '⠀⠀credits: undocumented', 'images/its%20your%20choice.jpeg')"
+       + '⠀⠀credits: undocumented', 'images/yourChoice.JPG')"
     ></a>
-    <img class="photo" src="images/its%20your%20choice.jpeg" alt=""/>
+    <img class="photo" src="images/yourChoice.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 43vw;left: 64.5vw;">
     <a class="selection"
        onclick="modalScript('band room mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/band%20room.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/bandRoom.JPG')"
     ></a>
-    <img class="photo" src="images/band%20room.JPG" alt=""/>
+    <img class="photo" src="images/bandRoom.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 40vw;left: 45vw;">
-    <a style=" height: 2.5vw;" class="selection"
-       onclick="modalScript('debate mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Julia Scher\n'
-       + '⠀⠀⠀⠀• Marston Scher\n'
-       + '⠀⠀⠀⠀• Adriana Ripley\n'
-       + '⠀⠀⠀⠀• Katie Siegfried\n'
-       + '⠀⠀⠀⠀• Jasmine Darmadi\n'
-       + '⠀⠀⠀⠀• Ava Brooks\n'
-       + '⠀⠀⠀⠀• Jenny Mavintana\n'
-       + '⠀⠀⠀⠀• Mara Hindery-Glasinovic\n'
-       + '⠀⠀⠀⠀• Stella Kirby-Ruggiero\n'
-       + '⠀⠀⠀⠀• Solisa Garia\n'
-       + '⠀⠀⠀⠀• Devin Simmons', 'images/debate.JPG')"
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('feminist union mural:\n'
+       + '⠀⠀year: 2021\n'
+       + '⠀⠀credits, feminist union:\n'
+       + '⠀⠀⠀⠀Julia Scher\n'
+       + '⠀⠀⠀⠀Marston Scher\n'
+       + '⠀⠀⠀⠀Adriana Ripley\n'
+       + '⠀⠀⠀⠀Katie Siegfried\n'
+       + '⠀⠀⠀⠀Jasmine Darmadi\n'
+       + '⠀⠀⠀⠀Ava Brooks\n'
+       + '⠀⠀⠀⠀Jenny Mavintana\n'
+       + '⠀⠀⠀⠀Mara Hindery-Glasinovic\n'
+       + '⠀⠀⠀⠀Stella Kirby-Ruggiero\n'
+       + '⠀⠀⠀⠀Solisa Garia\n'
+       + '⠀⠀⠀⠀Devin Simmons', 'images/feminist%20union.JPG')"
     ></a>
-    <img class="photo" src="images/debate.JPG" alt=""/>
+    <img class="photo" src="images/feminist%20union.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 38.5vw;left: 41vw;">
     <a class="selection"
        onclick="modalScript('Memorial Courtyard Mural:\n'
-       +'⠀⠀year: 2011\n'
+       + '⠀⠀year: 2011\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀Esteban Camacho Steffensen',
-       'images/tree%20life%20full.jpg', 'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/', 'find his site here',
-       'The enormous size of an old-growth Sitka Spruce is used to embody the community’s grief over the death of two beloved students. The entire mural is an illustration of the site where the tragedy happened, but the mood and imagery alludes to the resurrection of hope and beauty, rather than the depressive side of the tragedy')"
+       + '⠀⠀⠀⠀• Esteban Camacho Steffensen\n'
+       + '⠀⠀⠀⠀• Positive Change Club', 'images/memorialCourtyardFull.JPG',
+       'The enormous size of an old-growth Sitka Spruce is used to embody the community’s grief over the death of two beloved students. The entire mural is an illustration of the site where the tragedy happened, but the mood and imagery alludes to the resurrection of hope and beauty, rather than the depressive side of the tragedy',
+       'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/', 'find esteban’s site here')"
     ></a>
-    <img class="photo" src="images/tree%20life%203.JPG" alt=""/>
+    <img class="photo" src="images/memorialCourtyard.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 38.6vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('mayan mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Ellen Wang\n'
-       + '⠀⠀⠀⠀• Alex McConnell\n'
-       + '⠀⠀⠀⠀• Shelby Wanser\n'
-       + '⠀⠀⠀⠀• Ekongkar Khalsa\n'
-       + '⠀⠀⠀⠀• Tori Butler\n'
-       + '⠀⠀⠀⠀• Marie Morrison\n'
-       + '⠀⠀⠀⠀• Brittney Reynolds\n'
-       + '⠀⠀⠀⠀• Vivian Hsieh\n'
-       + '⠀⠀⠀⠀• ALiza Vaccher\n'
-       + '⠀⠀⠀⠀• Jake Roberts\n'
-       + '⠀⠀⠀⠀• Mandy Walker\n'
-       + '⠀⠀⠀⠀• Lafollette', 'images/mayan.JPG')"
+       + '⠀⠀⠀⠀Ellen Wang\n'
+       + '⠀⠀⠀⠀Alex McConnell\n'
+       + '⠀⠀⠀⠀Shelby Wanser\n'
+       + '⠀⠀⠀⠀Ekongkar Khalsa\n'
+       + '⠀⠀⠀⠀Tori Butler\n'
+       + '⠀⠀⠀⠀Marie Morrison\n'
+       + '⠀⠀⠀⠀Brittney Reynolds\n'
+       + '⠀⠀⠀⠀Vivian Hsieh\n'
+       + '⠀⠀⠀⠀ALiza Vaccher\n'
+       + '⠀⠀⠀⠀Jake Roberts\n'
+       + '⠀⠀⠀⠀Mandy Walker\n'
+       + '⠀⠀⠀⠀Lafollette', 'images/mayan.JPG')"
     ></a>
     <img class="photo" src="images/mayan.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 36.5vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('space mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits, SEHS art club:\n'
-       + '⠀⠀⠀⠀• Julia Chou\n'
-       + '⠀⠀⠀⠀• Dani White\n'
-       + '⠀⠀⠀⠀• Tabia Schmidt\n'
-       + '⠀⠀⠀⠀• Sarah Coates', 'images/space.JPG')"
+       + '⠀⠀⠀⠀Julia Chou\n'
+       + '⠀⠀⠀⠀Dani White\n'
+       + '⠀⠀⠀⠀Tabia Schmidt\n'
+       + '⠀⠀⠀⠀Sarah Coates', 'images/space.JPG')"
     ></a>
     <img class="photo" src="images/space.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 32vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('asia mural:\n'
-       +'⠀⠀year: 2010\n'
+       + '⠀⠀year: 2010\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Ellen Wang\n'
-       + '⠀⠀⠀⠀• Vivian Hsieh\n'
-       + '⠀⠀⠀⠀• Marie Morrison\n'
-       + '⠀⠀⠀⠀• Kati Duffy\n'
-       + '⠀⠀⠀⠀• Alex McConnell\n'
-       + '⠀⠀⠀⠀• xiaolu liu\n'
-       + '⠀⠀⠀⠀• Nina Selingson\n'
-       + '⠀⠀⠀⠀• Madisyn Schultz\n'
-       + '⠀⠀⠀⠀• Sky Sobol\n'
-       + '⠀⠀⠀⠀• Shelby Wanser\n'
-       + '⠀⠀⠀⠀• Aimee Jones\n'
-       + '⠀⠀⠀⠀• Suematsu\n'
-       + '⠀⠀⠀⠀• Jake Roberts\n'
-       + '⠀⠀⠀⠀• Olivia Curl\n'
-       + '⠀⠀⠀⠀• Mandy Walker\n'
-       + '⠀⠀⠀⠀• Lafollette', 'images/asia%20array.png')"
+       + '⠀⠀⠀⠀Ellen Wang\n'
+       + '⠀⠀⠀⠀Vivian Hsieh\n'
+       + '⠀⠀⠀⠀Marie Morrison\n'
+       + '⠀⠀⠀⠀Kati Duffy\n'
+       + '⠀⠀⠀⠀Alex McConnell\n'
+       + '⠀⠀⠀⠀xiaolu liu\n'
+       + '⠀⠀⠀⠀Nina Selingson\n'
+       + '⠀⠀⠀⠀Madisyn Schultz\n'
+       + '⠀⠀⠀⠀Sky Sobol\n'
+       + '⠀⠀⠀⠀Shelby Wanser\n'
+       + '⠀⠀⠀⠀Aimee Jones\n'
+       + '⠀⠀⠀⠀Suematsu\n'
+       + '⠀⠀⠀⠀Jake Roberts\n'
+       + '⠀⠀⠀⠀Olivia Curl\n'
+       + '⠀⠀⠀⠀Mandy Walker\n'
+       + '⠀⠀⠀⠀Lafollette', 'images/asiaFull.png')"
     ></a>
-    <img class="photo" src="images/asia%201.JPG" alt=""/>
+    <img class="photo" src="images/asia.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 28vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('ELJ mural:\n'
-       +'⠀⠀year: 2025-2026\n'
-       + '⠀⠀credits: undocumented', 'images/Elj.JPG')"
+       + '⠀⠀year: 2025-2026\n'
+       + '⠀⠀credits: undocumented', 'images/elj.JPG')"
     ></a>
-    <img class="photo" src="images/Elj.JPG" alt=""/>
+    <img class="photo" src="images/elj.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 39.3vw;left: 25.5vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('hammock mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Erika Writh\n'
-       + '⠀⠀⠀⠀• Lindsay Monroe\n'
-       + '⠀⠀⠀⠀• Brian Moshofsky\n'
-       + '⠀⠀⠀⠀• Chelsea Jones\n'
-       + '⠀⠀⠀⠀• Carissa Crowder\n'
-       + '⠀⠀⠀⠀• Darby Jones\n'
-       + '⠀⠀⠀⠀• Enim Gray\n'
-       + '⠀⠀⠀⠀• Nic Lamb', 'images/hammock.JPG')"
+       + '⠀⠀⠀⠀Erika Writh\n'
+       + '⠀⠀⠀⠀Lindsay Monroe\n'
+       + '⠀⠀⠀⠀Brian Moshofsky\n'
+       + '⠀⠀⠀⠀Chelsea Jones\n'
+       + '⠀⠀⠀⠀JC\n'
+       + '⠀⠀⠀⠀Carissa Crowder\n'
+       + '⠀⠀⠀⠀Darby Jones\n'
+       + '⠀⠀⠀⠀Enim Gray\n'
+       + '⠀⠀⠀⠀Nic Lamb', 'images/hammock.JPG')"
     ></a>
     <img class="photo" src="images/hammock.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 36vw;left: 25vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('kids down south door frame:\n'
-       +'⠀⠀year: 2019\n'
+       + '⠀⠀year: 2019\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Camille Crosswell\n'
-       + '⠀⠀⠀⠀• Riley Brandt', 'images/kids%20down%20south.JPG')"
+       + '⠀⠀⠀⠀Camille Crosswell\n'
+       + '⠀⠀⠀⠀Riley Brandt', 'images/kidsDownSouth.JPG')"
     ></a>
-    <img class="photo" src="images/kids%20down%20south.JPG" alt=""/>
+    <img class="photo" src="images/kidsDownSouth.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 46vw;left: 14.8vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a class="selection"
        onclick="modalScript('city to landscape mural:\n'
-       +'⠀⠀year: 2015\n'
+       + '⠀⠀year: 2015\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Julia Chou', 'images/city%20to%20landscape.JPG')"
+       + '⠀⠀⠀⠀Julia Chou', 'images/cityToLandscape.JPG')"
     ></a>
-    <img class="photo" src="images/city%20to%20landscape.JPG" alt=""/>
+    <img class="photo" src="images/cityToLandscape.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 46vw;left: 12.8vw;">
     <a class="selection"
        onclick="modalScript('courtroom mural (WIP):\n'
-       +'⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
+       + '⠀⠀year: 2026\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀June Turner\n'
+       + '⠀⠀⠀⠀Ella Killingsworth\n'
+       + '⠀⠀⠀⠀Kathryn Hehman\n'
+       + '⠀⠀⠀⠀Hanesh Pasternak\n'
+       + '⠀⠀⠀⠀Ira Young\n'
+       + '⠀⠀⠀⠀Addison St Clair\n'
+       + '⠀⠀⠀⠀Cal Desmond', 'images/courtroom.JPG')"
     ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
+    <img class="photo" src="images/courtroom.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 30.5vw;left: 11vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('climber mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/climber.JPG')"
     ></a>
     <img class="photo" src="images/climber.JPG" alt=""/>
@@ -596,46 +642,39 @@
 <div  class="container" style="top: 28.8vw;left: 33vw;">
     <a class="selection"
        onclick="modalScript('library back door mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/library.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀GG Janssen Kannin\n'
+       + '⠀⠀⠀⠀Brynn Gerl', 'images/library.JPG')"
     ></a>
     <img class="photo" src="images/library.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 30vw;left: 42vw;">
-    <a style=" height: 2.5vw;" class="selection"
-       onclick="modalScript('ornate door art:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/ornate%20door.JPG')"
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('ornate door art (WIP?):\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: Elenore Turner', 'images/ornateDoor.JPG')"
     ></a>
-    <img class="photo" src="images/ornate%20door.JPG" alt=""/>
-</div>
-
-<div  class="container" style="top: 30.5vw;left: 39.5vw;">
-    <a class="selection"
-       onclick="modalScript('cloud wall paint:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
-    ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
+    <img class="photo" src="images/ornateDoor.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 28vw;left: 52vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('Latinx Student Union mural:\n'
-       +'⠀⠀year: 2020-2021\n'
-       + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Miranda Mora\n'
-       + '⠀⠀⠀⠀• Ella Garner\n'
-       + '⠀⠀⠀⠀• Sophia Carrai\n'
-       + '⠀⠀⠀⠀• Iliana Barnes Daiz\n'
-       + '⠀⠀⠀⠀• Antonia Serrano\n'
-       + '⠀⠀⠀⠀• Maddy Ferguson\n'
-       + '⠀⠀⠀⠀• Sarah Dione\n'
-       + '⠀⠀⠀⠀• Nina Vanryzin\n'
-       + '⠀⠀⠀⠀• Sofi Serano\n'
-       + '⠀⠀⠀⠀• Jude Licea\n'
-       + '⠀⠀⠀⠀• Gion', 'images/spanish.JPG')"
+       + '⠀⠀year: 2020-2021\n'
+       + '⠀⠀credits, Latinx Student Union:\n'
+       + '⠀⠀⠀⠀Miranda Mora\n'
+       + '⠀⠀⠀⠀Ella Garner\n'
+       + '⠀⠀⠀⠀Sophia Carrai\n'
+       + '⠀⠀⠀⠀Iliana Barnes Daiz\n'
+       + '⠀⠀⠀⠀Antonia Serrano\n'
+       + '⠀⠀⠀⠀Maddy Ferguson\n'
+       + '⠀⠀⠀⠀Sarah Dione\n'
+       + '⠀⠀⠀⠀Nina Vanryzin\n'
+       + '⠀⠀⠀⠀Sofi Serano\n'
+       + '⠀⠀⠀⠀Jude Licea\n'
+       + '⠀⠀⠀⠀Gion', 'images/spanish.JPG')"
     ></a>
     <img class="photo" src="images/spanish.JPG" alt=""/>
 </div>
@@ -643,159 +682,351 @@
 <div  class="container" style="top: 30.8vw;left: 56vw;">
     <a class="selection"
        onclick="modalScript('performing arts mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Ila K.\n'
-       + '⠀⠀⠀⠀• Sanja K.', 'images/performing%20arts%20array.png')"
+       + '⠀⠀⠀⠀Ila K.\n'
+       + '⠀⠀⠀⠀Sanja K.', 'images/performingArtsFull.png')"
     ></a>
-    <img class="photo" src="images/performing%20arts%201.JPG" alt=""/>
+    <img class="photo" src="images/performingArts.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 32.5vw;left: 56.7vw;">
     <a class="selection"
        onclick="modalScript('space ship mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• David Derstmann', 'images/spaceship.JPG')"
+       + '⠀⠀⠀⠀David Derstmann', 'images/spaceship.JPG')"
     ></a>
     <img class="photo" src="images/spaceship.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 31.3vw;left: 58.4vw;">
     <a class="selection"
-       onclick="modalScript('red portrait mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/red%20figure.JPG')"
+       onclick="modalScript('Carlos Santana mural:\n'
+       + '⠀⠀year: 70-80ish\n'
+       + '⠀⠀credits: undocumented', 'images/carlosSantana.JPG', 'https://en.wikipedia.org/wiki/Carlos_Santana_%26_Buddy_Miles!_Live!?scrlybrkr=3cd5f968', 'its based on this album cover')"
     ></a>
-    <img class="photo" src="images/red%20figure.JPG" alt=""/>
+    <img class="photo" src="images/carlosSantana.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 36vw;left: 58.8vw;">
     <a class="selection"
        onclick="modalScript('stripe portrait mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/stripe%20figure.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/stripeFigure.JPG')"
     ></a>
-    <img class="photo" src="images/stripe%20figure.JPG" alt=""/>
+    <img class="photo" src="images/stripeFigure.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 37.5vw;left: 58.8vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('curling smoke mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Rhett “90”', 'images/curling%20smoke.JPG')"
+       + '⠀⠀⠀⠀Rhett “90”', 'images/curlingSmoke.JPG')"
     ></a>
-    <img class="photo" src="images/curling%20smoke.JPG" alt=""/>
+    <img class="photo" src="images/curlingSmoke.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 32.8vw;left: 58.8vw;">
     <a class="selection"
        onclick="modalScript('art has no rules mural:\n'
-       +'⠀⠀year: undocumented\n'
+       + '⠀⠀year: undocumented\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀• Noah Mifsud\n'
-       + '⠀⠀⠀⠀• Skyelar Ginsberg\n'
-       + '⠀⠀⠀⠀• Brennen MoCulloch\n'
-       + '⠀⠀⠀⠀• Jeremy Guenza-Marcus\n'
-       + '⠀⠀⠀⠀• Gabriela Petty\n'
-       + '⠀⠀⠀⠀• Emily Domínguez\n'
-       + '⠀⠀⠀⠀• Zielle Walsh\n'
-       + '⠀⠀⠀⠀• Mark Shum\n'
-       + '⠀⠀⠀⠀• Finn Mifsud', 'images/art%20has%20no%20rules.JPG')"
+       + '⠀⠀⠀⠀Noah Mifsud\n'
+       + '⠀⠀⠀⠀Skyelar Ginsberg\n'
+       + '⠀⠀⠀⠀Brennen MoCulloch\n'
+       + '⠀⠀⠀⠀Jeremy Guenza-Marcus\n'
+       + '⠀⠀⠀⠀Gabriela Petty\n'
+       + '⠀⠀⠀⠀Emily Domínguez\n'
+       + '⠀⠀⠀⠀Zielle Walsh\n'
+       + '⠀⠀⠀⠀Mark Shum\n'
+       + '⠀⠀⠀⠀Finn Mifsud', 'images/artHasNoRules.JPG')"
     ></a>
-    <img class="photo" src="images/art%20has%20no%20rules.JPG" alt=""/>
+    <img class="photo" src="images/artHasNoRules.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 34.5vw;left: 58.8vw;">
     <a class="selection"
        onclick="modalScript('floating geometry mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/floating%20geometry.JPG')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/floatingGeometry.JPG')"
     ></a>
-    <img class="photo" src="images/floating%20geometry.JPG" alt=""/>
+    <img class="photo" src="images/floatingGeometry.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 56vw;">
-    <a style=" height: 2.5vw;" class="selection"
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('human rights mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/human%20rights.jpeg')"
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Aria L-S\n'
+       + '⠀⠀⠀⠀Haylee Anne RC\n'
+       + '⠀⠀⠀⠀Benny S\n'
+       + '⠀⠀⠀⠀Eleni K\n'
+       + '⠀⠀⠀⠀Anya M\n'
+       + '⠀⠀⠀⠀Sofia C\n'
+       + '⠀⠀⠀⠀Zack S\n'
+       + '⠀⠀⠀⠀Edie Q\n'
+       + '⠀⠀⠀⠀Connor HS\n'
+       + '⠀⠀⠀⠀Maria S\n'
+       + '⠀⠀⠀⠀Olivia R\n'
+       + '⠀⠀⠀⠀Lucie G\n'
+       + '⠀⠀⠀⠀Ansley J', 'images/humanRights.JPG')"
     ></a>
-    <img class="photo" src="images/human%20rights.jpeg" alt=""/>
+    <img class="photo" src="images/humanRights.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 6.8vw;left: 50vw;">
+<div  class="container" style="top: 6.8vw;left: 48vw;">
     <a class="selection"
        onclick="modalScript('japanese club mural (WIP):\n'
-       +'⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/japanese%20club.jpg')"
+       + '⠀⠀year: 2026\n'
+       + '⠀⠀credits: undocumented', 'images/japanese%20club.JPG')"
     ></a>
-    <img class="photo" src="images/japanese%20club.jpg" alt=""/>
+    <img class="photo" src="images/japanese%20club.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 6.8vw;left: 46.5vw;">
+<div  class="container" style="top: 6.8vw;left: 43vw;">
     <a class="selection"
        onclick="modalScript('MLK mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/MLK%20array.png')"
+       + '⠀⠀year: 2008\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀ANS', 'images/mlkFull.png')"
     ></a>
-    <img class="photo" src="images/MLK%201.JPG" alt=""/>
+    <img class="photo" src="images/mlk.JPG" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 18vw;">
     <a class="selection"
        onclick="modalScript('ancient culture mural:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/ancient%20culture.JPG')"
+       + '⠀⠀year: 2010\n'
+       + '⠀⠀credits:\n' +
+        '⠀⠀⠀⠀Nick Sugiyama', 'images/ancientCulture.JPG')"
     ></a>
-    <img class="photo" src="images/ancient%20culture.JPG" alt=""/>
+    <img class="photo" src="images/ancientCulture.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 6.8vw;left: 28vw;">
+<div  class="container" style="top: 6.8vw;left: 32vw;">
     <a class="selection"
        onclick="modalScript('assorted structures mural:\n'
        + '⠀⠀year: 2010\n'
        + '⠀⠀credits:\n'
-       + '⠀⠀⠀⠀Claire Write', 'images/assorted%20structures.JPG')"
+       + '⠀⠀⠀⠀Claire Write', 'images/assortedStructures.JPG')"
     ></a>
-    <img class="photo" src="images/assorted%20structures.JPG" alt=""/>
+    <img class="photo" src="images/assortedStructures.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 33vw;left: 47vw;">
-    <a style=" height: 2.5vw;" class="selection"
+<div  class="container" style="top: 37vw;left: 47vw;">
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('jellyfish door art:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/jellyfish.JPG')"
+       + '⠀⠀year: 2024\n'
+       + '⠀⠀credits:\n' +
+        '⠀⠀⠀⠀Marely Heman', 'images/jellyfish.JPG')"
     ></a>
     <img class="photo" src="images/jellyfish.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 37vw;left: 47vw;">
-    <a style=" height: 2.5vw;" class="selection"
+<div  class="container" style="top: 33vw;left: 47vw;">
+    <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('whale door art:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/whale.JPG')"
+       + '⠀⠀year: 2024\n'
+       + '⠀⠀credits:\n' +
+        '⠀⠀⠀⠀Marely Heman', 'images/whale.JPG')"
     ></a>
     <img class="photo" src="images/whale.JPG" alt=""/>
 </div>
 
-<div  class="container" style="top: 43.5vw;left: 62.3vw;">
-    <a class="selection"
-       onclick="modalScript('dressing room painting?:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/placeholder.png')"
-    ></a>
-    <img class="photo" src="images/placeholder.png" alt=""/>
-</div>
+<!--<div  class="container" style="top: 43.5vw;left: 62.3vw;">-->
+<!--    <a class="selection"-->
+<!--       onclick="modalScript('dressing room painting?:\n'-->
+<!--       + '⠀⠀year: undocumented\n'-->
+<!--       + '⠀⠀credits: undocumented', 'images/placeholder.png')"-->
+<!--    ></a>-->
+<!--    <img class="photo" src="images/placeholder.png" alt=""/>-->
+<!--</div>-->
 
 <div  class="container" style="top: 44vw;left: 45.5vw;">
     <a class="selection"
        onclick="modalScript('periodic table art fixture:\n'
-       +'⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/periodic%20table.jpeg')"
+       + '⠀⠀year: 1996\n'
+       + '⠀⠀credits: undocumented', 'images/periodicTableFull.png')"
     ></a>
-    <img class="photo" src="images/periodic%20table.jpeg" alt=""/>
+    <img class="photo" src="images/periodicTable.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 38.2vw;left: 16vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('IOP climber mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/iopClimber.JPG')"
+    ></a>
+    <img class="photo" src="images/iopClimber.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 38.5vw;left: 18vw;">
+    <a class="selection"
+       onclick="modalScript('daylight cycle mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/dayNightFull.png')"
+    ></a>
+    <img class="photo" src="images/dayNight.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 38.5vw;left: 20vw;">
+    <a class="selection"
+       onclick="modalScript('maria:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Maita Keppler\n'
+       + '⠀⠀⠀⠀Autumn R Hummel', 'images/mariaFull.png')"
+    ></a>
+    <img class="photo" src="images/maria.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 38vw;left: 22vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('sunflower mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Corina MacWilliams\n'
+       + '⠀⠀⠀⠀Maggie Clark', 'images/sunflower.JPG')"
+    ></a>
+    <img class="photo" src="images/sunflower.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 35vw;left: 22vw;">
+    <a class="selection"
+       onclick="modalScript('surreal space mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/surealSpaceFull.png')"
+    ></a>
+    <img class="photo" src="images/surealSpace.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 31.5vw;left: 19vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('planet alignment mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/planetAlignment.JPG')"
+    ></a>
+    <img class="photo" src="images/planetAlignment.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 30.7vw;left: 16vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('pine tree mural:\n'
+       + '⠀⠀year: 2016\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Joey E\n'
+       + '⠀⠀⠀⠀Clara H\n'
+       + '⠀⠀⠀⠀Orion LLoyd\n'
+       + '⠀⠀⠀⠀Taha A Worman\n'
+       + '⠀⠀⠀⠀Nathan Jardine\n'
+       + '⠀⠀⠀⠀Coleen Young\n'
+       + '⠀⠀⠀⠀Dylan Wagner\n'
+       + '⠀⠀⠀⠀Jonas Jackson-Moses\n'
+       + '⠀⠀⠀⠀Sam Dean\n'
+       + '⠀⠀⠀⠀Natalie Brandt\n'
+       + '⠀⠀⠀⠀Ryan Holt\n'
+       + '⠀⠀⠀⠀Sahalie Pittman', 'images/pineFull.png')"
+    ></a>
+    <img class="photo" src="images/pine.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 34.5vw;left: 16vw;">
+    <a class="selection"
+       onclick="modalScript('eyes mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/eyes.JPG')"
+    ></a>
+    <img class="photo" src="images/eyes.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 33vw;left: 16vw;">
+    <a class="selection"
+       onclick="modalScript('sunset mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/sunset2.JPG')"
+    ></a>
+    <img class="photo" src="images/sunset1.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 36vw;left: 16vw;">
+    <a style=" height: 2.3vw;" class="selection"
+       onclick="modalScript('nature emblems:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/natureEmblems.JPG')"
+    ></a>
+    <img class="photo" src="images/natureEmblems.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 38vw;left: 33vw;">
+    <a class="selection"
+       onclick="modalScript('DR seuss mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/drSeuss.JPG')"
+    ></a>
+    <img class="photo" src="images/drSeuss.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 36vw;left: 33vw;">
+    <a class="selection"
+       onclick="modalScript('hungry caterpillar mural:\n'
+       + '⠀⠀year: 2017\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀KDS\n'
+       + '⠀⠀⠀⠀IOP', 'images/hungryCaterpillar.JPG')"
+    ></a>
+    <img class="photo" src="images/hungryCaterpillar.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 34vw;left: 33vw;">
+    <a class="selection"
+       onclick="modalScript('where the wild things are mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Lina Ko\n'
+       + '⠀⠀⠀⠀Elaima Vaogue\n'
+       + '⠀⠀⠀⠀Aidan Murphy\n'
+       + '⠀⠀⠀⠀Natalie Brandt', 'images/wildThings.JPG')"
+    ></a>
+    <img class="photo" src="images/wildThings.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 35vw;left: 27vw;">
+    <a class="selection"
+       onclick="modalScript('kids down south play area murals:\n'
+       + '⠀⠀year: 2007\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀MBQ\n'
+       + '⠀⠀⠀⠀Aula RodeRoark', 'images/playAreaFull.png')"
+    ></a>
+    <img class="photo" src="images/playArea.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 38.5vw;left: 30vw;">
+    <a class="selection"
+       onclick="modalScript('kids down south pavilion mural:\n'
+       + '⠀⠀year: 1999\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀Jeffries\n'
+       + '⠀⠀⠀⠀Jean Lee\n'
+       + '⠀⠀⠀⠀Libby S\n'
+       + '⠀⠀⠀⠀Emily Short\n'
+       + '⠀⠀⠀⠀Jean Lee\n'
+       + '⠀⠀⠀⠀Holly A Bayne\n'
+       + '⠀⠀⠀⠀Holee Kaagan', 'images/kidsPavilionFull.png')"
+    ></a>
+    <img class="photo" src="images/kidsPavilion.JPG" alt=""/>
+</div>
+
+<div  class="container" style="top: 35vw;left: 43.5vw;">
+    <a class="selection"
+       onclick="modalScript('skateboard tree mural:\n'
+       + '⠀⠀year: undocumented\n'
+       + '⠀⠀credits: undocumented', 'images/skateboard%20tree.JPG')"
+    ></a>
+    <img class="photo" src="images/skateboard%20tree.JPG" alt=""/>
 </div>
 
 
@@ -810,7 +1041,7 @@
     var redirect = document.getElementById("redirect");
     var caption = document.getElementById("caption");
 
-    function modalScript(text, photo, link, linkText, extra) {
+    function modalScript(text, photo, extra, link, linkText) {
         modal.style.opacity = "1";
         screenDarken.style.opacity = "1";
         screenDarken.style.pointerEvents = "auto";
@@ -835,6 +1066,7 @@
         redirect.href = '';
         redirect.innerText = '';
         caption.innerText = '';
+        image.src = 'images/blank.png';
     }
 
 </script>
