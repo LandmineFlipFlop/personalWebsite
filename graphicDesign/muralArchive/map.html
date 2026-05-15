@@ -66,7 +66,6 @@
             border-style: solid;
             border-width: 0.2vw;
             border-color: black;
-            filter: grayscale(30%) contrast(70%) brightness(130%) blur(0.03vw);
             background-color: rgba(0, 0, 0, 0.48);
         }
         .container .selection:hover + .photo {
@@ -75,7 +74,6 @@
             z-index: 4;
             border-width: 0.05vw;
             cursor: pointer;
-            filter: grayscale(0) contrast(100%) brightness(100%) blur(0);
         }
 
 
@@ -383,8 +381,9 @@
 <div  class="container" style="top: 46.8vw;left: 70.3vw;">
     <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('graphic design door art:\n'
-       + '⠀⠀year: undocumented\n'
-       + '⠀⠀credits: undocumented', 'images/graphicDesignDoor.jpg')"
+       + '⠀⠀year: 2022\n'
+       + '⠀⠀credits:\n'
+       + '⠀⠀⠀⠀• Seth Hofeijer', 'images/graphicDesignDoor.jpg')"
     ></a>
     <img class="photo" src="images/graphicDesignDoor.jpg" alt=""/>
 </div>
@@ -838,15 +837,6 @@
     <img class="photo" src="images/whale.jpg" alt=""/>
 </div>
 
-<!--<div  class="container" style="top: 43.5vw;left: 62.3vw;">-->
-<!--    <a class="selection"-->
-<!--       onclick="modalScript('dressing room painting?:\n'-->
-<!--       + '⠀⠀year: undocumented\n'-->
-<!--       + '⠀⠀credits: undocumented', 'images/placeholder.png')"-->
-<!--    ></a>-->
-<!--    <img class="photo" src="images/placeholder.png" alt=""/>-->
-<!--</div>-->
-
 <div  class="container" style="top: 44vw;left: 45.5vw;">
     <a class="selection"
        onclick="modalScript('periodic table art fixture:\n'
@@ -1032,16 +1022,20 @@
 </div>
 
 
+
+
+
+
 </body>
 
 <script>
-    var modal = document.getElementById("myModal");
-    var span = document.getElementById("close");
-    var content = document.getElementById("content");
-    var image = document.getElementById("image");
-    var screenDarken = document.getElementById("screenDarken");
-    var redirect = document.getElementById("redirect");
-    var caption = document.getElementById("caption");
+    let modal = document.getElementById("myModal");
+    let span = document.getElementById("close");
+    let content = document.getElementById("content");
+    let image = document.getElementById("image");
+    let screenDarken = document.getElementById("screenDarken");
+    let redirect = document.getElementById("redirect");
+    let caption = document.getElementById("caption");
 
     function modalScript(text, photo, extra, link, linkText) {
         modal.style.opacity = "1";
