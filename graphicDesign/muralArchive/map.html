@@ -121,17 +121,36 @@
             cursor: pointer;
         }
     </style>
+    <style>
+        .loader {
+            width: 5vw;
+            padding: 1vw;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: #ffffff;
+            --_m:
+                    conic-gradient(#0000 20%,#000),
+                    linear-gradient(#000 0 0) content-box;
+            -webkit-mask: var(--_m);
+            mask: var(--_m);
+            -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+            animation: l3 1s infinite linear;
+        }
+        @keyframes l3 {to{transform: rotate(1turn)}}
+    </style>
 
     <title>mural map</title>
 
 </head>
 
-<body>
+<body onload="hideLoader()">
 
 <h1>South Eugene High School interactive mural map</h1>
 <img src="images/southMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none; user-select:none; pointer-events: none; z-index: 0; filter: blur(0.2vw)" alt=""/>
 <img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.75vw; left: 0.5vw;filter: blur(0.2vw) brightness(0) opacity(0.6);" alt=""/>
 <img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.5vw; left: 0.5vw;" alt=""/>
+<div class="loader" id="loader" style="position: absolute; top: 50vh; left: 35vw; z-index: 10;"></div>
 
 <br/><br/><br/>
 
@@ -147,7 +166,7 @@
 
 </div>
 
-<div class="screenDarken" id="screenDarken" style="opacity: 0" onclick="modalClose()"></div>
+<div class="screenDarken" id="screenDarken" style="opacity: 1; pointer-events: auto" onclick="modalClose()"></div>
 
 <div  class="container" style="top: 50.7vw;left: 47.5vw;">
     <a class="selection"
@@ -1036,6 +1055,8 @@
     let screenDarken = document.getElementById("screenDarken");
     let redirect = document.getElementById("redirect");
     let caption = document.getElementById("caption");
+    let loader = document.getElementById("loader");
+    let loading = true;
 
     function modalScript(text, photo, extra, link, linkText) {
         modal.style.opacity = "1";
@@ -1055,14 +1076,23 @@
         }
     }
     function modalClose() {
-        modal.style.opacity = "0";
+        if (!loading) {
+            modal.style.opacity = "0";
+            screenDarken.style.opacity = "0";
+            screenDarken.style.pointerEvents = "none";
+            modal.style.pointerEvents = "none";
+            redirect.href = '';
+            redirect.innerText = '';
+            caption.innerText = '';
+            image.src = 'images/blank.png';
+        }
+    }
+
+    function hideLoader() {
+        loading = false;
+        loader.style.display = 'none';
         screenDarken.style.opacity = "0";
         screenDarken.style.pointerEvents = "none";
-        modal.style.pointerEvents = "none";
-        redirect.href = '';
-        redirect.innerText = '';
-        caption.innerText = '';
-        image.src = 'images/blank.png';
     }
 
 </script>
