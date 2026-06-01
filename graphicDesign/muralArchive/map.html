@@ -123,8 +123,8 @@
     </style>
     <style>
         .loader {
-            width: 5vw;
-            padding: 1vw;
+            width: 10vw;
+            padding: 2vw;
             aspect-ratio: 1;
             border-radius: 50%;
             background: #ffffff;
@@ -146,11 +146,11 @@
 
 <body onload="hideLoader()">
 
-<h1>South Eugene High School interactive mural map</h1>
-<img src="images/southMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none; user-select:none; pointer-events: none; z-index: 0; filter: blur(0.2vw)" alt=""/>
+<h1 style="display: inline-block;">SEHS Interactive Mural Archive</h1> <div style="width: 32vw; display: inline-block"></div> <h2 style="display: inline-block;"> <a href="gallery.html" target="_blank">gallery</a></h2>
+<img src="images/southMapSatelite.png" style="width:80vw; padding: 5vw; -webkit-user-select:none; user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.75vw; left: 0.5vw; filter: blur(0.2vw)" alt=""/>
 <img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.75vw; left: 0.5vw;filter: blur(0.2vw) brightness(0) opacity(0.6);" alt=""/>
 <img src="images/muralMapNoLabels.png" style="width:80vw; padding: 5vw; -webkit-user-select:none;user-select:none; pointer-events: none; z-index: 0; position: absolute; top: 0.5vw; left: 0.5vw;" alt=""/>
-<div class="loader" id="loader" style="position: absolute; top: 50vh; left: 35vw; z-index: 10;"></div>
+<div class="loader" id="loader" style="position: absolute; top: 40vh; left: 40vw; z-index: 10;"></div>
 
 <br/><br/><br/>
 
@@ -177,7 +177,7 @@
        + '⠀⠀⠀⠀• RNX\n'
        + '⠀⠀⠀⠀• AG', 'images/birdCorner.jpg')"
     ></a>
-    <img class="photo" src="images/birdCorner.jpg" alt=""/>
+    <img class="photo" src="previews/birdCorner.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 50.7vw;left: 52vw;">
@@ -190,7 +190,7 @@
        + '⠀⠀⠀⠀• Liam Davis\n'
        + '⠀⠀⠀⠀• Savannah Stanley', 'images/mountains.jpg')"
     ></a>
-    <img class="photo" src="images/mountains.jpg" alt=""/>
+    <img class="photo" src="previews/mountains.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 43vw;left: 47.8vw;">
@@ -200,7 +200,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Bryan G', 'images/oceanPollution.jpg')"
     ></a>
-    <img class="photo" src="images/oceanPollution.jpg" alt=""/>
+    <img class="photo" src="previews/oceanPollution.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 49.8vw;left: 49.4vw;">
@@ -210,7 +210,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Claire', 'images/forrest.jpg')"
     ></a>
-    <img class="photo" src="images/forrest.jpg" alt=""/>
+    <img class="photo" src="previews/forrest.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 49.4vw;left: 45.3vw;">
@@ -222,19 +222,19 @@
        'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/',
        'find esteban’s site here')"
     ></a>
-    <img class="photo" src="images/scienceHall.jpg" alt=""/>
+    <img class="photo" src="previews/scienceHall.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 44.5vw;left: 42vw;">
     <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('einstein mural:\n'
-       + '⠀⠀year: undocumented\n'
+       + '⠀⠀year: 2016\n'
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Hannah Nute\n'
        + '⠀⠀⠀⠀• Carson Schmittle\n'
        + '⠀⠀⠀⠀• Ze\'ev Tubman', 'images/einstein.jpg')"
     ></a>
-    <img class="photo" src="images/einstein.jpg" alt=""/>
+    <img class="photo" src="previews/einstein.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 47.5vw;left: 42.5vw;">
@@ -247,7 +247,7 @@
        + '⠀⠀⠀⠀• Kove Janeski\n'
        + '⠀⠀⠀⠀• Z.W.E', 'images/feynman.jpg')"
     ></a>
-    <img class="photo" src="images/feynman.jpg" alt=""/>
+    <img class="photo" src="previews/feynman.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 45.5vw;left: 44.3vw;">
@@ -259,7 +259,7 @@
        + '⠀⠀⠀⠀• Dani White\n'
        + '⠀⠀⠀⠀• Tabia Schmidt', 'images/curie.jpg')"
     ></a>
-    <img class="photo" src="images/curie.jpg" alt=""/>
+    <img class="photo" src="previews/curie.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 47vw;left: 57.5vw;">
@@ -268,7 +268,7 @@
        + '⠀⠀year: 2026\n'
        + '⠀⠀credits: undocumented', 'images/fishSchoolFull.png')"
     ></a>
-    <img class="photo" src="images/fishSchool.jpg" alt=""/>
+    <img class="photo" src="previews/fishSchool.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 43vw;left: 58.5vw;">
@@ -278,7 +278,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Aurora', 'images/stage.jpg')"
     ></a>
-    <img class="photo" src="images/stage.jpg" alt=""/>
+    <img class="photo" src="previews/stage.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 45vw;left: 58.5vw;">
@@ -288,7 +288,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Maria Maita Keppeler', 'images/seasideScene.jpg')"
     ></a>
-    <img class="photo" src="images/seasideScene.jpg" alt=""/>
+    <img class="photo" src="previews/seasideScene.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 59.5vw;">
@@ -304,7 +304,7 @@
        + '⠀⠀⠀⠀• Dale R\n'
        + '⠀⠀⠀⠀• Anahi C-A', 'images/villageScene.jpg')"
     ></a>
-    <img class="photo" src="images/villageScene.jpg" alt=""/>
+    <img class="photo" src="previews/villageScene.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 57.8vw;">
@@ -314,7 +314,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Maple', 'images/abstractFish.jpg')"
     ></a>
-    <img class="photo" src="images/abstractFish.jpg" alt=""/>
+    <img class="photo" src="previews/abstractFish.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 52.5vw;left: 61vw;">
@@ -324,16 +324,16 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Johanna Wright', 'images/sunglasses.jpg')"
     ></a>
-    <img class="photo" src="images/sunglasses.jpg" alt=""/>
+    <img class="photo" src="previews/sunglasses.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 62.7vw;">
     <a class="selection"
        onclick="modalScript('CAS mural (WIP):\n'
        + '⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/Cas.jpg')"
+       + '⠀⠀credits: undocumented', 'images/casFull.png')"
     ></a>
-    <img class="photo" src="images/Cas.jpg" alt=""/>
+    <img class="photo" src="previews/cas.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 64.6vw;">
@@ -342,7 +342,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/flamingos.jpg')"
     ></a>
-    <img class="photo" src="images/flamingos.jpg" alt=""/>
+    <img class="photo" src="previews/flamingos.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 51.6vw;left: 64.6vw;">
@@ -352,7 +352,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Gina King', 'images/castle.jpg')"
     ></a>
-    <img class="photo" src="images/castle.jpg" alt=""/>
+    <img class="photo" src="previews/castle.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 50.3vw;left: 66.6vw;">
@@ -361,7 +361,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/assortedSymbols.jpg')"
     ></a>
-    <img class="photo" src="images/assortedSymbols.jpg" alt=""/>
+    <img class="photo" src="previews/assortedSymbols.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 49.2vw;left: 68.48vw;">
@@ -370,7 +370,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/potteryDoor.jpg')"
     ></a>
-    <img class="photo" src="images/potteryDoor.jpg" alt=""/>
+    <img class="photo" src="previews/potteryDoor.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 52vw;left: 71.3vw;">
@@ -385,7 +385,7 @@
        + '⠀⠀⠀⠀• Carmen Sherlock\n'
        + '⠀⠀⠀⠀• Siena Sassone', 'images/globalCitizens.jpg')"
     ></a>
-    <img class="photo" src="images/globalCitizens.jpg" alt=""/>
+    <img class="photo" src="previews/globalCitizens.jpg" alt=""/>
 </div>
 
 <div class="container" style="top: 49vw;left: 70.3vw;">
@@ -394,7 +394,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/greyFigures.jpg')"
     ></a>
-    <img class="photo" src="images/greyFigures.jpg" alt=""/>
+    <img class="photo" src="previews/greyFigures.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 46.8vw;left: 70.3vw;">
@@ -404,7 +404,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Seth Hofeijer', 'images/graphicDesignDoor.jpg')"
     ></a>
-    <img class="photo" src="images/graphicDesignDoor.jpg" alt=""/>
+    <img class="photo" src="previews/graphicDesignDoor.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 51.3vw;left: 69.5vw;">
@@ -415,7 +415,7 @@
        + '⠀⠀⠀⠀• Miranda Vidaly\n'
        + '⠀⠀⠀⠀• Sydney Millis', 'images/elemental.jpg')"
     ></a>
-    <img class="photo" src="images/elemental.jpg" alt=""/>
+    <img class="photo" src="previews/elemental.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 49.5vw;left: 72.2vw;">
@@ -426,7 +426,7 @@
        + '⠀⠀⠀⠀• Claire B\n'
        + '⠀⠀⠀⠀• Camille C', 'images/rowingTeam.jpg')"
     ></a>
-    <img class="photo" src="images/rowingTeam.jpg" alt=""/>
+    <img class="photo" src="previews/rowingTeam.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 50vw;left: 76vw;">
@@ -435,7 +435,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/celestialFigures.jpg')"
     ></a>
-    <img class="photo" src="images/celestialFigures.jpg" alt=""/>
+    <img class="photo" src="previews/celestialFigures.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 78vw;">
@@ -445,7 +445,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Azyr Koreen', 'images/uprising.jpg')"
     ></a>
-    <img class="photo" src="images/uprising.jpg" alt=""/>
+    <img class="photo" src="previews/uprising.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 52vw;left: 80vw;">
@@ -455,7 +455,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Abbe Bender', 'images/moonPhases.jpg')"
     ></a>
-    <img class="photo" src="images/moonPhases.jpg" alt=""/>
+    <img class="photo" src="previews/moonPhases.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 51vw;left: 82vw;">
@@ -471,7 +471,7 @@
        + '⠀⠀⠀⠀• BG\n'
        + '⠀⠀⠀⠀• TP', 'images/illusorySwirls.jpg')"
     ></a>
-    <img class="photo" src="images/illusorySwirls.jpg" alt=""/>
+    <img class="photo" src="previews/illusorySwirls.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 40vw;left: 60vw;">
@@ -480,7 +480,7 @@
        + '⠀⠀year: 1985\n'
        + '⠀⠀credits: undocumented', 'images/yourChoice.jpg')"
     ></a>
-    <img class="photo" src="images/yourChoice.jpg" alt=""/>
+    <img class="photo" src="previews/yourChoice.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 43vw;left: 64.5vw;">
@@ -489,7 +489,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/bandRoom.jpg')"
     ></a>
-    <img class="photo" src="images/bandRoom.jpg" alt=""/>
+    <img class="photo" src="previews/bandRoom.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 40vw;left: 45vw;">
@@ -509,7 +509,7 @@
        + '⠀⠀⠀⠀• Solisa Garia\n'
        + '⠀⠀⠀⠀• Devin Simmons', 'images/feministUnion.jpg')"
     ></a>
-    <img class="photo" src="images/feministUnion.jpg" alt=""/>
+    <img class="photo" src="previews/feministUnion.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38.5vw;left: 41vw;">
@@ -522,7 +522,7 @@
        'The enormous size of an old-growth Sitka Spruce is used to embody the community’s grief over the death of two beloved students. The entire mural is an illustration of the site where the tragedy happened, but the mood and imagery alludes to the resurrection of hope and beauty, rather than the depressive side of the tragedy',
        'https://esteban-camacho.myportfolio.com/eco-murals-around-the-world/', 'find esteban’s site here')"
     ></a>
-    <img class="photo" src="images/memorialCourtyard.jpg" alt=""/>
+    <img class="photo" src="previews/memorialCourtyard.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 38.6vw;">
@@ -543,7 +543,7 @@
        + '⠀⠀⠀⠀• Mandy Walker\n'
        + '⠀⠀⠀⠀• Lafollette', 'images/mayan.jpg')"
     ></a>
-    <img class="photo" src="images/mayan.jpg" alt=""/>
+    <img class="photo" src="previews/mayan.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 36.5vw;">
@@ -556,7 +556,7 @@
        + '⠀⠀⠀⠀• Tabia Schmidt\n'
        + '⠀⠀⠀⠀• Sarah Coates', 'images/space.jpg')"
     ></a>
-    <img class="photo" src="images/space.jpg" alt=""/>
+    <img class="photo" src="previews/space.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 32vw;">
@@ -581,16 +581,16 @@
        + '⠀⠀⠀⠀• Mandy Walker\n'
        + '⠀⠀⠀⠀• Lafollette', 'images/asiaFull.png')"
     ></a>
-    <img class="photo" src="images/asia.jpg" alt=""/>
+    <img class="photo" src="previews/asia.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 40.3vw;left: 28vw;">
     <a class="selection"
-       onclick="modalScript('ELJ mural:\n'
+       onclick="modalScript('EJL mural:\n'
        + '⠀⠀year: 2025-2026\n'
        + '⠀⠀credits: undocumented', 'images/elj.jpg')"
     ></a>
-    <img class="photo" src="images/elj.jpg" alt=""/>
+    <img class="photo" src="previews/elj.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 39.3vw;left: 25.5vw;">
@@ -608,7 +608,7 @@
        + '⠀⠀⠀⠀• Enim Gray\n'
        + '⠀⠀⠀⠀• Nic Lamb', 'images/hammock.jpg')"
     ></a>
-    <img class="photo" src="images/hammock.jpg" alt=""/>
+    <img class="photo" src="previews/hammock.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 36vw;left: 25vw;">
@@ -619,7 +619,7 @@
        + '⠀⠀⠀⠀• Camille Crosswell\n'
        + '⠀⠀⠀⠀• Riley Brandt', 'images/kidsDownSouth.jpg')"
     ></a>
-    <img class="photo" src="images/kidsDownSouth.jpg" alt=""/>
+    <img class="photo" src="previews/kidsDownSouth.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 46vw;left: 14.8vw;">
@@ -629,7 +629,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Julia Chou', 'images/cityToLandscape.jpg')"
     ></a>
-    <img class="photo" src="images/cityToLandscape.jpg" alt=""/>
+    <img class="photo" src="previews/cityToLandscape.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 46vw;left: 12.8vw;">
@@ -645,7 +645,7 @@
        + '⠀⠀⠀⠀• Addison St Clair\n'
        + '⠀⠀⠀⠀• Cal Desmond', 'images/courtroom.jpg')"
     ></a>
-    <img class="photo" src="images/courtroom.jpg" alt=""/>
+    <img class="photo" src="previews/courtroom.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 30.5vw;left: 11vw;">
@@ -654,7 +654,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/climber.jpg')"
     ></a>
-    <img class="photo" src="images/climber.jpg" alt=""/>
+    <img class="photo" src="previews/climber.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 28.8vw;left: 33vw;">
@@ -665,7 +665,7 @@
        + '⠀⠀⠀⠀• GG Janssen Kannin\n'
        + '⠀⠀⠀⠀• Brynn Gerl', 'images/library.jpg')"
     ></a>
-    <img class="photo" src="images/library.jpg" alt=""/>
+    <img class="photo" src="previews/library.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 30vw;left: 42vw;">
@@ -674,7 +674,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: Elenore Turner', 'images/ornateDoor.jpg')"
     ></a>
-    <img class="photo" src="images/ornateDoor.jpg" alt=""/>
+    <img class="photo" src="previews/ornateDoor.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 28vw;left: 52vw;">
@@ -694,7 +694,7 @@
        + '⠀⠀⠀⠀• Jude Licea\n'
        + '⠀⠀⠀⠀• Gion', 'images/spanish.jpg')"
     ></a>
-    <img class="photo" src="images/spanish.jpg" alt=""/>
+    <img class="photo" src="previews/spanish.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 30.8vw;left: 56vw;">
@@ -705,7 +705,7 @@
        + '⠀⠀⠀⠀• Ila K.\n'
        + '⠀⠀⠀⠀• Sanja K.', 'images/performingArtsFull.png')"
     ></a>
-    <img class="photo" src="images/performingArts.jpg" alt=""/>
+    <img class="photo" src="previews/performingArts.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 32.5vw;left: 56.7vw;">
@@ -715,7 +715,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• David Derstmann', 'images/spaceship.jpg')"
     ></a>
-    <img class="photo" src="images/spaceship.jpg" alt=""/>
+    <img class="photo" src="previews/spaceship.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 31.3vw;left: 58.4vw;">
@@ -726,7 +726,7 @@
        '',
        'https://en.wikipedia.org/wiki/Carlos_Santana_%26_Buddy_Miles!_Live!?scrlybrkr=3cd5f968', 'its based on this album cover')"
     ></a>
-    <img class="photo" src="images/carlosSantana.jpg" alt=""/>
+    <img class="photo" src="previews/carlosSantana.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 36vw;left: 58.8vw;">
@@ -735,7 +735,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/stripeFigure.jpg')"
     ></a>
-    <img class="photo" src="images/stripeFigure.jpg" alt=""/>
+    <img class="photo" src="previews/stripeFigure.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 37.5vw;left: 58.8vw;">
@@ -745,7 +745,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Rhett “90”', 'images/curlingSmoke.jpg')"
     ></a>
-    <img class="photo" src="images/curlingSmoke.jpg" alt=""/>
+    <img class="photo" src="previews/curlingSmoke.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 32.8vw;left: 58.8vw;">
@@ -763,7 +763,7 @@
        + '⠀⠀⠀⠀• Mark Shum\n'
        + '⠀⠀⠀⠀• Finn Mifsud', 'images/artHasNoRules.jpg')"
     ></a>
-    <img class="photo" src="images/artHasNoRules.jpg" alt=""/>
+    <img class="photo" src="previews/artHasNoRules.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 34.5vw;left: 58.8vw;">
@@ -772,13 +772,13 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/floatingGeometry.jpg')"
     ></a>
-    <img class="photo" src="images/floatingGeometry.jpg" alt=""/>
+    <img class="photo" src="previews/floatingGeometry.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 56vw;">
     <a style=" height: 2.3vw;" class="selection"
        onclick="modalScript('human rights mural:\n'
-       + '⠀⠀year: undocumented\n'
+       + '⠀⠀year: 2022\n'
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Aria L-S\n'
        + '⠀⠀⠀⠀• Haylee Anne RC\n'
@@ -794,16 +794,16 @@
        + '⠀⠀⠀⠀• Lucie G\n'
        + '⠀⠀⠀⠀• Ansley J', 'images/humanRights.jpg')"
     ></a>
-    <img class="photo" src="images/humanRights.jpg" alt=""/>
+    <img class="photo" src="previews/humanRights.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 48vw;">
     <a class="selection"
        onclick="modalScript('japanese club mural (WIP):\n'
        + '⠀⠀year: 2026\n'
-       + '⠀⠀credits: undocumented', 'images/japaneseClub.jpg')"
+       + '⠀⠀credits: undocumented', 'images/japaneseClubFull.png')"
     ></a>
-    <img class="photo" src="images/japaneseClub.jpg" alt=""/>
+    <img class="photo" src="previews/japaneseClub.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 43vw;">
@@ -813,7 +813,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• ANS', 'images/mlkFull.png')"
     ></a>
-    <img class="photo" src="images/mlk.jpg" alt=""/>
+    <img class="photo" src="previews/mlk.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 18vw;">
@@ -823,7 +823,7 @@
        + '⠀⠀credits:\n' +
         '⠀⠀⠀⠀• Nick Sugiyama', 'images/ancientCulture.jpg')"
     ></a>
-    <img class="photo" src="images/ancientCulture.jpg" alt=""/>
+    <img class="photo" src="previews/ancientCulture.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 6.8vw;left: 32vw;">
@@ -833,7 +833,7 @@
        + '⠀⠀credits:\n'
        + '⠀⠀⠀⠀• Claire Write', 'images/assortedStructures.jpg')"
     ></a>
-    <img class="photo" src="images/assortedStructures.jpg" alt=""/>
+    <img class="photo" src="previews/assortedStructures.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 37vw;left: 47vw;">
@@ -843,7 +843,7 @@
        + '⠀⠀credits:\n' +
         '⠀⠀⠀⠀• Marely Heman', 'images/jellyfish.jpg')"
     ></a>
-    <img class="photo" src="images/jellyfish.jpg" alt=""/>
+    <img class="photo" src="previews/jellyfish.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 33vw;left: 47vw;">
@@ -853,7 +853,7 @@
        + '⠀⠀credits:\n' +
         '⠀⠀⠀⠀• Marely Heman', 'images/whale.jpg')"
     ></a>
-    <img class="photo" src="images/whale.jpg" alt=""/>
+    <img class="photo" src="previews/whale.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 44vw;left: 45.5vw;">
@@ -862,7 +862,7 @@
        + '⠀⠀year: 1996\n'
        + '⠀⠀credits: undocumented', 'images/periodicTableFull.png')"
     ></a>
-    <img class="photo" src="images/periodicTable.jpg" alt=""/>
+    <img class="photo" src="previews/periodicTable.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38.2vw;left: 16vw;">
@@ -871,7 +871,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/iopClimber.jpg')"
     ></a>
-    <img class="photo" src="images/iopClimber.jpg" alt=""/>
+    <img class="photo" src="previews/iopClimber.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38.5vw;left: 18vw;">
@@ -880,7 +880,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/dayNightFull.png')"
     ></a>
-    <img class="photo" src="images/dayNight.jpg" alt=""/>
+    <img class="photo" src="previews/dayNight.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38.5vw;left: 20vw;">
@@ -891,7 +891,7 @@
        + '⠀⠀⠀⠀• Maita Keppler\n'
        + '⠀⠀⠀⠀• Autumn R Hummel', 'images/mariaFull.png')"
     ></a>
-    <img class="photo" src="images/maria.jpg" alt=""/>
+    <img class="photo" src="previews/maria.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38vw;left: 22vw;">
@@ -902,7 +902,7 @@
        + '⠀⠀⠀⠀• Corina MacWilliams\n'
        + '⠀⠀⠀⠀• Maggie Clark', 'images/sunflower.jpg')"
     ></a>
-    <img class="photo" src="images/sunflower.jpg" alt=""/>
+    <img class="photo" src="previews/sunflower.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 35vw;left: 22vw;">
@@ -911,7 +911,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/surealSpaceFull.png')"
     ></a>
-    <img class="photo" src="images/surealSpace.jpg" alt=""/>
+    <img class="photo" src="previews/surealSpace.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 31.5vw;left: 19vw;">
@@ -920,7 +920,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/planetAlignment.jpg')"
     ></a>
-    <img class="photo" src="images/planetAlignment.jpg" alt=""/>
+    <img class="photo" src="previews/planetAlignment.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 30.7vw;left: 16vw;">
@@ -941,7 +941,7 @@
        + '⠀⠀⠀⠀• Ryan Holt\n'
        + '⠀⠀⠀⠀• Sahalie Pittman', 'images/pineFull.png')"
     ></a>
-    <img class="photo" src="images/pine.jpg" alt=""/>
+    <img class="photo" src="previews/pine.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 34.5vw;left: 16vw;">
@@ -950,7 +950,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/eyes.jpg')"
     ></a>
-    <img class="photo" src="images/eyes.jpg" alt=""/>
+    <img class="photo" src="previews/eyes.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 33vw;left: 16vw;">
@@ -959,7 +959,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/sunset2.jpg')"
     ></a>
-    <img class="photo" src="images/sunset1.jpg" alt=""/>
+    <img class="photo" src="previews/sunset1.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 36vw;left: 16vw;">
@@ -968,7 +968,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/natureEmblems.jpg')"
     ></a>
-    <img class="photo" src="images/natureEmblems.jpg" alt=""/>
+    <img class="photo" src="previews/natureEmblems.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38vw;left: 33vw;">
@@ -977,7 +977,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/drSeuss.jpg')"
     ></a>
-    <img class="photo" src="images/drSeuss.jpg" alt=""/>
+    <img class="photo" src="previews/drSeuss.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 36vw;left: 33vw;">
@@ -988,7 +988,7 @@
        + '⠀⠀⠀⠀• KDS\n'
        + '⠀⠀⠀⠀• IOP', 'images/hungryCaterpillar.jpg')"
     ></a>
-    <img class="photo" src="images/hungryCaterpillar.jpg" alt=""/>
+    <img class="photo" src="previews/hungryCaterpillar.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 34vw;left: 33vw;">
@@ -1001,7 +1001,7 @@
        + '⠀⠀⠀⠀• Aidan Murphy\n'
        + '⠀⠀⠀⠀• Natalie Brandt', 'images/wildThings.jpg')"
     ></a>
-    <img class="photo" src="images/wildThings.jpg" alt=""/>
+    <img class="photo" src="previews/wildThings.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 35vw;left: 27vw;">
@@ -1012,7 +1012,7 @@
        + '⠀⠀⠀⠀• MBQ\n'
        + '⠀⠀⠀⠀• Aula RodeRoark', 'images/playAreaFull.png')"
     ></a>
-    <img class="photo" src="images/playArea.jpg" alt=""/>
+    <img class="photo" src="previews/playArea.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 38.5vw;left: 30vw;">
@@ -1028,7 +1028,7 @@
        + '⠀⠀⠀⠀• Holly A Bayne\n'
        + '⠀⠀⠀⠀• Holee Kaagan', 'images/kidsPavilionFull.png')"
     ></a>
-    <img class="photo" src="images/kidsPavilion.jpg" alt=""/>
+    <img class="photo" src="previews/kidsPavilion.jpg" alt=""/>
 </div>
 
 <div  class="container" style="top: 35vw;left: 43.5vw;">
@@ -1037,7 +1037,7 @@
        + '⠀⠀year: undocumented\n'
        + '⠀⠀credits: undocumented', 'images/skateboardTree.jpg')"
     ></a>
-    <img class="photo" src="images/skateboardTree.jpg" alt=""/>
+    <img class="photo" src="previews/skateboardTree.jpg" alt=""/>
 </div>
 
 
