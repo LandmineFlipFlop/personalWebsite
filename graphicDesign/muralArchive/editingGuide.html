@@ -1,0 +1,141 @@
+<html lang='English'>
+
+<head>
+
+  <style>
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      background-color: beige;
+      color: #05095a;
+
+      h1 {
+        font-size: 3vw;
+      }
+
+      font-size: 1vw;
+
+      hr {
+        border: 0.5vw solid #05095a;
+      }
+
+      a:link {
+        color: #0056af;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #0056af;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #008ed6;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: #008ed6;
+        text-decoration: underline;
+      }
+    }
+  </style>
+
+  <style>
+    img {
+      height: 20vh;
+      width: 19vw;
+      object-fit: scale-down;
+      display: inline-block;
+    }
+  </style>
+
+  <meta charset='UTF-8'>
+
+  <title>Gallery</title>
+
+</head>
+
+<body>
+<div id='top-bar' class='top-bar'></div>
+
+<h1>SEHS Mural Map Editing Guide</h1>
+
+<h2 style="font-size: 2.25vw">How to add a new mural:</h2><br/>
+<p style="font-size: 1.5vw">At the end of the mural section add this block of text <b>if you don't have name credits yet</b>:</p><br/>
+
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 1.25vw; padding-left: 1vw; background-color: bisque">
+  &nbsp;
+  <br/><br/>
+  &lt;div  class="container" style="top: <mark style="background-color: #ff9baa">[X]</mark>vw; left: <mark style="background-color: #fd9caa">[Y]</mark>vw;"&gt;<br/><br/>
+  <div style="padding-left: 2vw">
+    &lt;a<mark style="background-color: #ffc189"> style=" height: 2.3vw;"</mark> class="selection"<br/>
+    <div style="padding-left: 2vw">
+      onclick="modalScript('<mark style="background-color: #ffee82">[name]</mark>:\n'<br/>
+      + '⠀⠀year: <mark style="background-color: #a5ff99">[year]</mark>\n'<br/>
+      + '⠀⠀credits: undocumented',<br/>
+      'images/<mark style="background-color: #b1fff4">[full]</mark>'<mark style="background-color: #b5caff">,<br/>
+      '[extra]'</mark><mark style="background-color: #c6a3ff">,<br/>
+      '[link]', '[text]</mark>')"<br/>
+    </div>
+    &gt;&lt;/a&gt;<br/>
+    &lt;img class="photo" src="previews/<mark style="background-color: #b1fff4">[preview]</mark>" alt=""/&gt;<br/>
+  </div><br/>
+  &lt;/div&gt;<br/><br/>
+  &nbsp;
+</div>
+
+<br/><br/><br/><br/>
+<p style="font-size: 1.5vw"><b>If you do have</b> names add this instead:</p>
+<br/>
+
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 1.25vw; padding-left: 1vw; background-color: bisque">
+  &nbsp;
+  <br/><br/>
+  &lt;div  class="container" style="top: <mark style="background-color: #ff9baa">[X]</mark>vw; left: <mark style="background-color: #fd9caa">[Y]</mark>vw;"&gt;<br/><br/>
+  <div style="padding-left: 2vw">
+    &lt;a<mark style="background-color: #ffc189"> style=" height: 2.3vw;"</mark> class="selection"<br/>
+    <div style="padding-left: 2vw">
+      onclick="modalScript('<mark style="background-color: #ffee82">[name]</mark>:\n'<br/>
+      + '⠀⠀year: <mark style="background-color: #a5ff99">[year]</mark>\n'<br/>
+      + '⠀⠀credits:\n'<br/>
+      + '⠀⠀⠀⠀• <mark style="background-color: #ffb5f3">[name first]</mark>\n'<br/>
+      + '⠀⠀⠀⠀• <mark style="background-color: #ffb5f3">[name second]</mark>\n'<br/>
+      + '⠀⠀⠀⠀• <mark style="background-color: #ffb5f3">[name etc...]</mark>\n'<br/>
+      + '⠀⠀⠀⠀• <mark style="background-color: #ffb5f3">[name last]</mark>',<br/>
+      'images/<mark style="background-color: #b1fff4">[full]</mark>'<mark style="background-color: #b5caff">,<br/>
+      '[extra]'</mark><mark style="background-color: #c6a3ff">,<br/>
+      '[link]', '[text]</mark>')"<br/>
+    </div>
+    &gt;&lt;/a&gt;<br/>
+    &lt;img class="photo" src="previews/<mark style="background-color: #b1fff4">[preview]</mark>" alt=""/&gt;<br/>
+  </div><br/>
+  &lt;/div&gt;<br/><br/>
+  &nbsp;
+</div>
+
+<br/><br/><br/><br/>
+<h2 style="font-size: 2.25vw">Color label breakdown:</h2>
+<ul style="font-size: 1.25vw; padding-right: 5vw">
+  <li style="background-color: #ff9baa">Position on screen, play around with values till it's where you want. You can reference the position of other murals when adding a new one</li>
+  <li style="background-color: #ffc189">Use this if it’s a tall image, otherwise omit this section.</li>
+  <li style="background-color: #ffee82">This is the mural name displayed when you click on it, add a descriptive name if none is given.</li>
+  <li style="background-color: #a5ff99">The best estimate for the mural year of creation, if unknown then just put <mark style="background: white; font-family: 'JetBrains Mono', monospace;">undocumented</mark> in place of it</li>
+  <li style="background-color: #b1fff4">The file names for the full and preview images respectively</li>
+  <ul>
+    <li style="background-color: #b1fff4">preferably file names should be <a style="text-decoration: underline;" href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a>, and the the file-type should be either jpg or png format</li>
+    <li style="background-color: #b1fff4">the preview image (the one you see on hover) should be in the <mark style="background: white; font-family: 'JetBrains Mono', monospace;">previews</mark> folder and should be minimal in file size (probably jpg)</li>
+    <li style="background-color: #b1fff4">the full image (the one you see once clicked) goes in the <mark style="background: white; font-family: 'JetBrains Mono', monospace;">images</mark> folder and should be high quality (png, or less optimized jpg)</li>
+  </ul>
+  <li style="background-color: #b5caff">An optional poster history/additional information section (omit this if you don’t need it, but if there's a link section you can instead just fill it in as:  <mark style="background: white; font-family: 'JetBrains Mono', monospace;">, '',</mark> )</li>
+  <li style="background-color: #c6a3ff">An optional link (omit this section if you don’t need it) write the URL in the first section, and its label in the latter.</li>
+  <li style="background-color: #ffb5f3">Add as many names as you need following the pattern that's shown above, if there is only one name, just use:  <mark style="background: white; font-family: 'JetBrains Mono', monospace;">[name last]</mark></li>
+  <ul>
+    <li style="background-color: #ffb5f3">There are a few things you need special text notation for since some characters already have a specific meaning in JavaScript or HTML. for those you can reference <a style="text-decoration: underline;" href="https://www.w3schools.com/js/js_strings.asp" target="_blank">JavaScript Escape Characters</a></li>
+  </ul>
+</ul>
+
+<br/><br/>
+
+</body>
+
+</html>
