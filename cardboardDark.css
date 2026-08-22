@@ -1,19 +1,21 @@
 body {
-    background-color: #475161;
+    background-color: #6e5f8e;
     font-family: Overlock, sans-serif;
+    font-size: 40px;
+    color: white;
     a {
         color: rgb(124 153 225)
     }
-    font-size: 20px;
 }
 
 #navbar {
     position: sticky;
     top: 0;
     overflow: hidden;
-    background-color: #475161;
+    background-color: #3b3b56;
     border-bottom: 0.4vw solid #ffffff;
     z-index: 2;
+    box-shadow: 0 -10vw 0 10vw #3b3b56, 0 0.3vw 0.5vw 0.5vw rgb(24 20 94 / 0.32);
 }
 
 #navbar a {
@@ -24,6 +26,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 #navbar a:hover {

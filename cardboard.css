@@ -1,19 +1,21 @@
 body {
-    background-color: #bbd9ff;
+    background-color: #cabbff;
     font-family: Overlock, sans-serif;
+    font-size: 40px;
+    color: black;
     a {
-        color: rgb(45 85 196)
+        color: rgb(17 52 167)
     }
-    font-size: 20px;
 }
 
 #navbar {
     position: sticky;
     top: 0;
     overflow: hidden;
-    background-color: #bbd9ff;
+    background-color: #b0a1ee;
     border-bottom: 0.4vw solid #000000;
     z-index: 2;
+    box-shadow: 0 -10vw 0 10vw #b0a1ee, 0 0.1vw 0.5vw 0.5vw rgb(24 20 94 / 0.32);
 }
 
 #navbar a {
@@ -24,10 +26,11 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 #navbar a:hover {
-    background-color: #adc1db;
+    background-color: #ddd6ff;
     color: black;
 }
 
@@ -80,7 +83,5 @@ h1 {
 }
 
 p {
-    font-family: "Overlock", sans-serif;
-    font-size: 40px;
     color: rgb(6 0 29);
 }
