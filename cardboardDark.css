@@ -60,6 +60,7 @@ body {
     position: absolute;
     inset: 0;
 
+    background-color: #cea98a;
     background-image: url("cardboard.jpg");
     background-size: 100vw 100vw;
     background-repeat: repeat;
