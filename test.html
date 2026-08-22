@@ -9,7 +9,26 @@
     <link rel="stylesheet" href="cardboard.css" id="light">
     <link rel="stylesheet" href="cardboardDark.css" id="dark" disabled>
 
-    <script src="header.js" type="text/javascript"></script>
+    <script>
+        function header(relative) {
+            if (relative === undefined) {
+                relative = '';
+            }
+            let header = "<div id='navbar'> <a href='";
+            header += relative;
+            header += "index.html'>Home</a> <a href='";
+            header += relative;
+            header += "portfolio.html'>portfolio</a> <a href='";
+            header += relative;
+            header += "personalProjects/projectList.html'>projects</a> <a href='";
+            header += relative;
+            header += "musings/directory.html'>musings</a> <a href='";
+            header += relative;
+            header += "about.html'>about</a> </div>";
+            document.getElementById('navbar').innerHTML = header;
+            // alert(header);
+        }
+    </script>
 
     <script>
         function param() {
@@ -23,55 +42,49 @@
 
 </head>
 
-<body onload="param(); header()">
-<div id="navbar">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">portfolio</a>
-    <a href="personalProjects/projectList.html">projects</a>
-    <a href="musings/directory.html">musings</a>
-    <a href="about.html">about</a>
-</div>
+<body onload="param(); header('')">
+<div id='navbar'></div>
 
 <div class='cardboard'>
     <img src="banner.png" alt="a banner showing off some of my interests" style="width:100%;">
 </div>
 
 <div class="cardboard">
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Hi</h2>
-    <h2>Bye</h2>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Bye</p>
 </div>
 
 <br/><br/>
