@@ -1,0 +1,87 @@
+body {
+    background-color: #475161;
+    font-family: Overlock, sans-serif;
+    a {
+        color: rgb(124 153 225)
+    }
+    font-size: 20px;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #475161;
+    border-bottom: 0.4vw solid #ffffff;
+    z-index: 2;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #9ea6aa;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #88cdff;
+    color: white;
+}
+
+.cardboard {
+    position: relative;
+    overflow: hidden;
+
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vw;
+
+    padding-inline: 6vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+
+    box-shadow: 0 0.25vw 0.5vw 0.5vw rgb(2 3 45 / 0.25);
+    border-radius: 2vw;
+
+    img {
+        opacity: 90%
+    }
+}
+.cardboard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("cardboard.jpg");
+    background-size: 100vw 100vw;
+    background-repeat: repeat;
+
+    filter: brightness(20%) hue-rotate(200deg) saturate(80%);
+
+    z-index: 0;
+}
+.cardboard > * {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: "Protest Riot", cursive;
+    font-size: 80px;
+    text-align: center;
+    color: rgb(255 255 255);
+}
+
+h2 {
+    font-family: "Overlock", sans-serif;
+    font-size: 40px;
+    color: rgb(255 255 255 / 0.82);
+}
