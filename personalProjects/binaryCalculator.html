@@ -1,11 +1,15 @@
-<html lang="English">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <link rel="stylesheet" href="../mainStyle.css">
     <meta charset="UTF-8">
 
-    <script src="../header.js" type="text/javascript"></script>
+    <script src="../cardboardScripts.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="../cardboard.css" id="light">
+    <link rel="stylesheet" href="../cardboardDark.css" id="dark" disabled>
+
+    <title>binary calculator</title>
 
     <style>
         button{
@@ -104,14 +108,15 @@
 
     </style>
 
-    <title>binary calculator</title>
-
 </head>
 
-<body onload="header()">
-<div id="top-bar" class="top-bar"></div>
+<body onload="header('../'); param();">
+<div id='navbar'></div>
+
+<div class='cardboard'>
 
 <h1>binary Calculator</h1>
+<p style="font-size: 40px">as a note, this is currently in a somewhat broken state, with weird rounding errors and other misc bugs. My goal is  to redo it when I get a chance.</p>
 
 <div style="text-align: center;">
     <input type="text" id="display" disabled />
@@ -146,6 +151,8 @@
         &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203</b><br/>
     <input type="number" id="decimal">
     <button type="button" onclick="appendType()" style="padding: 1vmin 1vmin;">input</button>
+</div>
+
 </div>
 
 </body>
