@@ -26,9 +26,9 @@ body {
     display: block;
     color: #ffffff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1vw 1.5vw;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 30px;
     transition: color 0.2s, background-color 0.2s;
 }
 
@@ -83,6 +83,13 @@ body {
 h1 {
     font-family: "Protest Riot", cursive;
     font-size: 80px;
+    text-align: center;
+    color: rgb(255 255 255);
+}
+
+h2 {
+    font-family: "Protest Riot", cursive;
+    font-size: 60px;
     text-align: center;
     color: rgb(255 255 255);
 }

@@ -2,74 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cardboard</title>
 
+    <script src="cardboardScripts.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
     <link rel="stylesheet" href="cardboard.css" id="light">
     <link rel="stylesheet" href="cardboardDark.css" id="dark" disabled>
 
-    <script>
-        function header(relative) {
-            if (relative === undefined) {
-                relative = '';
-            }
-            let header = "<div id='navbar'> <a class='link'href='";
-            header += relative;
-            header += "index.html?dark=false'>Home</a> <a class='link'href='";
-            header += relative;
-            header += "portfolio.html?dark=false'>portfolio</a> <a class='link'href='";
-            header += relative;
-            header += "personalProjects/projectList.html?dark=false'>projects</a> <a class='link'href='";
-            header += relative;
-            header += "musings/directory.html?dark=false'>musings</a> <a class='link' href='";
-            header += relative;
-            header += "about.html?dark=false'>about</a> <a href='' onclick='mode()' id='mode'>☽ dark</a> </div>";
-            document.getElementById('navbar').innerHTML = header;
-        }
-
-        function param() {
-            const url = new URL(window.location.href);
-            const dark = url.searchParams.get("dark");
-
-            if (dark === "true") {
-                document.getElementById("dark").disabled = false;
-                document.getElementById("light").disabled = true;
-
-                document.getElementById("mode").innerText = 'light mode';
-                link(true)
-            } else {
-                document.getElementById("light").disabled = false;
-                document.getElementById("dark").disabled = true;
-
-                document.getElementById("mode").innerText = 'dark mode';
-                link(false)
-            }
-        }
-
-        function mode() {
-            const url = new URL(window.location.href);
-            const params = url.searchParams;
-
-            const dark = params.get("dark");
-            params.set("dark", dark === "true" ? "false" : "true");
-
-            history.pushState({}, "", url);
-            param();
-        }
-
-        function link(dark) {
-            for (let i = 0; i < document.getElementsByClassName('link').length; i++) {
-                let link = document.getElementsByClassName('link')[i];
-                if (dark) {
-                    link.href = link.href.replace('dark=false', 'dark=true');
-                } else {
-                    link.href = link.href.replace('dark=true', 'dark=false');
-                }
-            }
-        }
-    </script>
-
+    <title>home</title>
 </head>
 
 <body onload="header(''); param();">
@@ -77,9 +17,11 @@
 
 <div class='cardboard'>
     <img src="banner.png" alt="a banner showing off some of my interests" style="width:100%;">
+    <h1>Welcome to my site!</h1>
 </div>
 
 <div class="cardboard">
+    <p>Glad you made it, feel free to look around at the neat stuff I've made. There's nothin too serious here, most of this is just for fun.</p>
     <ul>
         <li><a class='link' href="graphicDesign/muralArchive/map.html?dark=false" target="_blank">SEHS mural map project!</a></li>
         <li><a class='link' href="graphicDesign/designPortfolio.html?dark=false">graphic design portfolio</a></li>
