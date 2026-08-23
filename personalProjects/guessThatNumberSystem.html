@@ -1,11 +1,12 @@
-<html lang="English">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <link rel="stylesheet" href="../mainStyle.css">
     <meta charset="UTF-8">
 
-    <script src="../header.js" type="text/javascript"></script>
+    <script src="../cardboardScripts.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+    <link rel="stylesheet" href="../cardboard.css" id="light">
+    <link rel="stylesheet" href="../cardboardDark.css" id="dark" disabled>
 
     <style>
         div {
@@ -130,10 +131,9 @@
 
 </head>
 
-<body onload="header()">
-<span id="top-bar" class="top-bar"></span>
+<body onload="header('../'); param();">
+<div id='navbar'></div>
 
-<p id="header"></p>
 
 <h1>Guess That Number System!</h1>
 <h2>How It Works:</h2>

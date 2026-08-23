@@ -1,13 +1,13 @@
-<html lang="English">
-
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-  <link rel="stylesheet" href="../mainStyle.css">
   <meta charset="UTF-8">
 
-  <script src="../header.js" type="text/javascript"></script>
+  <script src="../cardboardScripts.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+  <link rel="stylesheet" href="../cardboard.css" id="light">
+  <link rel="stylesheet" href="../cardboardDark.css" id="dark" disabled>
 
   <style>
     h2 {
@@ -55,49 +55,56 @@
 
 </head>
 
-<body onload="header()">
-<div id="top-bar" class="top-bar"></div>
+<body onload="header('../'); param();">
+<div id='navbar'></div>
 
-<p id="header"></p>
+<div class='cardboard'>
+  <h1>Binary Unit System</h1>
+  <p>This system defines its base units in terms of <a href="https://en.wikipedia.org/wiki/Planck_units">the planck units</a> which is a (as far as we currently know) fundamental system of units</p>
+</div>
 
-<h1>Binary Unit System</h1>
-<p>This system defines its base units in terms of <a href="https://en.wikipedia.org/wiki/Planck_units">the planck units</a> which is a (as far as we currently know) fundamental system of units</p>
-<h2>time:</h2>
-<br/>
-<p style="text-align: center;">
-  <span id="binary" style="border: 2.5vmin solid #030649; padding: 3vmin; border-radius: 4vmin; background-color: #c4e5ed; box-shadow: 0 2vmin 1vmin rgba(7,7,46,0.35); font-size: 16vmin; letter-spacing: -3vmin; -webkit-user-select:none;user-select:none;">
-    <span class="tall"></span> <span class="short"></span>
-  </span>
-</p>
+<div class='cardboard'>
+  <h2>time:</h2>
+  <br/>
+    <div class="cardboard" style="box-shadow: 0 1vw 0 0 #825c4d, 0 1.25vw 1.5vw 1vw rgb(2 3 45 / 0.25);">
+      <span id="binary" style="padding: 3vmin; border-radius: 4vmin; background-color: transparent; font-size: 16vmin; letter-spacing: -3vmin; -webkit-user-select:none;user-select:none;">
+        <span class="tall"></span> <span class="short"></span>
+      </span>
+    </div>
+  <br/><br/>
+  <p id="decimal" style="text-align: center;  -webkit-user-select:none;user-select:none;"></p>
+  <p>the time system is defined in such a way as to have it line up with a day such that 1zt (or 2<sup>16</sup>t) is equivalent to 1day</p>
+  <div>
+    <img src="images/planckTime.png" alt="[IMAGE] the definition of planck time" style="width:30%;">
+    <img src="images/binaryUnitTime.png" alt="[IMAGE] the definition of the B.U.S time in terms of planck time" style="width:30%;">
+  </div>
+</div>
+
+<div class='cardboard'>
+  <h2>length:</h2>
+  <p>the distance system ends up being a nice in-between for metric and imperial</p>
+  <p>1d</p>
+  <div style="text-align: center;">
+    <img src="images/d.png" alt="[IMAGE] a comparison between an inch, a centi-meter, and a d" style="width:50%;  border-radius: 1vmin; border-width: 1vmin; border-style: solid;">
+  </div>
+
+  <p>1hd = 2<sup>4</sup>d</p>
+  <div style="text-align: center;">
+    <img src="images/hd.png" alt="[IMAGE] a comparison between a foot, a meter, and a hd" style="width:50%; border-radius: 1vmin; border-width: 1vmin; border-style: solid;">
+  </div>
+  <br/>
+  <p>1zd = 2<sup>16</sup>d</p>
+  <div style="text-align: center;">
+    <img src="images/zd.png" alt="[IMAGE] a comparison between a mile, a kilo-meter, and a zd" style="width:50%; border-radius: 1vmin; border-width: 1vmin; border-style: solid;">
+  </div>
+
+  <div>
+    <img src="images/planckLength.png" alt="[IMAGE] the definition of planck length" style="width:30%;">
+    <img src="images/binaryUnitDistance.png" alt="[IMAGE] the definition of the B.U.S distance in terms of planck length" style="width:30%;">
+  </div>
+</div>
+
 <br/><br/>
-<p id="decimal" style="text-align: center;  -webkit-user-select:none;user-select:none;"></p>
-<p>the time system is defined in such a way as to have it line up with a day such that 1zt (or 2<sup>16</sup>t) is equivalent to 1day</p>
-<div>
-  <img src="images/planckTime.png" alt="[IMAGE] the definition of planck time" style="width:30%;">
-  <img src="images/binaryUnitTime.png" alt="[IMAGE] the definition of the B.U.S time in terms of planck time" style="width:30%;">
-</div>
-
-<h2>length:</h2>
-<p>the distance system ends up being a nice in-between for metric and imperial</p>
-<p>1d</p>
-<div style="text-align: center;">
-  <img src="images/d.png" alt="[IMAGE] a comparison between an inch, a centi-meter, and a d" style="width:50%;  border-radius: 1vmin; border-width: 1vmin; border-style: solid;">
-</div>
-
-<p>1hd = 2<sup>4</sup>d</p>
-<div style="text-align: center;">
-  <img src="images/hd.png" alt="[IMAGE] a comparison between a foot, a meter, and a hd" style="width:50%; border-radius: 1vmin; border-width: 1vmin; border-style: solid;">
-</div>
-<br/>
-<p>1zd = 2<sup>16</sup>d</p>
-<div style="text-align: center;">
-  <img src="images/zd.png" alt="[IMAGE] a comparison between a mile, a kilo-meter, and a zd" style="width:50%; border-radius: 1vmin; border-width: 1vmin; border-style: solid;">
-</div>
-
-<div>
-  <img src="images/planckLength.png" alt="[IMAGE] the definition of planck length" style="width:30%;">
-  <img src="images/binaryUnitDistance.png" alt="[IMAGE] the definition of the B.U.S distance in terms of planck length" style="width:30%;">
-</div>
 
 </body>
 
