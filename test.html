@@ -14,17 +14,17 @@
             if (relative === undefined) {
                 relative = '';
             }
-            let header = "<div id='navbar'> <a href='";
+            let header = "<div id='navbar'> <a class='link'href='";
             header += relative;
-            header += "index.html'>Home</a> <a href='";
+            header += "index.html?dark=false'>Home</a> <a class='link'href='";
             header += relative;
-            header += "portfolio.html'>portfolio</a> <a href='";
+            header += "portfolio.html?dark=false'>portfolio</a> <a class='link'href='";
             header += relative;
-            header += "personalProjects/projectList.html'>projects</a> <a href='";
+            header += "personalProjects/projectList.html?dark=false'>projects</a> <a class='link'href='";
             header += relative;
-            header += "musings/directory.html'>musings</a> <a href='";
+            header += "musings/directory.html?dark=false'>musings</a> <a class='link' href='";
             header += relative;
-            header += "about.html'>about</a> <a href='' onclick='mode()' id='mode'>☽ dark</a> </div>";
+            header += "about.html?dark=false'>about</a> <a href='' onclick='mode()' id='mode'>☽ dark</a> </div>";
             document.getElementById('navbar').innerHTML = header;
         }
 
@@ -33,13 +33,17 @@
             const dark = url.searchParams.get("dark");
 
             if (dark === "true") {
-                document.getElementById("light").disabled = true;
                 document.getElementById("dark").disabled = false;
+                document.getElementById("light").disabled = true;
+
                 document.getElementById("mode").innerText = 'light mode';
+                link(true)
             } else {
-                document.getElementById("dark").disabled = true;
                 document.getElementById("light").disabled = false;
+                document.getElementById("dark").disabled = true;
+
                 document.getElementById("mode").innerText = 'dark mode';
+                link(false)
             }
         }
 
@@ -52,6 +56,17 @@
 
             history.pushState({}, "", url);
             param();
+        }
+
+        function link(dark) {
+            for (let i = 0; i < document.getElementsByClassName('link').length; i++) {
+                let link = document.getElementsByClassName('link')[i];
+                if (dark) {
+                    link.href = link.href.replace('dark=false', 'dark=true');
+                } else {
+                    link.href = link.href.replace('dark=true', 'dark=false');
+                }
+            }
         }
     </script>
 
@@ -66,13 +81,13 @@
 
 <div class="cardboard">
     <ul>
-        <li><a href="graphicDesign/muralArchive/map.html" target="_blank">SEHS mural map project!</a></li>
-        <li><a href="graphicDesign/designPortfolio.html">graphic design portfolio</a></li>
-        <li><a href="gameDev/gamePortfolio.html">game dev portfolio</a></li>
-        <li><a href="personalProjects/projectList.html">personal projects</a></li>
-        <li><a href="musings/directory.html">musings</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="sideTracks.html">random stuff I find neat</a></li>
+        <li><a class='link' href="graphicDesign/muralArchive/map.html?dark=false" target="_blank">SEHS mural map project!</a></li>
+        <li><a class='link' href="graphicDesign/designPortfolio.html?dark=false">graphic design portfolio</a></li>
+        <li><a class='link' href="gameDev/gamePortfolio.html?dark=false">game dev portfolio</a></li>
+        <li><a class='link' href="personalProjects/projectList.html?dark=false">personal projects</a></li>
+        <li><a class='link' href="musings/directory.html?dark=false">musings</a></li>
+        <li><a class='link' href="about.html?dark=false">about</a></li>
+        <li><a class='link' href="sideTracks.html?dark=false">random stuff I find neat</a></li>
     </ul>
 </div>
 
