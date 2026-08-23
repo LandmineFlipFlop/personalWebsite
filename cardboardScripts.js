@@ -12,6 +12,8 @@ function header(relative) {
     header += relative;
     header += "musings/directory.html?dark=false'>musings</a> <a class='link' href='";
     header += relative;
+    header += "sideTracks.html?dark=false'>collection</a> <a class='link' href='";
+    header += relative;
     header += "about.html?dark=false'>about</a> <a href='' onclick='swap()' id='mode'>☽ dark</a> </div>";
     document.getElementById('navbar').innerHTML = header;
 }
