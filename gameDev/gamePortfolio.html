@@ -1,65 +1,71 @@
-<html lang="English">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <link rel="stylesheet" href="../mainStyle.css">
     <meta charset="UTF-8">
 
-    <script src="../header.js" type="text/javascript"></script>
+    <script src="../cardboardScripts.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="../cardboard.css" id="light">
+    <link rel="stylesheet" href="../cardboardDark.css" id="dark" disabled>
 
-    <title>Game Portfolio</title>
-
+    <title>games</title>
 </head>
 
-<body onload="header()">
-<div id="top-bar" class="top-bar"></div>
+<body onload="header('../'); param();">
+<div id='navbar'></div>
 
-<h1>game development portfolio</h1>
+<div class='cardboard'>
+    <h1>game development portfolio</h1>
+    <p>my scratch games throughout the years. you can also find these on either <a href="https://landmineflipflop.itch.io/" target="_blank">itch</a> or <a href="https://scratch.mit.edu/users/landmineflipy/" target="_blank">scratch</a>.</p>
+</div>
 
-<br/>
+<div class='cardboard'>
+    <a href="dwindle.html" target="_blank">
+        <img src="dwindle.png" alt="a thumbnail of a platformer character and a growing level" style="width:50%;">
+    </a>
+    <br/>
+    <a href="dwindle.html" target="_blank">dwindle</a>
+    <p>this was a game jam submission (I missed the deadline) where the theme was "built to scale" I got to have a lot of fun designing levels in a new way. The "gimick" of the game is that the level grows as you play, and you have to find new ways to scale it each time.</p>
+</div>
 
-<a href="https://landmine.maykids.org/gameDev/dwindle.html" target="_blank">
-    <img src="dwindle.png" alt="a thumbnail of a platformer character and a growing level" style="width:25%;">
-</a>
-<br/>
-<a href="https://landmine.maykids.org/gameDev/dwindle.html" target="_blank">dwindle</a>
-<p>this was a game jam submission (I missed the deadline) where the theme was "built to scale" I got to have a lot of fun designing levels in a new way. The "gimick" of the game is that the level grows as you play, and you have to find new ways to scale it each time.</p>
+<div class='cardboard'>
+    <a href="blessingOrACursor.html" target="_blank">
+        <img src="blessingOrACursor.png" alt="a thumbnail of a mouse moving a character around a level" style="width:50%;">
+    </a>
+    <br/>
+    <a href="blessingOrACursor.html" target="_blank">a blessing or a cursor</a>
+    <p>this was a passion project of mine, I put a lot of effort into polishing visuals and making fun levels, I'm really proud of how it turned out.</p>
+</div>
 
-<br/><hr style="width:99%;" /><br/><br/>
+<div class='cardboard'>
+    <a href="blobertHuntsAnomalies.html" target="_blank">
+        <img src="blobertHuntsAnomalies.png" alt="a blob character looking with a flashlight" style="width:50%;">
+    </a>
+    <br/>
+    <a href="blobertHuntsAnomalies.html" target="_blank">blobert hunts anomalies</a>
+    <p>this was another game jam submission where the theme was "loop". the game I ended up making was a loop game where your looking for things that arent quite right, I was able to have some fun and play around with cryptic and spooky ideas in a silly context.</p>
+</div>
 
-<a href="https://landmine.maykids.org/gameDev/blessingOrACursor.html" target="_blank">
-    <img src="blessingOrACursor.png" alt="a thumbnail of a mouse moving a character around a level" style="width:25%;">
-</a>
-<br/>
-<a href="https://landmine.maykids.org/gameDev/blessingOrACursor.html" target="_blank">a blessing or a cursor</a>
-<p>this was a passion project of mine, I put a lot of effort into polishing visuals and making fun levels, I'm really proud of how it turned out.</p>
+<div class='cardboard'>
+    <a href="chatGame.html" target="_blank">
+        <img src="chatGame.png" alt="a blob character looking with a flashlight" style="width:50%;">
+    </a>
+    <br/>
+    <a href="chatGame.html" target="_blank">chat with this guy</a>
+    <p>I made this for fun so I could play around with goofy dialogue and a "choose your own adventure" style system.</p>
+</div>
 
-<br/><hr style="width:99%;" /><br/><br/>
+<div class='cardboard'>
+    <a href="SquidtasticSokoban.html" target="_blank">
+        <img src="SquidtasticSokoban.png" alt="" style="width:50%;">
+    </a>
+    <br/>
+    <a href="SquidtasticSokoban.html" target="_blank">Squidtastic Sokoban</a>
+    <p>This was my 2026 GMTK game jam submission. Its a block pushing puzzle game designed around a timer block</p>
+</div>
 
-<a href="https://landmine.maykids.org/gameDev/blobertHuntsAnomalies.html" target="_blank">
-    <img src="blobertHuntsAnomalies.png" alt="a blob character looking with a flashlight" style="width:25%;">
-</a>
-<br/>
-<a href="https://landmine.maykids.org/gameDev/blobertHuntsAnomalies.html" target="_blank">blobert hunts anomalies</a>
-<p>this was another game jam submission where the theme was "loop". the game I ended up making was a loop game where your looking for things that arent quite right, I was able to have some fun and play around with cryptic and spooky ideas in a silly context.</p>
-
-<br/><hr style="width:99%;" /><br/><br/>
-
-<a href="https://landmine.maykids.org/gameDev/chatGame.html" target="_blank">
-    <img src="chatGame.png" alt="a blob character looking with a flashlight" style="width:25%;">
-</a>
-<br/>
-<a href="https://landmine.maykids.org/gameDev/chatGame.html" target="_blank">chat with this guy</a>
-<p>I made this for fun so I could play around with goofy dialogue and a "choose your own adventure" style system.</p>
-
-<br/><hr style="width:99%;" /><br/><br/>
-
-<a href="https://landmine.maykids.org/gameDev/SquidtasticSokoban.html" target="_blank">
-    <img src="SquidtasticSokoban.png" alt="" style="width:25%;">
-</a>
-<br/>
-<a href="https://landmine.maykids.org/gameDev/SquidtasticSokoban.html" target="_blank">Squidtastic Sokoban</a>
-<p>This was my 2026 GMTK game jam submission. Its a block pushing puzzle game designed around a timer block</p>
+<br/><br/>
 
 </body>
 
