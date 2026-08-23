@@ -47,8 +47,8 @@ function swap() {
 }
 
 function link(dark) {
-    for (let i = 0; i < document.getElementsByClassName('link').length; i++) {
-        let link = document.getElementsByClassName('link')[i];
+    for (let i = 0; i < document.getElementsByTagName('a').length; i++) {
+        let link = document.getElementsByTagName('a')[i];
         if (dark) {
             link.href = link.href.replace('dark=false', 'dark=true');
         } else {
