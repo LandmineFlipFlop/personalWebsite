@@ -6,16 +6,19 @@ body {
     a {
         color: rgb(17 52 167)
     }
+    a:hover {
+        color: rgb(65 102 200)
+    }
 }
 
 #navbar {
     position: sticky;
     top: 0;
     overflow: hidden;
-    background-color: #b0a1ee;
+    background-color: #8c76da;
     border-bottom: 0.4vw solid #000000;
     z-index: 2;
-    box-shadow: 0 -10vw 0 10vw #b0a1ee, 0 0.1vw 0.5vw 0.5vw rgb(24 20 94 / 0.32);
+    box-shadow: 0 -10vw 0 10vw #8c76da, 0 0.1vw 0.5vw 0.5vw rgb(24 20 94 / 0.32);
 }
 
 #navbar a {
@@ -30,7 +33,7 @@ body {
 }
 
 #navbar a:hover {
-    background-color: #ddd6ff;
+    background-color: #c7c0f2;
     color: black;
 }
 
@@ -51,7 +54,7 @@ body {
     padding-top: 3vw;
     padding-bottom: 3vw;
 
-    box-shadow: 0 0.25vw 0.5vw 0.5vw rgb(2 3 45 / 0.25);
+    box-shadow: 0 1vw 0 0 #825c4d, 0 1.25vw 0.5vw 0.5vw rgb(2 3 45 / 0.25);
     border-radius: 2vw;
 
     img {

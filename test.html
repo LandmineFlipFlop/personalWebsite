@@ -24,25 +24,40 @@
             header += relative;
             header += "musings/directory.html'>musings</a> <a href='";
             header += relative;
-            header += "about.html'>about</a> </div>";
+            header += "about.html'>about</a> <a href='' onclick='mode()' id='mode'>☽ dark</a> </div>";
             document.getElementById('navbar').innerHTML = header;
-            // alert(header);
         }
-    </script>
 
-    <script>
         function param() {
-            var dark = (window.location.search.substring(1) === "dark")
-            if (dark){
-                document.getElementById('light').disabled = true;
-                document.getElementById('dark').disabled = false;
+            const url = new URL(window.location.href);
+            const dark = url.searchParams.get("dark");
+
+            if (dark === "true") {
+                document.getElementById("light").disabled = true;
+                document.getElementById("dark").disabled = false;
+                document.getElementById("mode").innerText = 'light mode';
+            } else {
+                document.getElementById("dark").disabled = true;
+                document.getElementById("light").disabled = false;
+                document.getElementById("mode").innerText = 'dark mode';
             }
+        }
+
+        function mode() {
+            const url = new URL(window.location.href);
+            const params = url.searchParams;
+
+            const dark = params.get("dark");
+            params.set("dark", dark === "true" ? "false" : "true");
+
+            history.pushState({}, "", url);
+            param();
         }
     </script>
 
 </head>
 
-<body onload="param(); header('')">
+<body onload="header(''); param();">
 <div id='navbar'></div>
 
 <div class='cardboard'>
@@ -51,13 +66,13 @@
 
 <div class="cardboard">
     <ul>
-        <li><a href="https://landmine.maykids.org/graphicDesign/muralArchive/map.html" target="_blank">SEHS mural map project!</a></li>
-        <li><a href="https://landmine.maykids.org/graphicDesign/designPortfolio.html">graphic design portfolio</a></li>
-        <li><a href="https://landmine.maykids.org/gameDev/gamePortfolio.html">game dev portfolio</a></li>
-        <li><a href="https://landmine.maykids.org/personalProjects/projectList.html">personal projects</a></li>
-        <li><a href="https://landmine.maykids.org/musings/directory.html">musings</a></li>
-        <li><a href="https://landmine.maykids.org/about.html">about</a></li>
-        <li><a href="https://landmine.maykids.org/sideTracks.html">random stuff I find neat</a></li>
+        <li><a href="graphicDesign/muralArchive/map.html" target="_blank">SEHS mural map project!</a></li>
+        <li><a href="graphicDesign/designPortfolio.html">graphic design portfolio</a></li>
+        <li><a href="gameDev/gamePortfolio.html">game dev portfolio</a></li>
+        <li><a href="personalProjects/projectList.html">personal projects</a></li>
+        <li><a href="musings/directory.html">musings</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="sideTracks.html">random stuff I find neat</a></li>
     </ul>
 </div>
 
