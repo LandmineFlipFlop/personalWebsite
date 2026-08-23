@@ -1,95 +1,106 @@
-
-<html lang="English">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <link rel="stylesheet" href="mainStyle.css">
-
     <meta charset="UTF-8">
 
-    <script src="header.js" type="text/javascript"></script>
+    <script src="cardboardScripts.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="cardboard.css" id="light">
+    <link rel="stylesheet" href="cardboardDark.css" id="dark" disabled>
 
-    <title>some cool stuff</title>
-
+    <title>about</title>
 </head>
 
-<body onload="header()">
-<div id="top-bar" class="top-bar"></div>
+<body onload="header(''); param();">
+<div id='navbar'></div>
 
-<h1>neat stuff</h1>
-<p>interesting wikipedia articles:</p>
-<ul>
-    <li><a href="https://en.wikipedia.org/wiki/Lambda_calculus" target="_blank">lambda calculus</a>
-    <li><a href="https://en.wikipedia.org/wiki/Planck_units" target="_blank">planck units</a>
-    <li><a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">binary</a>
-    <li><a href="https://en.wikipedia.org/wiki/Balanced_ternary" target="_blank">balanced ternary</a>
-    <li><a href="https://en.wikipedia.org/wiki/Non-integer_base_of_numeration" target="_blank">non-integer number base</a>
-    <li><a href="https://en.wikipedia.org/wiki/Cross-linguistic_onomatopoeias" target="_blank">cross-linguistic onomatopoeias</a>
-    <li><a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">international phonetics alphabet</a>
-    <li><a href="https://en.wikipedia.org/wiki/Toki_Pona" target="_blank">toki pona</a>
-</ul>
-
-<p>videos I really liked:</p>
-<ul>
-    <li><a href="https://www.youtube.com/watch?v=bI-FS7aZJpY" target="_blank">units as seven dimensions - Kieran Borovac</a>
-    <li><a href="https://www.youtube.com/watch?v=rDDaEVcwIJM" target="_blank">why binary is the best - the best way to count</a>
-    <li><a href="https://www.youtube.com/watch?v=1zgBwQVr-wI&list=PLwOpUM_s-f1Rb8ylpP8aMR9cCv_x1LXGu" target="_blank">portal logic - optozorax</a>
-    <li><a href="https://www.youtube.com/watch?v=jixKquBf66k" target="_blank">different kinds of trichromacy visualizer - ooqui</a>
-    <li><a href="https://www.youtube.com/watch?v=pfIGMWxjFTQ" target="_blank">imaginary numbers are vectors - ali the dazzling</a>
-    <li><a href="https://www.youtube.com/watch?v=RcVA8Nj6HEo" target="_blank">lambda calculus - 2swap</a>
-    <li><a href="https://www.youtube.com/watch?v=NSS6yAMZF78" target="_blank">video motion extraction - posy</a>
-    <li><a href="https://www.youtube.com/watch?v=JheGL6uSF-4" target="_blank">graph of wikipedia - adumb</a>
-    <li><a href="https://www.youtube.com/watch?v=dQhj5RGtag0" target="_blank">how floating point works - jan misali</a>
-    <li><a href="https://www.youtube.com/watch?v=Eq3bUFgEcb4" target="_blank">western music notation history and reforms - tantacrul</a>
-    <li><a href="https://www.youtube.com/watch?v=WUvTyaaNkzM&list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank">the essence of calculus - 3blue1brown</a>
-</ul>
-
-<p>amusing wikipedia pages (see <a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_articles" target="_blank">Unusual articles</a> for full list):</p>
-<ul>
-    <li><a href="https://en.wikipedia.org/wiki/Russian_political_jokes" target="_blank">russian political jokes</a>
-    <li><a href="https://en.wikipedia.org/wiki/Pasilalinic-sympathetic_compass" target="_blank">snail telepathy</a>
-    <li><a href="https://en.wikipedia.org/wiki/Lenin_was_a_mushroom" target="_blank">lenin was a mushroom</a>
-    <li><a href="https://en.wikipedia.org/wiki/Chicago_rat_hole" target="_blank">chicago rat hole</a>
-    <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_ways_to_get_your_article_on_Wikipedia" target="_blank">Unusual ways to get your article on Wikipedia</a>
-</ul>
-
-<p>websites I enjoy:</p>
-<ul>
-    <li><a href="https://c.xkcd.com/" target="_blank">xkcd</a>
-    <li><a href="https://nimi.li/" target="_blank">toki pona dictionary</a>
-    <li><a href="https://wikipedia.luk.ke/" target="_blank">interactive wikipedia map</a>
-</ul>
-
-<p>favorite books:</p>
-<ul>
-    <li><i>Hitchhiker's Guide To The Galaxy</i> - 	Douglas Adams
-    <li><i>The Martian</i> - Andy Weir
-    <li><i>Project Hail Mary</i> - Andy Weir
-    <li><i>The Stormlight Archive</i> - Brandon Sanderson
-    <li><i>MistBorn</i> - Brandon Sanderson
-    <li><i>The Long Earth</i> - Terry Pratchett, Steven Baxter
-</ul>
-
-<p>favorite games:</p>
-<ul>
-    <li>Hollow Knight (and SilkSong)
-    <li>Rain World
-    <li>Celeste
-    <li>Terraria
-    <li>Minecraft
-    <li>Animal Well
-    <li>The Stanley Parable
-    <li>Deltarune & undertale
-</ul>
-
-<p>favorite movies:</p>
-<ul>
-    <li>Apollo 13
-    <li>LOTR
-    <li>The Princess Bride
-    <li>Monty Python and the Holy Grail
-    <li>Whiplash
-</ul>
+<div class='cardboard'>
+    <h1>neat stuff</h1>
+    <p>Just a compiled list of cool stuff I've found or just generally enjoy.</p>
+</div>
+<div class='cardboard'>
+    <h2>interesting wikipedia articles:</h2>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Lambda_calculus" target="_blank">lambda calculus</a>
+        <li><a href="https://en.wikipedia.org/wiki/Planck_units" target="_blank">planck units</a>
+        <li><a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">binary</a>
+        <li><a href="https://en.wikipedia.org/wiki/Balanced_ternary" target="_blank">balanced ternary</a>
+        <li><a href="https://en.wikipedia.org/wiki/Non-integer_base_of_numeration" target="_blank">non-integer number base</a>
+        <li><a href="https://en.wikipedia.org/wiki/Cross-linguistic_onomatopoeias" target="_blank">cross-linguistic onomatopoeias</a>
+        <li><a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">international phonetics alphabet</a>
+        <li><a href="https://en.wikipedia.org/wiki/Toki_Pona" target="_blank">toki pona</a>
+    </ul>
+</div>
+<div class='cardboard'>
+    <h2>videos I really liked:</h2>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=bI-FS7aZJpY" target="_blank">units as seven dimensions - Kieran Borovac</a>
+        <li><a href="https://www.youtube.com/watch?v=rDDaEVcwIJM" target="_blank">why binary is the best - the best way to count</a>
+        <li><a href="https://www.youtube.com/watch?v=1zgBwQVr-wI&list=PLwOpUM_s-f1Rb8ylpP8aMR9cCv_x1LXGu" target="_blank">portal logic - optozorax</a>
+        <li><a href="https://www.youtube.com/watch?v=jixKquBf66k" target="_blank">different kinds of trichromacy visualizer - ooqui</a>
+        <li><a href="https://www.youtube.com/watch?v=pfIGMWxjFTQ" target="_blank">imaginary numbers are vectors - ali the dazzling</a>
+        <li><a href="https://www.youtube.com/watch?v=RcVA8Nj6HEo" target="_blank">lambda calculus - 2swap</a>
+        <li><a href="https://www.youtube.com/watch?v=NSS6yAMZF78" target="_blank">video motion extraction - posy</a>
+        <li><a href="https://www.youtube.com/watch?v=JheGL6uSF-4" target="_blank">graph of wikipedia - adumb</a>
+        <li><a href="https://www.youtube.com/watch?v=dQhj5RGtag0" target="_blank">how floating point works - jan misali</a>
+        <li><a href="https://www.youtube.com/watch?v=Eq3bUFgEcb4" target="_blank">western music notation history and reforms - tantacrul</a>
+        <li><a href="https://www.youtube.com/watch?v=WUvTyaaNkzM&list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank">the essence of calculus - 3blue1brown</a>
+    </ul>
+</div>
+<div class='cardboard'>
+    <h2>amusing wikipedia pages:</h2>
+    <p>(see <a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_articles" target="_blank">Unusual articles</a> for so many more)</p>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Russian_political_jokes" target="_blank">russian political jokes</a>
+        <li><a href="https://en.wikipedia.org/wiki/Pasilalinic-sympathetic_compass" target="_blank">snail telepathy</a>
+        <li><a href="https://en.wikipedia.org/wiki/Lenin_was_a_mushroom" target="_blank">lenin was a mushroom</a>
+        <li><a href="https://en.wikipedia.org/wiki/Chicago_rat_hole" target="_blank">chicago rat hole</a>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_ways_to_get_your_article_on_Wikipedia" target="_blank">Unusual ways to get your article on Wikipedia</a>
+    </ul>
+</div>
+<div class='cardboard'>
+<h2>websites I enjoy:</h2>
+    <ul>
+        <li><a href="https://c.xkcd.com/" target="_blank">xkcd</a>
+        <li><a href="https://nimi.li/" target="_blank">toki pona dictionary</a>
+        <li><a href="https://wikipedia.luk.ke/" target="_blank">interactive wikipedia map</a>
+    </ul>
+</div>
+<div class='cardboard'>
+    <h2>favorite books:</h2>
+    <ul>
+        <li><i>Hitchhiker's Guide To The Galaxy</i> - 	Douglas Adams
+        <li><i>The Martian</i> - Andy Weir
+        <li><i>Project Hail Mary</i> - Andy Weir
+        <li><i>The Stormlight Archive</i> - Brandon Sanderson
+        <li><i>MistBorn</i> - Brandon Sanderson
+        <li><i>The Long Earth</i> - Terry Pratchett, Steven Baxter
+    </ul>
+</div>
+<div class='cardboard'>
+    <h2>favorite games:</h2>
+    <ul>
+        <li>Hollow Knight (and SilkSong)
+        <li>Rain World
+        <li>Celeste
+        <li>Terraria
+        <li>Minecraft
+        <li>Animal Well
+        <li>The Stanley Parable
+        <li>Deltarune & undertale
+    </ul>
+</div>
+<div class='cardboard'>
+<h2>favorite movies:</h2>
+    <ul>
+        <li>Apollo 13
+        <li>LOTR
+        <li>The Princess Bride
+        <li>Monty Python and the Holy Grail
+        <li>Whiplash
+    </ul>
+</div>
 
 </body>
 

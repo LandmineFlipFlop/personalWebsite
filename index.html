@@ -1,45 +1,53 @@
-<html lang="English">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <link rel="stylesheet" href="mainStyle.css">
     <meta charset="UTF-8">
 
-    <script src="header.js" type="text/javascript"></script>
+    <script src="cardboardScripts.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="cardboard.css" id="light">
+    <link rel="stylesheet" href="cardboardDark.css" id="dark" disabled>
 
     <title>home</title>
 
+    <script>
+        isFirefox = typeof InstallTrigger !== 'undefined';
+        function checkFirefox() {
+            if (!isFirefox) {
+                document.getElementById('firefox').innerHTML = "<li><a href='https://librewolf.net/' target='_blank'>my favorite web browser!</a> (you should try it)";
+            } else {
+                document.getElementById('firefox').disabled = true;
+            }
+        }
+    </script>
+
 </head>
 
-<body onload="header(); checkFirefox()">
-<div id="top-bar" class="top-bar"></div>
+<body onload="header(''); param();">
+<div id='navbar'></div>
 
-<br/>
+<div class='cardboard'>
+    <img src="banner.png" alt="a banner showing off some of my interests" style="width:100%;">
+    <h1>Welcome to my site!</h1>
+</div>
 
-<img src="banner.png" alt="a banner showing off some of my interests" style="width:100%;">
+<div class="cardboard">
+    <p>Glad you made it, feel free to look around at the neat stuff I've made. There's nothin too serious here, most of this is just for fun.</p>
+    <ul>
+        <li><a class='link' href="graphicDesign/muralArchive/map.html?dark=false" target="_blank">SEHS mural map project!</a></li>
+        <li><a class='link' href="graphicDesign/designPortfolio.html?dark=false">graphic design portfolio</a></li>
+        <li><a class='link' href="gameDev/gamePortfolio.html?dark=false">game dev portfolio</a></li>
+        <li><a class='link' href="personalProjects/projectList.html?dark=false">personal projects</a></li>
+        <li><a class='link' href="musings/directory.html?dark=false">musings</a></li>
+        <li><a class='link' href="about.html?dark=false">about</a></li>
+        <li><a class='link' href="sideTracks.html?dark=false">random stuff I find neat</a></li>
+        <p id="firefox"></p>
+    </ul>
+</div>
 
-<h1>Welcome to my website!</h1>
-<p>This just some random stuff I've made, there's not much yet but feel free to look around at what I have so far:</p>
-<ul>
-    <li><a href="https://landmine.maykids.org/graphicDesign/muralArchive/map.html" target="_blank">SEHS mural map project!</a>
-    <li><a href="https://landmine.maykids.org/graphicDesign/designPortfolio.html">graphic design portfolio</a>
-    <li><a href="https://landmine.maykids.org/gameDev/gamePortfolio.html">game dev portfolio</a>
-    <li><a href="https://landmine.maykids.org/personalProjects/projectList.html">personal projects</a>
-    <li><a href="https://landmine.maykids.org/musings/directory.html">musings</a>
-    <li><a href="https://landmine.maykids.org/about.html">about</a>
-    <li><a href="https://landmine.maykids.org/sideTracks.html">random stuff I find neat</a>
-    <a id="firefox"></a>
-</ul>
+<br/><br/>
 
 </body>
-
-<script>
-    isFirefox = typeof InstallTrigger !== 'undefined';
-    function checkFirefox() {
-        if (!isFirefox) {
-            document.getElementById('firefox').innerHTML = "<li><a href='https://librewolf.net/' target='_blank'>my favorite web browser!</a> (you should try it)";
-        }
-    }
-</script>
 
 </html>
