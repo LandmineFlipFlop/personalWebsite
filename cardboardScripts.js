@@ -42,19 +42,22 @@ function swap() {
     const params = url.searchParams;
 
     const dark = params.get("dark");
-    params.set("dark", dark === "true" ? "false" : "true");
+    if (dark !== "true") {
+        params.set("dark", "true");
+    } else {
+        params.set("dark", "false");
+    }
 
     history.pushState({}, "", url);
     param();
 }
 
 function link(dark) {
-    for (let i = 0; i < document.getElementsByTagName('a').length; i++) {
-        let link = document.getElementsByTagName('a')[i];
-        if (dark) {
-            link.href = link.href.replace('dark=false', 'dark=true');
-        } else {
-            link.href = link.href.replace('dark=true', 'dark=false');
-        }
-    }
+    document.querySelectorAll("a").forEach(link => {
+        const url = new URL(link.href, window.location.href);
+
+        url.searchParams.set("dark", String(dark));
+
+        link.href = url.href;
+    });
 }
