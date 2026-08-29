@@ -2,19 +2,19 @@ function header(relative) {
     if (relative === undefined) {
         relative = '';
     }
-    let header = "<div id='navbar'> <a class='link'href='";
+    let header = "<div id='navbar'> <a class='link' href='";
     header += relative;
-    header += "index.html?dark=false'>Home</a> <a class='link'href='";
+    header += "index.html?dark=false'>Home</a> <a class='link' href='";
     header += relative;
-    header += "portfolio.html?dark=false'>portfolio</a> <a class='link'href='";
+    header += "portfolio.html?dark=false'>portfolio</a> <a class='link' href='";
     header += relative;
-    header += "personalProjects/projectList.html?dark=false'>projects</a> <a class='link'href='";
+    header += "personalProjects/projectList.html?dark=false'>projects</a> <a class='link' href='";
     header += relative;
     header += "musings/directory.html?dark=false'>musings</a> <a class='link' href='";
     header += relative;
     header += "sideTracks.html?dark=false'>collection</a> <a class='link' href='";
     header += relative;
-    header += "about.html?dark=false'>about</a> <a href='' onclick='swap()' id='mode'>☽ dark</a> </div>";
+    header += "about.html?dark=false'>about</a> <a href='' onclick='swap()' id='mode'>dark mode</a> </div>";
     document.getElementById('navbar').innerHTML = header;
 }
 

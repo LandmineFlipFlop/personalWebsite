@@ -1,67 +1,147 @@
-<html lang="English">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
 
-    <meta charset="utf-8">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Riot">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
     <style>
         body {
-            font-family: 'Trebuchet MS', sans-serif;
-            background-color: beige;
-            color: #05095a;
+            font-family: Overlock, sans-serif;
+            font-size: 32px;
+        }
 
-            h1 {
-                font-size: 4vmin;
+        #navbar {
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 1vw 1.5vw;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        .cardboard {
+            position: relative;
+            overflow: hidden;
+
+            margin-left: 3vw;
+            margin-right: 3vw;
+            margin-top: 3vw;
+
+            padding-inline: 6vw;
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+
+            border-radius: 2vw;
+
+            img {
+                opacity: 80%
             }
+        }
+        .cardboard::before {
+            content: "";
+            position: absolute;
+            inset: 0;
 
-            font-size: 2vmin;
+            background-image: url("cardboard.jpg");
+            background-size: 100vw 100vw;
+            background-repeat: repeat;
 
-            hr {
-                border: 0.5vmin solid #05095a;
-            }
+            z-index: 0;
+        }
+        .cardboard > * {
+            position: relative;
+            z-index: 1;
+        }
+        .cardboard .cardboard {
+            margin-bottom: 2vw;
+        }
 
-            a:link {
-                color: #0056af;
-                text-decoration: none;
-            }
-
-            a:visited {
-                color: #0056af;
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: #008ed6;
-                text-decoration: underline;
-            }
-
-            a:active {
-                color: #008ed6;
-                text-decoration: underline;
-            }
+        h1 {
+            font-family: "Protest Riot", cursive;
+            font-size: 56px;
+            text-align: center;
+        }
+        h2 {
+            font-family: "Protest Riot", cursive;
+            font-size: 40px;
+            text-align: center;
         }
     </style>
-
-    <script>
-        function header() {
-            document.getElementById('top-bar').innerHTML = '<a href="https://landmine.maykids.org/" style="padding-right: 1vmin; padding-left: 0.5vmin">home</a> -  <a href="https://landmine.maykids.org/portfolio.html" style="padding-inline: 1vmin">portfolio</a> - <a href="https://landmine.maykids.org/personalProjects/projectList.html" style="padding-inline: 1vmin">personal projects</a> - <a href="https://landmine.maykids.org/musings/directory.html" style="padding-inline: 1vmin">musings</a> - <a href="https://landmine.maykids.org/about.html" style="padding-inline: 1vmin">about</a>';
+    <style>
+        body {
+        background-color: #cabbff;
+        color: black;
+        a {
+            color: rgb(17 52 167)
         }
-    </script>
+        a:hover {
+            color: rgb(65 102 200)
+        }
+    }
+
+    #navbar {
+        background-color: #8c76da;
+        border-bottom: 0.4vw solid #000000;
+        box-shadow: 0 -10vw 0 10vw #8c76da, 0 0.1vw 0.5vw 0.5vw rgb(24 20 94 / 0.32);
+    }
+
+    #navbar a {
+        color: #000000;
+    }
+
+    #navbar a:hover {
+        background-color: #c7c0f2;
+        color: black;
+    }
+
+    .cardboard {
+        box-shadow: 0 1vw 0 0 #825c4d, 0 1.25vw 0.5vw 0.5vw rgb(2 3 45 / 0.25);
+    }
+    .cardboard::before {
+        background-color: #cea98a;
+    }
+    .cardboard .cardboard {
+        box-shadow: 0 1vw 0 0 #825c4d, 0 1.25vw 1.5vw 1vw rgb(2 3 45 / 0.25);
+    }
+
+    h1 {
+        color: rgb(6 0 29);
+    }
+
+    h2 {
+        color: rgb(6 0 29);
+    }
+
+    p {
+        color: rgb(6 0 29);
+    }</style>
 
     <title>error 404</title>
-
 </head>
 
+<body>
 
+<div id='navbar'>
+    <a class='link' href='https://landmine.maykids.org/index.html?dark=false'>Home</a>
+    <a class='link' href='https://landmine.maykids.org/portfolio.html?dark=false'>portfolio</a>
+    <a class='link' href='https://landmine.maykids.org/personalProjects/projectList.html?dark=false'>projects</a>
+    <a class='link' href='https://landmine.maykids.org/musings/directory.html?dark=false'>musings</a>
+    <a class='link' href='https://landmine.maykids.org/sideTracks.html?dark=false'>collection</a>
+</div>
 
-<body onload="header()">
-<div id="top-bar" class="top-bar"></div>
-
-<br/><hr style="width:99%;" />
-
-<h1>404 not found</h1>
-<p>Sorry, there has been some kind of error, most likely a mistyped url or a non-existent page.</p>
-
+<div class='cardboard'>
+    <h1>404 Not Found</h1>
+    <p>Sorry, there has been some kind of error, most likely a mistyped url or a non-existent page.</p>
+</div>
 
 </body>
 
