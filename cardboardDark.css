@@ -31,9 +31,6 @@ body {
 
 .cardboard {
     box-shadow: 0 1vw 0 0 #131228, 0 1.25vw 0.5vw 0.5vw rgb(2 3 45 / 0.25);
-    img {
-        opacity: 90%
-    }
 }
 .cardboard::before {
     background-color: #cea98a;
