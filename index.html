@@ -13,19 +13,17 @@
     <title>home</title>
 
     <script>
-        isFirefox = typeof InstallTrigger !== 'undefined';
         function checkFirefox() {
+            isFirefox = typeof InstallTrigger !== 'undefined';
             if (!isFirefox) {
-                document.getElementById('firefox').innerHTML = "<li><a href='https://librewolf.net/' target='_blank'>my favorite web browser!</a> (you should try it)";
-            } else {
-                document.getElementById('firefox').disabled = true;
+                document.getElementById('firefox').style.display = "inline";
             }
         }
     </script>
 
 </head>
 
-<body onload="header(''); param();">
+<body onload="header(''); param(); checkFirefox();">
 <div id='navbar'></div>
 
 <div class='cardboard'>
@@ -43,7 +41,7 @@
         <li><a href="musings/directory.html?dark=false">musings</a></li>
         <li><a href="about.html?dark=false">about</a></li>
         <li><a href="sideTracks.html?dark=false">random stuff I find neat</a></li>
-        <p id="firefox"></p>
+        <li id="firefox" style="display: none"><a href='https://librewolf.net/' target='_blank'>my favorite web browser!</a> (you should try it)</li>
     </ul>
 </div>
 
