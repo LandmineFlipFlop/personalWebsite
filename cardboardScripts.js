@@ -4,17 +4,17 @@ function header(relative) {
     }
     let header = "<div id='navbar'> <a class='link' href='";
     header += relative;
-    header += "index.html?dark=false'>Home</a> <a class='link' href='";
+    header += "index.html'>Home</a> <a class='link' href='";
     header += relative;
-    header += "portfolio.html?dark=false'>portfolio</a> <a class='link' href='";
+    header += "portfolio.html'>portfolio</a> <a class='link' href='";
     header += relative;
-    header += "personalProjects/projectList.html?dark=false'>projects</a> <a class='link' href='";
+    header += "personalProjects/projectList.html'>projects</a> <a class='link' href='";
     header += relative;
-    header += "musings/directory.html?dark=false'>musings</a> <a class='link' href='";
+    header += "musings/directory.html'>musings</a> <a class='link' href='";
     header += relative;
-    header += "sideTracks.html?dark=false'>collection</a> <a class='link' href='";
+    header += "sideTracks.html'>collection</a> <a class='link' href='";
     header += relative;
-    header += "about.html?dark=false'>about</a> <a href='' onclick='swap()' id='mode'>dark mode</a> </div>";
+    header += "about.html'>about</a> <a href='' onclick='swap()' id='mode'>dark mode</a> </div>";
     document.getElementById('navbar').innerHTML = header;
 }
 
@@ -56,8 +56,10 @@ function link(dark) {
     document.querySelectorAll("a").forEach(link => {
         const url = new URL(link.href, window.location.href);
 
-        url.searchParams.set("dark", String(dark));
+        if (link.target !== "_blank") {
+            url.searchParams.set("dark", String(dark));
+            link.href = url.href;
 
-        link.href = url.href;
+        }
     });
 }
