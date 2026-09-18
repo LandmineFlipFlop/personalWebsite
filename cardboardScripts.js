@@ -45,7 +45,7 @@ function swap() {
     if (dark !== "true") {
         params.set("dark", "true");
     } else {
-        params.set("dark", "false");
+        params.delete("dark");
     }
 
     history.pushState({}, "", url);
@@ -57,7 +57,13 @@ function link(dark) {
         const url = new URL(link.href, window.location.href);
 
         if (link.target !== "_blank") {
-            url.searchParams.set("dark", String(dark));
+
+            if (dark) {
+                url.searchParams.set("dark", "true");
+            } else {
+                url.searchParams.delete("dark");
+            }
+
             link.href = url.href;
 
         }
