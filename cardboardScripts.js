@@ -1,21 +1,18 @@
-function header(relative) {
-    if (relative === undefined) {
-        relative = '';
-    }
-    let header = "<div id='navbar'> <a class='link' href='";
-    header += relative;
-    header += "index.html'>Home</a> <a class='link' href='";
-    header += relative;
-    header += "portfolio.html'>portfolio</a> <a class='link' href='";
-    header += relative;
-    header += "personalProjects/projectList.html'>projects</a> <a class='link' href='";
-    header += relative;
-    header += "musings/directory.html'>musings</a> <a class='link' href='";
-    header += relative;
-    header += "sideTracks.html'>collection</a> <a class='link' href='";
-    header += relative;
-    header += "about.html'>about</a> <a href='' onclick='swap()' id='mode'>dark mode</a> </div>";
-    document.getElementById('navbar').innerHTML = header;
+document.addEventListener('DOMContentLoaded', () => {
+    header();
+    param();
+});
+
+function header() {
+    document.getElementById('navbar').innerHTML = `
+        <a class="link" href="/index.html">Home</a>
+        <a class="link" href="/portfolio.html">Portfolio</a>
+        <a class="link" href="/personalProjects/projectList.html">Projects</a>
+        <a class="link" href="/musings/directory.html">Musings</a>
+        <a class="link" href="/sideTracks.html">Collection</a>
+        <a class="link" href="/about.html">About</a>
+        <a href="#" onclick="swap(); return false;" id="mode">Dark mode</a>
+    `;
 }
 
 function param() {
